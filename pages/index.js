@@ -1,6 +1,13 @@
 import Head from 'next/head'
+import { connect } from "react-redux"
+import{ Button } from "antd"
 
-export default function Home() {
+class Home extends React.Component {
+  constructor(props) {
+      super(props);
+  }
+
+render() {
   return (
     <div className="container">
       <Head>
@@ -10,7 +17,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">{this.props.appAuthReducer.user.userName}</a>
         </h1>
 
         <p className="description">
@@ -207,3 +214,7 @@ export default function Home() {
     </div>
   )
 }
+
+}
+
+export default connect(state => state)(Home);
