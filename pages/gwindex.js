@@ -23,7 +23,6 @@ for (let i = 1; i < 23; i++) {
     description: <Rate style={{position:"relative", left: '0px', top: '-20px'}} />,
     content:
       'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-    
     });
 }
 
@@ -125,6 +124,56 @@ return (
   />,
     </TabPane>
     <TabPane tab="New Demand" key="2">
+    <List
+    itemLayout="vertical"
+    size="large"
+    bordered="true"
+    pagination={{
+      onChange: page => {
+        console.log(page);
+      },
+      pageSize: 3,
+    }}
+    dataSource={listData}
+    footer={
+      <div>
+        <b>ant design</b> footer part
+      </div>
+    }
+    renderItem={item => (
+      <List.Item
+        key={item.title}
+        actions={[
+          <IconText icon={ShareAltOutlined} text="99999" key="list-vertical-star-o" />,
+          <IconText icon={MessageFilled} text="99999" key="list-vertical-like-o" />,
+          <IconText icon={HeartFilled} text="99999" key="list-vertical-message" />,
+        ]}
+        extra={
+          <img
+            width={272}
+            style={{position:"absolute", left: '0px', top: '-300px'}}
+            alt="logo"
+            src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+          />
+        }
+        
+      
+        
+      >
+
+    <Button type="text"   size="small" style={{position:"relative", left: '275px', top: '-175px'}} >
+    <Text > + Friend</Text>
+    </Button>,
+    <List.Item.Meta  style={{position:"relative", left: '0px', top: '-200px'}}
+      avatar={<Avatar src={item.avatar} />}
+      title= {<a href={item.href}>{item.title}</a>}  
+      description={item.description}
+      />
+      {item.content}
+    </List.Item>
+    )}
+  />
+
     </TabPane>
   </Tabs>
       <Col offset={8}>
