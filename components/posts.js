@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { Tabs, Row, Col, Button, Carousel, Avatar, Rate, List, Typography, Card, Space  } from 'antd';
+import { Tabs, Row, Col, Button, Carousel, Avatar, Rate, List, Typography, Card, Space,  } from 'antd';
 import Head from 'next/head'
 import { createFromIconfontCN } from '@ant-design/icons';
 import { CloseOutlined, EditOutlined, EllipsisOutlined, SettingOutlined , HeartFilled, MessageFilled, ShareAltOutlined } from '@ant-design/icons';
@@ -25,6 +25,7 @@ function callback(key) {
 }
 
 
+
 function Posts(props)  {
     return (
           <List
@@ -43,20 +44,23 @@ function Posts(props)  {
               console.log('item color: ', item.type)
               return (
               <List.Item
+             
                 key={item.title}
                 actions={[
                   <IconText icon={ShareAltOutlined} text="99999" key="list-vertical-star-o" />,
                   <IconText icon={MessageFilled} text="99999" key="list-vertical-like-o" />,
                   <IconText icon={HeartFilled} text="99999" key="list-vertical-message" />,
                 ]}
-                extra={
-                  <img
-                    width={272}
-                    style={{position:"relative", left: '0px', top: '50px'}}
-                    alt="logo"
-                    src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-                  />
-                }
+                //extra={
+                  //<img
+                    //src= {item.images}                                  
+                    //width={272}
+                    //style={{position:"relative", left: '0px', top: '50px'}}
+                    //alt="logo"
+                    //src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+                  ///>
+                //} 
+                
                 
               >
                 <div 
@@ -71,13 +75,35 @@ function Posts(props)  {
                   <Button type="text"   size="small" style={{position:"relative", left: '275px', top: '-175px'}} >
                   <Text > + Friend</Text>
                   </Button>,
-                  <List.Item.Meta  style={{position:"relative", left: '0px', top: '-200px'}}
+                  <List.Item.Meta  style={{position:"relative", left: '0px', top: '0px'}}
                     avatar={<Avatar src={item.avatar} />}
                     title= {<a href={item.href}>{item.title}</a>}  
                     description={item.description}
-                    
+                   
                     />
                     {item.content}
+
+                    <List
+                      grid={{
+                      column: 4,
+                     
+                      }}
+                      
+                      dataSource={item.images}
+                      renderItem={imageItem => (
+                       <List.Item>
+
+                        <Card > <img
+                      src= {imageItem.uri}
+                      width={50}
+                      style={{position: "relative", left: '-25px', top: '0px'}}
+                      alt="logo"
+                    /> </Card>
+                     
+                      </List.Item>
+                        )}
+                    />,
+
                 </div>
               </List.Item>
             )}}

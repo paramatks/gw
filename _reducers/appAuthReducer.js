@@ -20,7 +20,7 @@ export const initialState = {
         title: 'aaa1',
         avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
         description: 5,
-        images:[],
+        images: [{uri: 'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png'} ,{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Orange-Whole-&-Split.jpg/1920px-Orange-Whole-&-Split.jpg'}],
         content: 'abcdefg'
         },
         {
@@ -30,6 +30,7 @@ export const initialState = {
           title: 'aaa2',
           avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
           description: 4,
+          images: [],
           //content: this.props.appAuthReducer.posts.content
           content: 'hijklmn'
           },
@@ -40,6 +41,7 @@ export const initialState = {
             title: 'aaa3',
             avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
             description: 3,
+            images: [],
             //content: this.props.appAuthReducer.posts.content
             content: 'opqrst'
             },
@@ -50,6 +52,7 @@ export const initialState = {
               title: 'aaa4',
               avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
               description: 2,
+              images: [],
               //content: this.props.appAuthReducer.posts.content
               content: 'uvwxyz'
               }
@@ -61,6 +64,7 @@ export const initialState = {
           type: 1, 
           avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
           description: 5,
+          images: [],
           content: 'abcdefg'
           },
           {
@@ -69,6 +73,7 @@ export const initialState = {
             title: 'bbb2',
             avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
             description: 4,
+            images: [],
             //content: this.props.appAuthReducer.posts.content
             content: 'hijklmn',
             type: 1, 
@@ -79,6 +84,7 @@ export const initialState = {
               title: 'bbb3',
               avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
               description: 3,
+              images: [],
               //content: this.props.appAuthReducer.posts.content
               content: 'opqrst',
               type: 1, 
@@ -89,6 +95,7 @@ export const initialState = {
                 title: 'bbb4',
                 avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
                 description: 2,
+                images: [],
                 //content: this.props.appAuthReducer.posts.content
                 content: 'uvwxyz',
                 type: 1, 
