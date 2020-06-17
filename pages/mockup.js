@@ -24,14 +24,14 @@ export default function mockup () {
     <Row   justify= "center" align="bottom" style={{width: '100%'}}>
        
         <Col    span={20}>
-            <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' },{backgroundColor:'gray'}} >
+            <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' }, {backgroundColor:'gray'}, {position:"relative", left: '75px', top: '0px'}}> 
                  Continue with LINE
             </Button>
         </Col>
   
         </Row>
        
-        <Row   justify= "center" align="bottom" >
+        <Row   justify= "center" align="bottom" style={{position:"relative", left: '75px', top: '0px'}}>
        
         <Col>
         Log in means 
@@ -40,7 +40,7 @@ export default function mockup () {
   
         </Row>
 
-        <Row   justify= "center" align="bottom" >
+        <Row   justify= "center" align="bottom" style={{position:"relative", left: '75px', top: '0px'}}>
        
        <Col >
        you have agreed to this
@@ -48,7 +48,7 @@ export default function mockup () {
   
  
        </Row>
-       <Row   justify= "center" align="bottom" >
+       <Row   justify= "center" align="bottom" style={{position:"relative", left: '75px', top: '0px'}}>
        
        <Col style={{ color: 'orange' }}>
        platform agreement
