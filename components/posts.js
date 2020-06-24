@@ -12,10 +12,10 @@ const { Text, Title } = Typography;
 const { Meta } = Card;
 const { TabPane } = Tabs;
 
-const IconText = ({ icon, text }) => (
-  <Space style={{ position: "relative", left: "25px", top: "-5px" }} size="middle" >
+const IconText = ({ icon, Text }) => (
+  <Space style={{ position: "relative", left: "100px", top: "-5px" }} size="middle" >
     {React.createElement(icon)}
-    {text}
+    {Text}
   </Space>
 );
 
@@ -44,11 +44,11 @@ function Posts(props) {
         return (
           <List.Item
 
-            key={item.title}
+            key={item.author}
             actions={[
-              <IconText icon={ShareAltOutlined} text="99999" key="list-vertical-star-o" />,
-              <IconText icon={MessageFilled} text="99999" key="list-vertical-like-o" />,
-              <IconText icon={HeartFilled} text="99999" key="list-vertical-message" />,
+              <IconText icon={ShareAltOutlined} Text={item.share} key="list-vertical-star-o" />,
+              <IconText icon={MessageFilled} Text={item.comment} key="list-vertical-like-o" />,
+              <IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
 
             ]}
           //extra={
@@ -70,7 +70,7 @@ function Posts(props) {
 
               }
             >
-              <Rate style={{ position: "relative", left: '55px', top: '30px' }} />
+              <Rate style={{ position: "relative", left: '55px', top: '30px' }} count={item.rating} />
 
               <Button type="text" size="small" style={{ position: "relative", left: '75px', top: '3px' }} >
                 <Text > + Friend</Text>
@@ -83,11 +83,11 @@ function Posts(props) {
 
               <List.Item.Meta style={{ position: "relative", left: '10px', top: '-25px' }}
                 avatar={<Avatar src={item.avatar} />}
-                title={<a href={item.href}>{item.title}</a>}
+                title={<a href={item.href}>{item.author}</a>}
               //description={item.description}
 
               />
-              <List style={{ position: "relative", left: '25px', top: '-15px' }} >
+              <List style={{ position: "relative", left: '10px', top: '-15px' }} >
                 {item.content}
 
 
@@ -112,7 +112,8 @@ function Posts(props) {
                     <img
                       src={imageItem.uri}
                       width={100}
-                      style={{ position: "relative", left: '0px', top: '0px' }}
+                      style={{ position: "relative", left: '0px', top: '0px', height: '100px', width: '100px', objectFit: 'cover' }}
+                      //style={{}}
                       alt="logo"
                     />
 
@@ -123,24 +124,24 @@ function Posts(props) {
               />
               <List style={{ position: "relative", left: '15px', top: '-5px' }} >
                 <EnvironmentFilled />
-                <text style={{ position: "relative", left: '10px', top: '0px' }}>
+                <Text style={{ position: "relative", left: '10px', top: '0px' }}>
                   {item.location}
 
 
-                </text>
+                </Text>
 
 
 
               </List>
 
 
-              <List style={{ position: "relative", left: '240px', top: '-27px' }} >
+              <List style={{ position: "relative", left: '175px', top: '-27px' }} >
 
-                <text style={{ position: "relative", left: '0px', top: '0px' }}>
+                <Text style={{ position: "relative", left: '0px', top: '0px' }}>
                   {item.date}
 
 
-                </text>
+                </Text>
 
 
 

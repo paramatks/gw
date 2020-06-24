@@ -1,8 +1,10 @@
+import React, { useState, useEffect, useCallback } from 'react';
 import { Tabs, Row, Col, Typography, Carousel, Card, Space } from 'antd';
 import Head from 'next/head'
 import { createFromIconfontCN } from '@ant-design/icons';
 import { connect } from "react-redux"
 import Posts from '../components/posts';
+import { getPopularPosts, getNewDemand } from '../_actions/postsAction';
 
 
 
@@ -24,15 +26,54 @@ const IconText = ({ icon, text }) => (
   </Space>
 );
 
-function callback(key) {
-  console.log(key);
-}
+
+
+
 
 
 const Gwindex = (props) => {
-  console.log(props.appAuthReducer.posts)
 
-  //ReactDOM.render (<Posts />, document.getElementById("root") )
+  useEffect(() => {
+    // use the getPopularPosts action to init the data
+    props.getPopularPosts();
+    //props.getNewDemand();
+
+  }, []);
+
+
+  function callback(activeKey) {
+    console.log(activeKey);
+    //props.getNewDemand();
+    if (activeKey == 2) {
+      props.getNewDemand();
+    } else if (activeKey == 1) {
+      props.getPopularPosts();
+
+    }
+
+  }
+
+
+ 
+
+
+
+
+
+  /*useCallback(() => {
+      
+   
+       useEffect(() => {
+        props.getNewDemand();
+  
+  
+       }, []);
+           
+         },
+         
+         [],
+  ); */
+
 
   return (
     <>
@@ -47,33 +88,37 @@ const Gwindex = (props) => {
             <Title strong="true" level={4}>  Logo </Title>
           </Col>
         </Row>
+        <Row style={{ position: "relative", left: "0px", top: '0px' }}>
+        
+          <Tabs type=" card" defaultActiveKey="1" onChange={callback} tabPosition="top" tabBarGutter="100px">
+            
 
-        <Tabs defaultActiveKey="1" onChange={callback} >
-          <TabPane tab="Popular" key="1"  >
-            <Carousel autoplay={true} dots={false} style={{ position: "relative", left: '0px', top: '-15px' }} >
-              <div>
+            <TabPane tab="Popular" key="1"  >
+              <Carousel autoplay={true} dots={false} style={{ position: "relative", left: '0px', top: '-15px' }} >
+                <div>
 
-                <img
-                  src="/images/welcome.png"
-                />
-              </div>
-              <div>
-                <img
-                  src="/images/Welcome 2.png"
-                />
-              </div>
-            </Carousel>
+                  <img
+                    src="/images/welcome.png"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="/images/Welcome 2.png"
+                  />
+                </div>
+              </Carousel>
 
-            <Posts postlist={props.appAuthReducer.posts} />
-          </TabPane>
+              <Posts postlist={props.appAuthReducer.posts} />
+            </TabPane>
 
-          <TabPane tab="New Demand" key="2">
-            <Posts postlist={props.appAuthReducer.newDemand} />
-          </TabPane>
+            <TabPane tab="New Demand" key="2">
+              <Posts postlist={props.appAuthReducer.newDemand} />
+            </TabPane>
 
-        </Tabs>
+          </Tabs>
+        </Row>
       </div>
     </>
   )
 }
-export default connect(state => state)(Gwindex);
+export default connect(state => state, { getPopularPosts, getNewDemand })(Gwindex);

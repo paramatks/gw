@@ -8,10 +8,10 @@ import { setCookie, getCookie, getCookieFromBrowser, getCookieFromServer, remove
 Use to check existing cookie and authenticate with the server again
 */
 export const getState = (req) => {
-    return function(dispatch) {
+    return function (dispatch) {
 
         dispatch({
-            type: GET_STATE, 
+            type: GET_STATE,
         });
 
     }
