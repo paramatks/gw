@@ -13,7 +13,7 @@ const { Meta } = Card;
 const { TabPane } = Tabs;
 
 const IconText = ({ icon, Text }) => (
-  <Space style={{ position: "relative", left: "100px", top: "-5px" }} size="middle" >
+  <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
     {React.createElement(icon)}
     {Text}
   </Space>
@@ -46,8 +46,8 @@ function Posts(props) {
 
             key={item.author}
             actions={[
-              <IconText icon={ShareAltOutlined} Text={item.share} key="list-vertical-star-o" />,
-              <IconText icon={MessageFilled} Text={item.comment} key="list-vertical-like-o" />,
+              <IconText icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" />,
+              <IconText icon={MessageFilled} Text={item.comments} key="list-vertical-like-o" />,
               <IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
 
             ]}
@@ -72,10 +72,10 @@ function Posts(props) {
             >
               <Rate style={{ position: "relative", left: '55px', top: '30px' }} count={item.rating} />
 
-              <Button type="text" size="small" style={{ position: "relative", left: '75px', top: '3px' }} >
+              <Button type="text" size="small" style={{ position: "relative", left: '85px', top: '3px' }} >
                 <Text > + Friend</Text>
               </Button>,
-              <Button type="text" size="small" style={{ position: "relative", left: '65px', top: '3px' }} >
+              <Button type="text" size="small" style={{ position: "relative", left: '75px', top: '3px' }} >
                 <Text > + Follow</Text>
               </Button>
               <Button type="link" style={{ position: "relative", left: '55px', top: '5px' }} icon={<MoreOutlined style={{ color: 'gray' }} />} />
@@ -83,7 +83,7 @@ function Posts(props) {
 
               <List.Item.Meta style={{ position: "relative", left: '10px', top: '-25px' }}
                 avatar={<Avatar src={item.avatar} />}
-                title={<a href={item.href}>{item.author}</a>}
+                title={item.author}
               //description={item.description}
 
               />
