@@ -1,5 +1,7 @@
 import fetchServer from '../lib/general/fetchServer'
-import { GET_POPULAR, GET_NEWDEMAND } from '../_constants/action_types';
+import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3 } from '../_constants/action_types';
+//import posts from '../components/posts';
+
 
 
 export function getPopularPosts() {
@@ -50,3 +52,109 @@ export function getNewDemand() {
 
     }
 }
+
+export function getIncrement1(postID) {
+    return (dispatch, getState) => {
+        //var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
+        //var posts = [...getState().appAuthReducer.posts];
+        var posts = getState().appAuthReducer.posts;
+
+        /*
+        for(var i=0; i<posts.length; i++) {
+            if(posts[i].postID == postID) {
+                posts[i].like++;
+            } 
+        }
+        */
+       
+        var newPosts = posts.map((post) => {
+            //post.postID === postID ?  {...post, like: post.like++} :  post
+            
+            if(post.postID === postID) {
+                return {...post, like: ++post.like}
+            } 
+
+            return post
+        });
+
+        
+        dispatch({
+            type: GET_INCREMENT1,
+            afterIncrement: newPosts
+        })
+        
+
+        console.log(newPosts);
+    }
+}
+
+export function getIncrement2(postID) {
+    return (dispatch, getState) => {
+        //var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
+        //var posts = [...getState().appAuthReducer.posts];
+        var posts = getState().appAuthReducer.posts;
+
+        /*
+        for(var i=0; i<posts.length; i++) {
+            if(posts[i].postID == postID) {
+                posts[i].like++;
+            } 
+        }
+        */
+       
+        var newPosts = posts.map((post) => {
+            //post.postID === postID ?  {...post, like: post.like++} :  post
+            
+            if(post.postID === postID) {
+                return {...post, like: ++post.comments}
+            } 
+
+            return post
+        });
+
+        
+        dispatch({
+            type: GET_INCREMENT2,
+            afterIncrement2: newPosts
+        })
+        
+
+        console.log(newPosts);
+    }
+}
+
+export function getIncrement3(postID) {
+    return (dispatch, getState) => {
+        //var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
+        //var posts = [...getState().appAuthReducer.posts];
+        var posts = getState().appAuthReducer.posts;
+
+        /*
+        for(var i=0; i<posts.length; i++) {
+            if(posts[i].postID == postID) {
+                posts[i].like++;
+            } 
+        }
+        */
+       
+        var newPosts = posts.map((post) => {
+            //post.postID === postID ?  {...post, like: post.like++} :  post
+            
+            if(post.postID === postID) {
+                return {...post, like: ++post.comments}
+            } 
+
+            return post
+        });
+
+        
+        dispatch({
+            type: GET_INCREMENT3,
+            afterIncrement3: newPosts
+        })
+        
+
+        console.log(newPosts);
+    }
+}
+

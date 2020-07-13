@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import { Tabs, Row, Col, Button, Avatar, Rate, List, Typography, Card, Space, } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { Tabs, Button, Avatar, Rate, List, Typography, Card, Space, } from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { HeartFilled, MessageFilled, ShareAltOutlined, MoreOutlined, EnvironmentFilled } from '@ant-design/icons';
+
 
 
 const IconFont = createFromIconfontCN({
@@ -12,20 +13,57 @@ const { Text, Title } = Typography;
 const { Meta } = Card;
 const { TabPane } = Tabs;
 
-const IconText = ({ icon, Text }) => (
-  <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
-    {React.createElement(icon)}
-    {Text}
-  </Space>
+const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
+  <div onClick={() => { getIncrement2(postID) }}>
+    <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
+      {React.createElement(icon)}
+      {Text}
+     
+    </Space>
+  </div>
+
+)
+
+const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
+  <div onClick={() => { getIncrement1(postID) }}>
+    <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
+      {React.createElement(icon)}
+      {Text}
+     
+    </Space>
+  </div>
+);
+
+const IconText1 = ({ icon, Text, postID, getIncrement3 }) => (
+  <div onClick={() => { getIncrement3(postID) }}>
+    <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
+      {React.createElement(icon)}
+      {Text}
+     
+    </Space>
+  </div>
 );
 
 function callback(key) {
   console.log(key);
 }
 
+const actions = {
+  increment: () => {
+    return {
+      type: 'GET_INCREMENT',
+    }
+  }
+}
 
 
 function Posts(props) {
+
+  useEffect(() => {
+    //props.getIncrement(999)
+
+  }, []);
+
   return (
     <List style={{ position: "relative", left: '0px', top: '-20px' }}
       itemLayout="vertical"
@@ -40,15 +78,16 @@ function Posts(props) {
       dataSource={props.postlist}
 
       renderItem={item => {
-        console.log('item color: ', item.type)
+        console.log(props);
         return (
           <List.Item
 
             key={item.author}
             actions={[
-              <IconText icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" />,
-              <IconText icon={MessageFilled} Text={item.comments} key="list-vertical-like-o" />,
-              <IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
+              <IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} getIncrement3={props.getIncrement3} />,
+              <IconText2 icon={MessageFilled} Text={item.comments} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />,
+              //<IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
+              <IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} getIncrement1={props.getIncrement1} />
 
             ]}
           //extra={
@@ -70,12 +109,12 @@ function Posts(props) {
 
               }
             >
-              <Rate style={{ position: "relative", left: '55px', top: '30px' }} count={item.rating} />
+              <Rate style={{ position: "relative", left: '55px', top: '30px' }} value={item.rating} />
 
-              <Button type="text" size="small" style={{ position: "relative", left: '85px', top: '3px' }} >
+              <Button type="text" size="small" style={{ position: "relative", left: '80px', top: '3px' }} >
                 <Text > + Friend</Text>
-              </Button>,
-              <Button type="text" size="small" style={{ position: "relative", left: '75px', top: '3px' }} >
+              </Button>
+              <Button type="text" size="small" style={{ position: "relative", left: '70px', top: '3px' }} >
                 <Text > + Follow</Text>
               </Button>
               <Button type="link" style={{ position: "relative", left: '55px', top: '5px' }} icon={<MoreOutlined style={{ color: 'gray' }} />} />

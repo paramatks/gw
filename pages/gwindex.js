@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import { Tabs, Row, Col, Typography, Carousel, Card, Space, Layout } from 'antd';
+import { Tabs, Row, Col, Typography, Carousel, Card, } from 'antd';
 import Head from 'next/head'
-import { createFromIconfontCN } from '@ant-design/icons';
 import { connect } from "react-redux"
 import Posts from '../components/posts';
-import { getPopularPosts, getNewDemand } from '../_actions/postsAction';
-import { StickyContainer, Sticky } from 'react-sticky';
+import { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3 } from '../_actions/postsAction';
+import { StickyContainer } from 'react-sticky';
 
 
 
@@ -24,9 +23,7 @@ const renderTabBar = (props, DefaultTabBar) => (
 );
 
 
-const IconFont = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
-});
+
 
 
 
@@ -66,7 +63,9 @@ const Gwindex = (props) => {
 
 
 
-
+  const test = () => {
+    console.log("this is a test")
+  }
 
 
   /*useCallback(() => {
@@ -82,6 +81,7 @@ const Gwindex = (props) => {
          
          [],
   ); */
+
 
 
   return (
@@ -114,11 +114,11 @@ const Gwindex = (props) => {
               </div>
             </Carousel>
 
-            <Posts postlist={props.appAuthReducer.posts} />
+            <Posts postlist={props.appAuthReducer.posts} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3}    />
           </TabPane>
 
           <TabPane tab="New Demand" key="2">
-            <Posts postlist={props.appAuthReducer.newDemand} />
+            <Posts postlist={props.appAuthReducer.newDemand} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3}/>
           </TabPane>
 
         </Tabs>
@@ -130,4 +130,4 @@ const Gwindex = (props) => {
 }
 
 
-export default connect(state => state, { getPopularPosts, getNewDemand })(Gwindex);
+export default connect(state => state, { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3 })(Gwindex);

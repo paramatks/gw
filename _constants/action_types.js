@@ -1,6 +1,6 @@
 export const GET_STATE = "GET_STATE";
-
-
 export const GET_POPULAR = "GET_POPULAR";
-
 export const GET_NEWDEMAND = "GET_NEWDEMAND";
+export const GET_INCREMENT1 = "GET_INCREMENT1";
+export const GET_INCREMENT2 = "GET_INCREMENT2";
+export const GET_INCREMENT3 = "GET_INCREMENT3";
