@@ -106,7 +106,7 @@ export function getIncrement2(postID) {
             //post.postID === postID ?  {...post, like: post.like++} :  post
             
             if(post.postID === postID) {
-                return {...post, like: ++post.comments}
+                return {...post, comments: ++post.comments}
             } 
 
             return post
@@ -141,7 +141,7 @@ export function getIncrement3(postID) {
             //post.postID === postID ?  {...post, like: post.like++} :  post
             
             if(post.postID === postID) {
-                return {...post, like: ++post.comments}
+                return {...post, shares: ++post.shares}
             } 
 
             return post

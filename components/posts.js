@@ -17,8 +17,7 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
   <div onClick={() => { getIncrement2(postID) }}>
     <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
       {React.createElement(icon)}
-      {Text}
-     
+      {Text}     
     </Space>
   </div>
 
@@ -26,20 +25,18 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 
 const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
   <div onClick={() => { getIncrement1(postID) }}>
-    <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
+    <Space style={{ position: "relative", left: "75px", top: "-5px" }} size="middle" >
       {React.createElement(icon)}
       {Text}
-     
     </Space>
   </div>
 );
 
 const IconText1 = ({ icon, Text, postID, getIncrement3 }) => (
   <div onClick={() => { getIncrement3(postID) }}>
-    <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
+    <Space style={{ position: "relative", left: "25px", top: "-5px" }} size="middle" >
       {React.createElement(icon)}
       {Text}
-     
     </Space>
   </div>
 );
