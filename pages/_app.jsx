@@ -4,6 +4,8 @@ import React from 'react'
 import App from 'next/app'
 import { wrapper } from "../_store/goodWorkStore"
 
+import '../styles/styles.css'
+import '../styles/styles-custom.css'
 import { getState } from '../_actions/appAuthAction'
 import { setCookie, getCookie} from '../lib/general/cookieOps'
 

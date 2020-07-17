@@ -39,25 +39,25 @@ const { TabPane } = Tabs;
 
 const Gwindex = (props) => {
 
-  useEffect(() => {
+  //useEffect(() => {
     // use the getPopularPosts action to init the data
-    props.getPopularPosts();
+    //props.getPopularPosts();
     //props.getNewDemand();
 
-  }, []);
+  //}, []);
 
 
-  function callback(activeKey) {
-    console.log(activeKey);
+  //function callback(activeKey) {
+    //console.log(activeKey);
     //props.getNewDemand();
-    if (activeKey == 2) {
-      props.getNewDemand();
-    } else if (activeKey == 1) {
-      props.getPopularPosts();
+    //if (activeKey == 2) {
+      //props.getNewDemand();
+    //} else if (activeKey == 1) {
+    //  props.getPopularPosts();
 
-    }
+   // }
 
-  }
+ // }
 
 
 
@@ -95,7 +95,7 @@ const Gwindex = (props) => {
 
       <StickyContainer>
 
-        <Tabs type="card" defaultActiveKey="1" onChange={callback} renderTabBar={renderTabBar}>
+        <Tabs type="card" defaultActiveKey="1" /*onChange={callback}*/ renderTabBar={renderTabBar}>
 
 
           <TabPane tab="Popular" key="1"   >
@@ -114,11 +114,11 @@ const Gwindex = (props) => {
               </div>
             </Carousel>
 
-            <Posts postlist={props.appAuthReducer.posts} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3}    />
+            <Posts postlist={props.appAuthReducer.posts} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3} />
           </TabPane>
 
           <TabPane tab="New Demand" key="2">
-            <Posts postlist={props.appAuthReducer.newDemand} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3}/>
+            <Posts postlist={props.appAuthReducer.newDemand} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3} />
           </TabPane>
 
         </Tabs>

@@ -17,7 +17,7 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
   <div onClick={() => { getIncrement2(postID) }}>
     <Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
       {React.createElement(icon)}
-      {Text}     
+      {Text}
     </Space>
   </div>
 
