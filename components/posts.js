@@ -82,7 +82,7 @@ function Posts(props) {
 						key={item.author}
 						actions={[
 							<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} getIncrement3={props.getIncrement3} />,
-							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2}  />,
+							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} style={{position: "relative", left: '50px', top:'0px'}} />,
 							//<IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
 							<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} getIncrement1={props.getIncrement1} />
 

@@ -120,13 +120,13 @@ export function getIncrement2(aaa) {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
 			if (post.postID === aaa) {
-				post.comments.push(comment) 
+				post.comments.reverse() 
 			}
 			//console.log("post",post)
 			
 			return post
 		});
-		//console.log("hi",newPosts)
+		console.log("hi",newPosts)
 
 		dispatch({
 			type: GET_INCREMENT2,
