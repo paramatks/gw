@@ -164,9 +164,12 @@ export const initialState = {
 
 
 
-	]
+	],
+	post: []
 
 }
+
+
 
 export default (state = initialState, action) => {
 	switch (action.type) {

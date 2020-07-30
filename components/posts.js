@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Tabs, Button, Avatar, Rate, List, Typography, Card, Space, } from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { HeartFilled, MessageFilled, ShareAltOutlined, MoreOutlined, EnvironmentFilled } from '@ant-design/icons';
+import Router from 'next/router'
 
 
 
@@ -13,8 +14,15 @@ const { Text, Title } = Typography;
 const { Meta } = Card;
 const { TabPane } = Tabs;
 
-const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
-	<div onClick={() => { getIncrement2(postID) }} style={{backgroundColor:"black"}}>
+const IconText2 = ({ icon, Text, postID}) => (
+	<div onClick={() =>  Router.push({
+		pathname: '/comments',
+	  })
+	
+	
+	
+	
+	} style={{backgroundColor:"black"}} >
 		<Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
