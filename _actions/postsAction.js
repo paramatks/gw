@@ -1,5 +1,6 @@
 import fetchServer from '../lib/general/fetchServer'
-import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3 } from '../_constants/action_types';
+import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4 } from '../_constants/action_types';
+import comments from '../pages/comments';
 //import posts from '../components/posts';
 
 const comment = 
@@ -116,15 +117,17 @@ export function getIncrement2(aaa) {
 		}
 		*/
 
-		var newPosts = posts.map((post) => {
+		var newPosts = posts.filter((post) => {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
-			if (post.postID === aaa) {
+			if (post.postID === aaa) 
+			
+			/*{
 				post.comments.reverse() 
-			}
+			}*/
 			//console.log("post",post)
 			
-			return post
+			return post 
 		});
 		console.log("hi",newPosts)
 
@@ -170,3 +173,37 @@ export function getIncrement3(postID) {
 	}
 }
 
+export function getIncrement4(commentID) {
+	return (dispatch, getState) => {
+		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
+		//var posts = [...getState().appAuthReducer.posts];
+		var posts = getState().appAuthReducer.post;
+
+		/*
+		for(var i=0; i<posts.length; i++) {
+			if(posts[i].postID == postID) {
+				posts[i].like++;
+			} 
+		}
+		*/
+
+		var newPosts = posts.map((post) => {
+			//post.postID === postID ?  {...post, like: post.like++} :  post
+
+			if (post.commentID === commentID) {
+				return { ...comments, like: ++comments.like }
+			}
+
+			return post
+		});
+
+
+		dispatch({
+			type: GET_INCREMENT4,
+			afterIncrement4: newPosts
+		})
+
+
+		console.log(newPosts);
+	}
+}

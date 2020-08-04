@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Tabs, Button, Avatar, Rate, List, Typography, Card, Space, } from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { HeartFilled, MessageFilled, ShareAltOutlined, MoreOutlined, EnvironmentFilled } from '@ant-design/icons';
-import Router from 'next/router'
+import router from 'next/router'
 
 
 
@@ -14,15 +14,12 @@ const { Text, Title } = Typography;
 const { Meta } = Card;
 const { TabPane } = Tabs;
 
-const IconText2 = ({ icon, Text, postID}) => (
-	<div onClick={() =>  Router.push({
+const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
+	<div onClick={() => {{ getIncrement2(postID); router.push({
 		pathname: '/comments',
-	  })
-	
-	
-	
-	
-	} style={{backgroundColor:"black"}} >
+	  }); }}  } style={{backgroundColor:"black"}} >
+		
+		
 		<Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -30,6 +27,10 @@ const IconText2 = ({ icon, Text, postID}) => (
 	</div>
 
 )
+
+ /*IconText2.then(router.push({
+	pathname: '/comments',
+  }))*/
 
 const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
 	<div onClick={() => { getIncrement1(postID) }}>
@@ -41,8 +42,8 @@ const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
 );
 
 const IconText1 = ({ icon, Text, postID, getIncrement3 }) => (
-	<div onClick={() => { getIncrement3(postID) }}>
-		<Space style={{ position: "relative", left: "25px", top: "-5px" }} size="middle" >
+	<div onClick={() => { getIncrement3(postID) } }>
+		<Space size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>

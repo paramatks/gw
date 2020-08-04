@@ -1,5 +1,5 @@
 import {
-	GET_STATE, GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3
+	GET_STATE, GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4
 } from '../_constants/action_types'
 
 import { HYDRATE } from 'next-redux-wrapper';
@@ -165,7 +165,7 @@ export const initialState = {
 
 
 	],
-	post: []
+	post: {}
 
 }
 
@@ -200,12 +200,18 @@ export default (state = initialState, action) => {
 		case GET_INCREMENT2:
 			return {
 				...state,
-				posts: action.afterIncrement2
+				post: action.afterIncrement2
 			}
 		case GET_INCREMENT3:
 			return {
 				...state,
 				posts: action.afterIncrement3
+
+			}
+		case GET_INCREMENT4:
+			return{
+				...state,
+				post: action.afterIncrement4
 
 			}
 		default:
