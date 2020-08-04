@@ -42,6 +42,7 @@ export const initialState = {
 					rating: 5,
 					content: "That look's great",
 					date: ' 2020-07-18',
+					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 					like: 2000,
 					comments: [
 						{
@@ -51,6 +52,7 @@ export const initialState = {
 							rating: 5,
 							content: "I agree",
 							date: '2020-07-19',
+							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 							like: 1500
 						},
 						{
@@ -60,6 +62,7 @@ export const initialState = {
 							rating: 4,
 							content: "I don't agree!",
 							date: '2020-07-19',
+							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 							like: 1000
 
 						}
@@ -72,6 +75,7 @@ export const initialState = {
 					rating: 4,
 					content: "That look's bad",
 					date: ' 2020-07-19',
+					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 					like: 500,
 				},
 				{
@@ -81,6 +85,7 @@ export const initialState = {
 					rating: 4,
 					content: "That look's awesome",
 					date: ' 2020-07-20',
+					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 					like: 2500,
 				},
 			]

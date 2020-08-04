@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
-import { Avatar, List, Comment, PageHeader, Row, Col, Card, Rating, Space } from 'antd';
+import { Avatar, List, Comment, PageHeader, Row, Col, Card, Rate, Space, Typography } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
 import { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3, getIncrement4 } from '../_actions/postsAction';
-import { ShareAltOutlined, HeartFilled, MessageFilled, } from '@ant-design/icons';
+import { ShareAltOutlined, HeartFilled, MessageFilled, EnvironmentFilled } from '@ant-design/icons';
 import { Formik } from 'formik'
 import * as Yup from 'yup';
 import { Form, Input, } from 'formik-antd';
 import ReactDOM from 'react-dom';
 
+const { Text, Title } = Typography;
 
 //const { Meta } = Card;
 //const listData = [];
@@ -45,7 +46,7 @@ const IconText1 = ({ icon, Text, postID, getIncrement3 }) => (
 
 const IconText4 = ({ icon, Text, commentID, getIncrement4 }) => (
 	<div onClick={() => { getIncrement4(commentID) }} style={{ backgroundColor: "orange" }} >
-		<Space  size="middle">
+		<Space size="middle">
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -81,6 +82,7 @@ function Comments(props) {
 
 				title="Post Details"
 			/>
+		
 
 			<List
 				itemLayout="vertical"
@@ -99,7 +101,10 @@ function Comments(props) {
 								<IconText2 icon={MessageFilled} Text={item.comments.length} postID={item.postID} getIncrement2={props.getIncrement2} key="list-vertical-like-o" />,
 								<IconText3 icon={HeartFilled} Text={item.like} postID={item.postID} getIncrement1={props.getIncrement1} key="list-vertical-message" />,
 							]}
+
 						>
+
+							<Rate style={{ position: "relative", left: '45px', top: '50px' }} value={item.rating} />
 
 							<List.Item.Meta
 								avatar={<Avatar src={item.avatar} />}
@@ -113,15 +118,10 @@ function Comments(props) {
 									gutter: 100
 
 								}}
-								style={{ position: "relative", left: '-10px', top: '20px' }}
-
+								style={{ position: "relative", left: '-10px', top: '10px' }}
 								dataSource={item.images}
 								renderItem={imageItem => (
 									<List.Item>
-
-
-
-
 										<img
 											src={imageItem.uri}
 											width={100}
@@ -129,10 +129,26 @@ function Comments(props) {
 											//style={{}}
 											alt="logo"
 										/>
-
 									</List.Item>
 								)}
 							/>
+							<List style={{ position: "relative", left: '0px', top: '10px' }} >
+								<EnvironmentFilled />
+								<Text style={{ position: "relative", left: '5px', top: '0px' }}>
+									{item.location}
+
+
+								</Text>
+							</List>
+
+
+
+							
+				<Text style={{ position: "relative", left: '175px', top: '-11px' }}>
+					{item.date}
+
+
+				</Text>
 
 							{/*<Comment
 	  					actions={[<span key="comment-nested-reply-to">Reply to</span>]}
@@ -205,7 +221,14 @@ function Comments(props) {
 								</Form.Item>
 							</Form>
 						*/}
+
 						</List.Item>
+						
+						
+
+
+
+
 					)
 				}}
 
@@ -214,6 +237,16 @@ function Comments(props) {
 
 
 			/>
+
+
+
+
+		
+
+
+
+
+
 
 			<List
 				dataSource={props.appAuthReducer.post[0].comments}
