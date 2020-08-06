@@ -1,5 +1,5 @@
 import fetchServer from '../lib/general/fetchServer'
-import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4 } from '../_constants/action_types';
+import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6 } from '../_constants/action_types';
 import comments from '../pages/comments';
 //import posts from '../components/posts';
 
@@ -173,7 +173,7 @@ export function getIncrement3(postID) {
 	}
 }
 
-export function getIncrement4(commentID) {
+export function getIncrement4(postID) {
 	return (dispatch, getState) => {
 		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
 		//var posts = [...getState().appAuthReducer.posts];
@@ -190,8 +190,8 @@ export function getIncrement4(commentID) {
 		var newPosts = posts.map((post) => {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
-			if (post.commentID === commentID) {
-				return { ...comments, like: ++comments.like }
+			if (post.postID === postID) {
+				return { ...post, like: ++post.like }
 			}
 
 			return post
@@ -207,3 +207,74 @@ export function getIncrement4(commentID) {
 		console.log(newPosts);
 	}
 }
+
+export function getIncrement5(postID) {
+	return (dispatch, getState) => {
+		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
+		//var posts = [...getState().appAuthReducer.posts];
+		var posts = getState().appAuthReducer.post;
+
+		/*
+		for(var i=0; i<posts.length; i++) {
+			if(posts[i].postID == postID) {
+				posts[i].like++;
+			} 
+		}
+		*/
+
+		var newPosts = posts.map((post) => {
+			//post.postID === postID ?  {...post, like: post.like++} :  post
+
+			if (post.postID === postID) {
+				return { ...post, shares: ++post.shares }
+			}
+
+			return post
+		});
+
+
+		dispatch({
+			type: GET_INCREMENT5,
+			afterIncrement5: newPosts
+		})
+
+
+		console.log(newPosts);
+	}
+}
+
+export function getIncrement6(commentid) {
+	return (dispatch, getState) => {
+		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
+		//var posts = [...getState().appAuthReducer.posts];
+		var posts = getState().appAuthReducer.post;
+
+		/*
+		for(var i=0; i<posts.length; i++) {
+			if(posts[i].postID == postID) {
+				posts[i].like++;
+			} 
+		}
+		*/
+
+		var newPosts = posts.map((comments) => {
+			//post.postID === postID ?  {...post, like: post.like++} :  post
+
+			if (commentid === commentid) {
+				return { ...post, like: ++comments.like }
+			}
+
+			return comments
+		});
+
+
+		dispatch({
+			type: GET_INCREMENT6,
+			afterIncrement6: newPosts
+		})
+
+
+		console.log(newPosts);
+	}
+}
+

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { Tabs, Row, Col, Typography, Carousel, Card, } from 'antd';
+import { Tabs, Row, Col, Typography, Carousel, Card, Button } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
 import Posts from '../components/posts';
 import { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3 } from '../_actions/postsAction';
 import { StickyContainer } from 'react-sticky';
+import { LoginOutlined } from '@ant-design/icons';
+import router from 'next/router'
 
 
 
@@ -12,12 +14,18 @@ import { StickyContainer } from 'react-sticky';
 
 
 const renderTabBar = (props, DefaultTabBar) => (
-	<Row justify="center" style={{ backgroundColor: 'gray' }} align="top" >
+	<Row justify="center" style={{ backgroundColor: 'gray' }} align="middle" >
 		<Col pull="4">
 			<Title strong="true" level={4}>  Logo </Title>
 		</Col>
 		<Col pull="2">
 			<DefaultTabBar {...props} />
+		</Col>
+		<Col push="3" style={{ backgroundColor: "orange" }}>
+			<button onClick={() => router.push('/login')}>
+				<LoginOutlined />
+			</button>
+
 		</Col>
 	</Row>
 );

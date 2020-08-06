@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Tabs, Button, Avatar, Rate, List, Typography, Card, Space, } from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
-import { HeartFilled, MessageFilled, ShareAltOutlined, MoreOutlined, EnvironmentFilled } from '@ant-design/icons';
+import { HeartFilled, MessageFilled, ShareAltOutlined, MoreOutlined, EnvironmentFilled, LoginOutlined } from '@ant-design/icons';
 import router from 'next/router'
 
 
@@ -15,11 +15,15 @@ const { Meta } = Card;
 const { TabPane } = Tabs;
 
 const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
-	<div onClick={() => {{ getIncrement2(postID); router.push({
-		pathname: '/comments',
-	  }); }}  } style={{backgroundColor:"black"}} >
-		
-		
+	<div onClick={() => {
+		{
+			getIncrement2(postID); router.push({
+				pathname: '/comments',
+			});
+		}
+	}} style={{ backgroundColor: "black" }} >
+
+
 		<Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -28,9 +32,9 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 
 )
 
- /*IconText2.then(router.push({
-	pathname: '/comments',
-  }))*/
+/*IconText2.then(router.push({
+   pathname: '/comments',
+ }))*/
 
 const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
 	<div onClick={() => { getIncrement1(postID) }}>
@@ -42,7 +46,7 @@ const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
 );
 
 const IconText1 = ({ icon, Text, postID, getIncrement3 }) => (
-	<div onClick={() => { getIncrement3(postID) } }>
+	<div onClick={() => { getIncrement3(postID) }}>
 		<Space size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -91,7 +95,7 @@ function Posts(props) {
 						key={item.author}
 						actions={[
 							<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} getIncrement3={props.getIncrement3} />,
-							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} style={{position: "relative", left: '50px', top:'0px'}} />,
+							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} style={{ position: "relative", left: '50px', top: '0px' }} />,
 							//<IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
 							<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} getIncrement1={props.getIncrement1} />
 
@@ -110,20 +114,20 @@ function Posts(props) {
 					>
 						<div
 							style={
-								//if type == 1 then we render 999, else then we render orange
-								(item.type == 1) ? { backgroundColor: '#999' } : { backgroundColor: 'orange' }
+								//if type == common then we render 999, else then we render orange
+								(item.type == "common") ? { backgroundColor: '#999' } : { backgroundColor: 'orange' }
 
 							}
 						>
 							<Rate style={{ position: "relative", left: '55px', top: '30px' }} value={item.rating} />
 
-							<Button type="text" size="small" style={{ position: "relative", left: '80px', top: '3px' }} >
+							<Button type="text" size="small" style={{ position: "relative", left: '55px', top: '3px' }} >
 								<Text > + Friend</Text>
 							</Button>
-							<Button type="text" size="small" style={{ position: "relative", left: '70px', top: '3px' }} >
+							<Button type="text" size="small" style={{ position: "relative", left: '45px', top: '3px' }} >
 								<Text > + Follow</Text>
 							</Button>
-							<Button type="link" style={{ position: "relative", left: '55px', top: '5px' }} icon={<MoreOutlined style={{ color: 'gray' }} />} />
+							<Button type="link" style={{ position: "relative", left: '30px', top: '5px' }} icon={<MoreOutlined style={{ color: 'gray' }} />} />
 
 
 							<List.Item.Meta style={{ position: "relative", left: '10px', top: '-25px' }}
@@ -182,7 +186,7 @@ function Posts(props) {
 
 							<List style={{ position: "relative", left: '175px', top: '-27px' }} >
 
-								<Text style={{ position: "relative", left: '0px', top: '0px' }}>
+								<Text style={{ position: "relative", left: '50px', top: '0px' }}>
 									{item.date}
 
 
