@@ -2,9 +2,11 @@ import { Form, Input, Button, Checkbox, Grid, Tag, Row, Col, Layout, Space, List
 import CloseOutlined from '@ant-design/icons';
 import Head from 'next/head';
 import { connect } from "react-redux"
+import { useDispatch } from 'react-redux';
+import {setLoginstate} from '../_actions/postsAction';
 
 
-function Mockup(props) {
+function Login(props) {
     return (
         <>
             <Head>
@@ -46,7 +48,7 @@ function Mockup(props) {
             <Row justify="center" align="bottom" /*style={{ width: '100%' }}*/>
 
                 <Col flex="auto">
-                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' }, { backgroundColor: 'gray' }, { position: "relative", left: '0px', top: '0px' }}>
+                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' }, { backgroundColor: 'gray' }, { position: "relative", left: '0px', top: '0px' }}  onClick={() => { props.setLoginstate() }}>
                         Continue with LINE
             </Button>
                 </Col>
@@ -87,4 +89,4 @@ function Mockup(props) {
 
     )
 }
-export default connect(state => state,)(Mockup);
+export default connect(state => state,{setLoginstate})(Login);

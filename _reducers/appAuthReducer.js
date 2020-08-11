@@ -1,11 +1,13 @@
 import {
-	GET_STATE, GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6
+	GET_STATE, GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE
 } from '../_constants/action_types'
 
 import { HYDRATE } from 'next-redux-wrapper';
-import { date } from 'yup';
+//import * as t from './actionTypes';
+
 
 export const initialState = {
+	isLoggedIn: false,
 	isLoggingIn: false,
 	isLoggingOut: false,
 	isVerifying: false,
@@ -225,9 +227,14 @@ export default (state = initialState, action) => {
 				post: action.afterIncrement5
 			}
 		case GET_INCREMENT6:
-			return{
+			return {
 				...state,
 				post: action.afterIncrement6
+			}
+		case SET_LOGIN_STATE:
+			return {
+				...state,
+				isLoggedIn: action.isLoggedInaction
 			}
 		default:
 			return { ...state };

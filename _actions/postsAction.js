@@ -1,9 +1,14 @@
 import fetchServer from '../lib/general/fetchServer'
-import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6 } from '../_constants/action_types';
-import comments from '../pages/comments';
+import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE } from '../_constants/action_types';
+import appAuthReducer from '../_reducers/appAuthReducer';
+//import comments from '../pages/comments';
 //import posts from '../components/posts';
+import router from 'next/router'
 
-const comment = 
+
+
+
+{/*const comment = 
 	{
 		commentid: '',
 		author: '',
@@ -12,7 +17,7 @@ const comment =
 		content: '',
 		date: '',
 		like: '',
-	}
+	}*/}
 
 
 
@@ -120,16 +125,16 @@ export function getIncrement2(aaa) {
 		var newPosts = posts.filter((post) => {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
-			if (post.postID === aaa) 
-			
-			/*{
-				post.comments.reverse() 
-			}*/
-			//console.log("post",post)
-			
-			return post 
+			if (post.postID === aaa)
+
+				/*{
+					post.comments.reverse() 
+				}*/
+				//console.log("post",post)
+
+				return post
 		});
-		console.log("hi",newPosts)
+		console.log("hi", newPosts)
 
 		dispatch({
 			type: GET_INCREMENT2,
@@ -247,7 +252,7 @@ export function getIncrement6(commentid) {
 	return (dispatch, getState) => {
 		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
 		//var posts = [...getState().appAuthReducer.posts];
-		var posts = getState().appAuthReducer.post;
+		var posts = getState().appAuthReducer.post[0].comments;
 
 		/*
 		for(var i=0; i<posts.length; i++) {
@@ -260,8 +265,8 @@ export function getIncrement6(commentid) {
 		var newPosts = posts.map((comments) => {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
-			if (commentid === commentid) {
-				return { ...post, like: ++comments.like }
+			if (comments.commentid === commentid) {
+				return { ...comments, like: ++comments.like }
 			}
 
 			return comments
@@ -277,4 +282,22 @@ export function getIncrement6(commentid) {
 		console.log(newPosts);
 	}
 }
+export function setLoginstate() {
+	return (dispatch, getState) => {
+		
+		//var login = getState().appAuthReducer.isLoggedIn
+
+		//var newLogin= (login=true) //(login.isLoggedIn=true)
+		
+		
+		dispatch({
+			type: SET_LOGIN_STATE,
+			isLoggedInaction: true
+		})
+		router.push({
+			pathname: '/gwindex',
+		});
+	}
+}
+
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, componentDidMount } from 'react';
 import { Tabs, Row, Col, Typography, Carousel, Card, Button } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
@@ -7,10 +7,9 @@ import { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncreme
 import { StickyContainer } from 'react-sticky';
 import { LoginOutlined } from '@ant-design/icons';
 import router from 'next/router'
-
-
-
-
+//import Link from 'next/link'
+//import { useRouter } from 'next/router'
+//import { withRouter } from 'next/router'
 
 
 const renderTabBar = (props, DefaultTabBar) => (
@@ -25,7 +24,6 @@ const renderTabBar = (props, DefaultTabBar) => (
 			<button onClick={() => router.push('/login')}>
 				<LoginOutlined />
 			</button>
-
 		</Col>
 	</Row>
 );
@@ -40,57 +38,17 @@ const { Meta } = Card;
 const { TabPane } = Tabs;
 
 
+function Gwindex(props) {
 
+	useEffect(() => {
+		const isLoggedin = props.appAuthReducer.isLoggedIn;
 
-
-
-
-const Gwindex = (props) => {
-
-	//useEffect(() => {
-	// use the getPopularPosts action to init the data
-	//props.getPopularPosts();
-	//props.getNewDemand();
-
-	//}, []);
-
-
-	//function callback(activeKey) {
-	//console.log(activeKey);
-	//props.getNewDemand();
-	//if (activeKey == 2) {
-	//props.getNewDemand();
-	//} else if (activeKey == 1) {
-	//  props.getPopularPosts();
-
-	// }
-
-	// }
-
-
-
-
-
-	const test = () => {
-		console.log("this is a test")
-	}
-
-
-	/*useCallback(() => {
-	    
-	 
-		 useEffect(() => {
-		  props.getNewDemand();
-    
-    
-		 }, []);
-			 
-		   },
-		   
-		   [],
-	); */
-
-
+		if (isLoggedin == false) {
+			router.push({
+				pathname: '/login',
+			})
+		}
+	}, [])
 
 	return (
 		<>
@@ -130,12 +88,18 @@ const Gwindex = (props) => {
 					</TabPane>
 
 				</Tabs>
-			</StickyContainer>,
-
+			</StickyContainer>
 
 		</>
 	)
+
 }
+
+
+
+
+
+
 
 
 export default connect(state => state, { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3 })(Gwindex);
