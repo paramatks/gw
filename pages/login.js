@@ -1,16 +1,27 @@
+import {useEffect} from 'react';
 import { Form, Input, Button, Checkbox, Grid, Tag, Row, Col, Layout, Space, List, PageHeader } from 'antd';
 import CloseOutlined from '@ant-design/icons';
 import Head from 'next/head';
 import { connect } from "react-redux"
 import { useDispatch } from 'react-redux';
 import {setLoginstate} from '../_actions/postsAction';
+import liff from '@line/liff';
 
 
 function Login(props) {
+
+    useEffect(() =>{
+        liff.init({ liffId: '1654691017-Vb7OE34O' });
+        if (!liff.isLoggedIn()) {
+            // set `redirectUri` to redirect the user to a URL other than the endpoint URL of your LIFF app.
+            liff.login({redirectUri: 'https://beta.vtra.app/gwindex'});
+        }
+    }, []);
+
     return (
         <>
             <Head>
-                <title>We Work</title>
+                <title>GoodWork</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 

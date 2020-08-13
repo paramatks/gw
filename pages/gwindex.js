@@ -1,6 +1,7 @@
 import React, { useEffect, useState, componentDidMount } from 'react';
 import { Tabs, Row, Col, Typography, Carousel, Card, Button } from 'antd';
 import Head from 'next/head'
+import authWrapper from '../components/general/authWrapper'
 import { connect } from "react-redux"
 import Posts from '../components/posts';
 import { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3 } from '../_actions/postsAction';
@@ -41,13 +42,15 @@ const { TabPane } = Tabs;
 function Gwindex(props) {
 
 	useEffect(() => {
+        /*
 		const isLoggedin = props.appAuthReducer.isLoggedIn;
 
 		if (isLoggedin == false) {
 			router.push({
 				pathname: '/login',
 			})
-		}
+        }
+        */
 	}, [])
 
 	return (
@@ -102,4 +105,4 @@ function Gwindex(props) {
 
 
 
-export default connect(state => state, { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3 })(Gwindex);
+export default connect(state => state, { getPopularPosts, getNewDemand, getIncrement1, getIncrement2, getIncrement3 })(authWrapper(Gwindex));
