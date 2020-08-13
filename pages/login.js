@@ -10,14 +10,12 @@ import {setLoginstate} from '../_actions/postsAction';
 function Login(props) {
 
     useEffect(() =>{
-        liff.init({ liffId: '1654691017-Vb7OE34O' });
-        /*
-        if (!liff.isLoggedIn()) {
-            // set `redirectUri` to redirect the user to a URL other than the endpoint URL of your LIFF app.
-            liff.login({redirectUri: 'https://beta.vtra.app/gwindex'});
-        }
-        */
+        window.addEventListener('load', initializeLiff);
     }, []);
+
+    const initializeLiff = () => {
+        liff.init({ liffId: '1654691017-Vb7OE34O' });
+    };
 
     return (
         <>
