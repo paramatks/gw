@@ -234,7 +234,7 @@ export default (state = initialState, action) => {
 		case SET_LOGIN_STATE:
 			return {
 				...state,
-				isLoggedIn: action.isLoggedInaction
+				isAuthenticated: action.isLoggedInaction
 			}
 		default:
 			return { ...state };

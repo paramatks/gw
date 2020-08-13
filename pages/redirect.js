@@ -20,7 +20,8 @@ function Login(props) {
             console.log("Line logged in", liff.isLoggedIn());
             if (liff.isLoggedIn()) {
                 props.setLoginstate();
-                Router.push('/gwindex');
+            } else {
+                Router.push('/login');
             }
         })
     };
