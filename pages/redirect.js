@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 import { useDispatch } from 'react-redux';
 import { setLoginstate } from '../_actions/postsAction';
 import SpinComponent from '../components/general/SpinComponent'
-import { Router } from 'next/router';
+import Router from 'next/router';
 
 
 function Login(props) {
