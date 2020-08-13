@@ -9,7 +9,7 @@ import SpinComponent from '../components/general/SpinComponent'
 import Router from 'next/router';
 
 
-function Login(props) {
+function Redirect(props) {
     useEffect(() => {
         window.addEventListener('load', initializeLiff);
     }, []);
@@ -29,7 +29,7 @@ function Login(props) {
     return (
         <>
             <Head>
-                <title>GoodWork</title>
+                <title>GoodWork Redirect</title>
                 <link rel="icon" href="/favicon.ico" />
                 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
             </Head>
@@ -37,4 +37,4 @@ function Login(props) {
         </>)
 
 }
-export default connect(state => state, { setLoginstate })(Login);
+export default connect(state => state, { setLoginstate })(Redirect);
