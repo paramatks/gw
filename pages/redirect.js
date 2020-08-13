@@ -10,10 +10,10 @@ import { Router } from 'next/router';
 
 
 function Login(props) {
-
     useEffect(() => {
         liff.init({ liffId: '1654691017-Vb7OE34O' })
         .then(() => {
+            console.log("Line logged in", liff.isLoggedIn());
             if (liff.isLoggedIn()) {
                 props.setLoginstate();
                 Router.push('/gwindex');
