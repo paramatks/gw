@@ -10,13 +10,7 @@ import {setLoginstate} from '../_actions/postsAction';
 function Login(props) {
 
     useEffect(() =>{
-        liff.init({ liffId: '1654691017-Vb7OE34O' })
-        .then(() => {
-            if (!liff.isLoggedIn()) {
-                // set `redirectUri` to redirect the user to a URL other than the endpoint URL of your LIFF app.
-                liff.login({redirectUri: 'https://beta.vtra.app/gwindex'});
-            }
-        })
+        liff.init({ liffId: '1654691017-Vb7OE34O' });
         /*
         if (!liff.isLoggedIn()) {
             // set `redirectUri` to redirect the user to a URL other than the endpoint URL of your LIFF app.
@@ -67,7 +61,7 @@ function Login(props) {
             <Row justify="center" align="bottom" /*style={{ width: '100%' }}*/>
 
                 <Col flex="auto">
-                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' }, { backgroundColor: 'gray' }, { position: "relative", left: '0px', top: '0px' }}  onClick={() => { props.setLoginstate() }}>
+                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' }, { backgroundColor: 'gray' }, { position: "relative", left: '0px', top: '0px' }}  onClick={() => { liff.login({redirectUri: 'https://beta.vtra.app/redirect'}); }}>
                         Continue with LINE
             </Button>
                 </Col>
