@@ -145,7 +145,7 @@ function Comments(props) {
 										gutter: 160
 
 									}}
-									style={{ position: "relative", left: '-20px', top: '0px' }}
+									style={{ position: "relative", left: '-15px', top: '0px' }}
 									dataSource={item.images}
 									renderItem={imageItem => (
 										<List.Item>

@@ -4,6 +4,7 @@ import appAuthReducer from '../_reducers/appAuthReducer';
 //import comments from '../pages/comments';
 //import posts from '../components/posts';
 import router from 'next/router'
+import comments from '../pages/comments';
 
 
 
@@ -248,12 +249,12 @@ export function getIncrement5(postID) {
 	}
 }
 
-export function getIncrement6(commentid) {
+export function getIncrement6(commentID) {
 	return (dispatch, getState) => {
 		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
 		//var posts = [...getState().appAuthReducer.posts];
-		var posts = getState().appAuthReducer.post[0].comments;
-
+		//var posts = getState().appAuthReducer.post[0].comments;
+		var posts = getState().appAuthReducer.post
 		/*
 		for(var i=0; i<posts.length; i++) {
 			if(posts[i].postID == postID) {
@@ -262,16 +263,26 @@ export function getIncrement6(commentid) {
 		}
 		*/
 
-		var newPosts = posts.map((comments) => {
+		/*var newPosts = posts.map((comments) => {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
-			if (comments.commentid === commentid) {
+			if (comments.commentid === commentID) {
 				return { ...comments, like: ++comments.like }
 			}
 
 			return comments
-		});
+		});*/
 
+		var newPosts = posts.map((post) => {
+
+			if (post.comments.commentid === commentID) {
+				return { ...post, like: ++comments.like }
+
+			}
+
+			return post
+
+		})
 
 		dispatch({
 			type: GET_INCREMENT6,
@@ -284,12 +295,12 @@ export function getIncrement6(commentid) {
 }
 export function setLoginstate() {
 	return (dispatch, getState) => {
-		
+
 		//var login = getState().appAuthReducer.isLoggedIn
 
 		//var newLogin= (login=true) //(login.isLoggedIn=true)
-		
-		
+
+
 		dispatch({
 			type: SET_LOGIN_STATE,
 			isLoggedInaction: true
