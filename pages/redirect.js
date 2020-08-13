@@ -11,7 +11,16 @@ import Router from 'next/router';
 
 function Redirect(props) {
     useEffect(() => {
-        window.addEventListener('load', initializeLiff);
+        //window.addEventListener('load', initializeLiff);
+        liff.init({ liffId: '1654691017-Vb7OE34O' })
+        .then(() => {
+            console.log("Line logged in", liff.isLoggedIn());
+            if (liff.isLoggedIn()) {
+                props.setLoginstate();
+            } else {
+                Router.push('/login');
+            }
+        })
     }, []);
 
     const initializeLiff = () => {
