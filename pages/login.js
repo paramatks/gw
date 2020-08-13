@@ -5,7 +5,6 @@ import Head from 'next/head';
 import { connect } from "react-redux"
 import { useDispatch } from 'react-redux';
 import {setLoginstate} from '../_actions/postsAction';
-import liff from '@line/liff';
 
 
 function Login(props) {
@@ -23,6 +22,7 @@ function Login(props) {
             <Head>
                 <title>GoodWork</title>
                 <link rel="icon" href="/favicon.ico" />
+                <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
             </Head>
 
             <PageHeader //style={{ backgroundColor: "gray" }}
