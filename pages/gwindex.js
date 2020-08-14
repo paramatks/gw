@@ -4,7 +4,7 @@ import Head from 'next/head'
 import authWrapper from '../components/general/authWrapper'
 import { connect } from "react-redux"
 import Posts from '../components/posts';
-import { getPopularPosts, getNewDemand, setLikeIncrement, getIncrement2, setShareIncrement } from '../_actions/postsAction';
+import { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement2 } from '../_actions/postsAction';
 import { StickyContainer } from 'react-sticky';
 import { LoginOutlined } from '@ant-design/icons';
 import router from 'next/router'
@@ -105,4 +105,4 @@ function Gwindex(props) {
 
 
 
-export default connect(state => state, { getPopularPosts, getNewDemand, setLikeIncrement, getIncrement2, setShareIncrement })(authWrapper(Gwindex));
+export default connect(state => state, { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement2 })(authWrapper(Gwindex));

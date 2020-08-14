@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Avatar, List, Comment, PageHeader, Row, Col, Card, Rate, Space, Typography } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
-import { getPopularPosts, getNewDemand, setLikeIncrement, getIncrement2, setShareIncrement, getIncrement4, getIncrement5, getIncrement6 } from '../_actions/postsAction';
+import { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement5, getIncrement6 } from '../_actions/postsAction';
 import { ShareAltOutlined, HeartFilled, MessageFilled, EnvironmentFilled } from '@ant-design/icons';
 import { Formik } from 'formik'
 import * as Yup from 'yup';
@@ -26,8 +26,8 @@ const { Text, Title } = Typography;
 	</div>
 );*/
 
-const IconText3 = ({ icon, Text, postID, getIncrement4 }) => (
-	<div onClick={() => { getIncrement4(postID) }} style={{ position: "relative", left: "65px", top: "-45px" }}  >
+const IconText3 = ({ icon, Text, postID, setCommentLikeIncrement }) => (
+	<div onClick={() => { setCommentLikeIncrement(postID) }} style={{ position: "relative", left: "65px", top: "-45px" }}  >
 		<Space style={{ backgroundColor: "purple" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -115,7 +115,7 @@ function Comments(props) {
 							actions={[
 								<IconText1 icon={ShareAltOutlined} Text={item.shares} postID={item.postID} getIncrement5={props.getIncrement5} key="list-vertical-star-o" />,
 								/*<IconText2 icon={MessageFilled} Text={item.comments} postID={item.postID} getIncrement2={props.getIncrement2} key="list-vertical-like-o" />,*/
-								<IconText3 icon={HeartFilled} Text={item.like} postID={item.postID} getIncrement4={props.getIncrement4} key="list-vertical-message" />,
+								<IconText3 icon={HeartFilled} Text={item.like} postID={item.postID} setCommentLikeIncrement={props.setCommentLikeIncrement} key="list-vertical-message" />,
 							]}
 						>
 
@@ -301,4 +301,4 @@ function Comments(props) {
 
 }
 
-export default connect(state => state, { getPopularPosts, getNewDemand, setLikeIncrement, getIncrement2, setShareIncrement, getIncrement4, getIncrement5, getIncrement6 })(Comments);
+export default connect(state => state, { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement5, getIncrement6 })(Comments);

@@ -1,5 +1,5 @@
 import fetchServer from '../lib/general/fetchServer'
-import { GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, GET_INCREMENT2, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE, SET_SHARE_INCREMENT } from '../_constants/action_types';
+import { GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, SET_COMMENT_LIKE_INCREMENT, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE, SET_SHARE_INCREMENT, GET_INCREMENT2 } from '../_constants/action_types';
 //import appAuthReducer from '../_reducers/appAuthReducer';
 //import comments from '../pages/comments';
 //import posts from '../components/posts';
@@ -115,22 +115,22 @@ export function getIncrement2(aaa) {
 		//var posts = [...getState().appAuthReducer.posts];
 		var posts = getState().appAuthReducer.posts;
 
-		/*
-		for(var i=0; i<posts.length; i++) {
+		
+		/*for(var i=0; i<posts.length; i++) {
 			if(posts[i].postID == postID) {
 				posts[i].like++;
 			} 
-		}
-		*/
+		}*/
+		
 
 		var newPosts = posts.filter((post) => {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
 			if (post.postID === aaa)
 
-				/*{
+				{
 					post.comments.reverse() 
-				}*/
+				}
 				//console.log("post",post)
 
 				return post
@@ -179,7 +179,7 @@ export function setShareIncrement(postID) {
 	}
 }
 
-export function getIncrement4(postID) {
+export function setCommentLikeIncrement(postID) {
 	return (dispatch, getState) => {
 		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
 		//var posts = [...getState().appAuthReducer.posts];
@@ -205,8 +205,8 @@ export function getIncrement4(postID) {
 
 
 		dispatch({
-			type: GET_INCREMENT4,
-			afterIncrement4: newPosts
+			type: SET_COMMENT_LIKE_INCREMENT,
+			afterSetCommentLikeIncrement: newPosts
 		})
 
 
