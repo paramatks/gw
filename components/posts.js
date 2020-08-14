@@ -36,8 +36,8 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
    pathname: '/comments',
  }))*/
 
-const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
-	<div onClick={() => { getIncrement1(postID) }}>
+const IconText3 = ({ icon, Text, postID, setLikeIncrement }) => (
+	<div onClick={() => { setLikeIncrement(postID) }}>
 		<Space style={{ position: "relative", left: "75px", top: "-5px" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -45,8 +45,8 @@ const IconText3 = ({ icon, Text, postID, getIncrement1 }) => (
 	</div>
 );
 
-const IconText1 = ({ icon, Text, postID, getIncrement3 }) => (
-	<div onClick={() => { getIncrement3(postID) }}>
+const IconText1 = ({ icon, Text, postID, setShareIncrement }) => (
+	<div onClick={() => { setShareIncrement(postID) }}>
 		<Space size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -94,10 +94,10 @@ function Posts(props) {
 
 						key={item.author}
 						actions={[
-							<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} getIncrement3={props.getIncrement3} />,
+							<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />,
 							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} style={{ position: "relative", left: '50px', top: '0px' }} />,
 							//<IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
-							<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} getIncrement1={props.getIncrement1} />
+							<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 
 						]}
 					//extra={

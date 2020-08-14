@@ -1,5 +1,5 @@
 import fetchServer from '../lib/general/fetchServer'
-import { GET_POPULAR, GET_NEWDEMAND, GET_INCREMENT1, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE } from '../_constants/action_types';
+import { GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE, SET_SHARE_INCREMENT } from '../_constants/action_types';
 import appAuthReducer from '../_reducers/appAuthReducer';
 //import comments from '../pages/comments';
 //import posts from '../components/posts';
@@ -73,7 +73,7 @@ export function getNewDemand() {
 	}
 }
 
-export function getIncrement1(postID) {
+export function setLikeIncrement(postID) {
 	return (dispatch, getState) => {
 		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
 		//var posts = [...getState().appAuthReducer.posts];
@@ -99,7 +99,7 @@ export function getIncrement1(postID) {
 
 
 		dispatch({
-			type: GET_INCREMENT1,
+			type: SET_LIKE_INCREMENT,
 			afterIncrement: newPosts
 		})
 
@@ -144,7 +144,7 @@ export function getIncrement2(aaa) {
 	}
 }
 
-export function getIncrement3(postID) {
+export function setShareIncrement(postID) {
 	return (dispatch, getState) => {
 		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
 		//var posts = [...getState().appAuthReducer.posts];
@@ -170,8 +170,8 @@ export function getIncrement3(postID) {
 
 
 		dispatch({
-			type: GET_INCREMENT3,
-			afterIncrement3: newPosts
+			type: SET_SHARE_INCREMENT,
+			afteSetShareIncrement: newPosts
 		})
 
 
