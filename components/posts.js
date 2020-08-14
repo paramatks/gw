@@ -21,7 +21,7 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 				pathname: '/comments',
 			});
 		}
-	}} style={{ backgroundColor: "black" }} >
+	}} /*style={{ backgroundColor: "black" }}*/ >
 
 
 		<Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >

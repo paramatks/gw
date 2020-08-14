@@ -1,10 +1,10 @@
 import fetchServer from '../lib/general/fetchServer'
-import { GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, GET_INCREMENT2, GET_INCREMENT3, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE, SET_SHARE_INCREMENT } from '../_constants/action_types';
-import appAuthReducer from '../_reducers/appAuthReducer';
+import { GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, GET_INCREMENT2, GET_INCREMENT4, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE, SET_SHARE_INCREMENT } from '../_constants/action_types';
+//import appAuthReducer from '../_reducers/appAuthReducer';
 //import comments from '../pages/comments';
 //import posts from '../components/posts';
 import router from 'next/router'
-import comments from '../pages/comments';
+//import comments from '../pages/comments';
 
 
 
@@ -100,7 +100,7 @@ export function setLikeIncrement(postID) {
 
 		dispatch({
 			type: SET_LIKE_INCREMENT,
-			afterIncrement: newPosts
+			afterSetLikeIncrement: newPosts
 		})
 
 
@@ -171,7 +171,7 @@ export function setShareIncrement(postID) {
 
 		dispatch({
 			type: SET_SHARE_INCREMENT,
-			afteSetShareIncrement: newPosts
+			afterSetShareIncrement: newPosts
 		})
 
 

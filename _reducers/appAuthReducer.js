@@ -202,7 +202,7 @@ export default (state = initialState, action) => {
 		case SET_LIKE_INCREMENT:
 			return {
 				...state,
-				posts: action.afterIncrement
+				posts: action.afterSetLikeIncrement
 			}
 		case GET_INCREMENT2:
 			return {

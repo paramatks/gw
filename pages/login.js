@@ -59,7 +59,7 @@ function Login(props) {
             <Row justify="center" align="bottom" /*style={{ width: '100%' }}*/>
 
                 <Col flex="auto">
-                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' }, { backgroundColor: 'gray' }, { position: "relative", left: '0px', top: '0px' }}  onClick={() => { liff.login({redirectUri: 'https://beta.vtra.app/redirect'}); }}>
+                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white' }, { backgroundColor: 'gray' }, { position: "relative", left: '0px', top: '0px' }}  onClick={() => { props.setLoginstate() /*liff.login({redirectUri: 'https://beta.vtra.app/redirect'});*/ }}>
                         Continue with LINE
             </Button>
                 </Col>

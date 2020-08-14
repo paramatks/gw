@@ -83,11 +83,11 @@ function Gwindex(props) {
 							</div>
 						</Carousel>
 
-						<Posts postlist={props.appAuthReducer.posts} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3} />
+						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 
 					<TabPane tab="New Demand" key="2">
-						<Posts postlist={props.appAuthReducer.posts} getIncrement1={props.getIncrement1} getIncrement2={props.getIncrement2} getIncrement3={props.getIncrement3} />
+						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 
 				</Tabs>
