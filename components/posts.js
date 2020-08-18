@@ -120,9 +120,9 @@ function Posts(props) {
 						>
 
 
-							<Row style={{backgroundColor:" grey"}}>
+							<Row style={{backgroundColor:" grey"}} align="middle">
 								<Col span={2} push={0}>
-									<List.Item.Meta //style={{ position: "relative", left: '10px', top: '-25px' }}
+									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{padding:'10%'}}
 										avatar={<Avatar src={item.avatar} />}
 
 									//description={item.description}
