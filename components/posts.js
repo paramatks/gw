@@ -21,10 +21,10 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 				pathname: '/comments',
 			});
 		}
-	}} /*style={{ backgroundColor: "black" }}*/ >
+	}}  >
 
 
-		<Space style={{ position: "relative", left: "0px", top: "-5px" }} size="middle" >
+		<Space  size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -32,13 +32,11 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 
 )
 
-/*IconText2.then(router.push({
-   pathname: '/comments',
- }))*/
+
 
 const IconText3 = ({ icon, Text, postID, setLikeIncrement }) => (
 	<div onClick={() => { setLikeIncrement(postID) }}>
-		<Space style={{ position: "relative", left: "0px", top: "-5px" }} size="middle" >
+		<Space size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -47,8 +45,8 @@ const IconText3 = ({ icon, Text, postID, setLikeIncrement }) => (
 
 const IconText1 = ({ icon, Text, postID, setShareIncrement }) => (
 	<div onClick={() => { setShareIncrement(postID) }}>
-		<Space size="middle" style={{ position: "relative", left: "0px", top: "-5px" }} >
-			{React.createElement(icon)}
+		<Space size="middle">
+			{React.createElement(icon) }
 			{Text}
 		</Space>
 	</div>
@@ -90,39 +88,26 @@ function Posts(props) {
 			renderItem={item => {
 				//console.log(props);
 				return (
-					<List.Item 
+					<List.Item
 						key={item.author}
-						actions={[
-							<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />,
-							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />,
-							//<IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
-							<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
-
-						]}
-					//extra={
-					//<img
-					//src= {item.images}                                  
-					//width={272}
-					//style={{position:"relative", left: '0px', top: '50px'}}
-					//alt="logo"
-					//src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-					///>
-					//} 
-
 
 					>
-						<div style={{borderStyle:"solid",borderWidth:"thin",borderColor:"black",backgroundColor:'#d3d3d3'}}
-							/*{
-								//if type == common then we render 999, else then we render orange
-								(item.type == "common") ? { backgroundColor: '#d3d3d3' } : { backgroundColor: '#d3d3d3' }
 
-							}*/
+
+
+
+						<div style={{ borderStyle: "solid", borderWidth: "thin", borderColor: "black", backgroundColor: '#d3d3d3' }}
+						/*{
+							//if type == common then we render 999, else then we render orange
+							(item.type == "common") ? { backgroundColor: '#d3d3d3' } : { backgroundColor: '#d3d3d3' }
+
+						}*/
 						>
 
 
-							<Row style={{backgroundColor:" grey"}} align="middle">
+							<Row style={{ backgroundColor: " grey" }} align="middle">
 								<Col span={2} push={0}>
-									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{padding:'10%'}}
+									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ padding: '10%' }}
 										avatar={<Avatar src={item.avatar} />}
 
 									//description={item.description}
@@ -167,7 +152,7 @@ function Posts(props) {
 									<Button type="link" /*style={{ position: "relative", left: '20px', top: '5px' }}*/ icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
-							<Row style={{padding:'4%'}} >
+							<Row style={{ padding: '4%' }} >
 								<Col>
 									<Text >
 										{item.content}
@@ -230,6 +215,19 @@ function Posts(props) {
 							</List>
 
 						</div>
+						<>
+							<Row style={{ width: '100%', backgroundColor:"gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
+								<Col span="8" style={{padding:"0.5em"}} >
+									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
+								</Col>
+								<Col span="8" style={{padding:"0.5em"}} push="1" >
+									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
+								</Col>
+								<Col span="8" style={{padding:"0.5em"}} >
+									<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
+								</Col>
+							</Row>
+						</>
 					</List.Item>
 				)
 			}}
