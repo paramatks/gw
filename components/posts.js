@@ -90,7 +90,7 @@ function Posts(props) {
 			renderItem={item => {
 				//console.log(props);
 				return (
-					<List.Item
+					<List.Item 
 						key={item.author}
 						actions={[
 							<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />,
@@ -111,12 +111,12 @@ function Posts(props) {
 
 
 					>
-						<div
-							style={
+						<div style={{borderStyle:"solid",borderWidth:"thin",borderColor:"black",backgroundColor:'#d3d3d3'}}
+							/*{
 								//if type == common then we render 999, else then we render orange
 								(item.type == "common") ? { backgroundColor: '#d3d3d3' } : { backgroundColor: '#d3d3d3' }
 
-							}
+							}*/
 						>
 
 
@@ -167,9 +167,9 @@ function Posts(props) {
 									<Button type="link" /*style={{ position: "relative", left: '20px', top: '5px' }}*/ icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
-							<Row >
-								<Col push={1}>
-									<Text>
+							<Row style={{padding:'4%'}} >
+								<Col>
+									<Text >
 										{item.content}
 									</Text>
 								</Col>

@@ -14,16 +14,16 @@ import router from 'next/router'
 
 
 const renderTabBar = (props, DefaultTabBar) => (
-	<Row justify="center" style={{ backgroundColor: 'gray' }} align="middle" >
+	<Row justify="center"  style={{backgroundColor:"gray", height:'4em'}} align="middle"  >
 		<Col pull="3">
-			<Title strong="true" level={4}>  Logo </Title>
+			<Title style={{fontSize:'1.5em',height:"3.5em"}}>  Logo </Title>
 		</Col>
-		<Col pull="-3">
-			<DefaultTabBar {...props} />
+		<Col  >
+			<DefaultTabBar {...props}  />
 		</Col>
-		<Col push="3" style={{ backgroundColor: "orange" }}>
-			<button onClick={() => router.push('/login')}>
-				<LoginOutlined />
+		<Col push="3" style={{ backgroundColor: "gray" , height:"6em"}}>
+			<button onClick={() => router.push('/login')} >
+				<LoginOutlined  style={{fontSize:'1em'}}/>
 			</button>
 		</Col>
 	</Row>
@@ -67,7 +67,7 @@ function Gwindex(props) {
 				<Tabs type="card" defaultActiveKey="1" /*onChange={callback}*/ renderTabBar={renderTabBar} >
 
 
-					<TabPane tab="Popular" key="1"   >
+					<TabPane /*tab="Popular"*/ tab={<span style={{fontSize:14.5, height:"5.5em"}}>Popular</span>} key="1"  >
 
 						<Carousel autoplay={true} dots={false} style={{ position: "relative", left: '0px', top: '0px' }} >
 							<div>
@@ -86,7 +86,7 @@ function Gwindex(props) {
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 
-					<TabPane tab="New Demand" key="2" /*style={{backgroundColor: "orange"}}*/ >
+					<TabPane /*tab="New Demand"*/  tab={<span style={{fontSize:14.5, height:"5.5em"}}>New Demand</span>} key="2" /*style={{backgroundColor: "orange"}}*/ >
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 
