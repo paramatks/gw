@@ -15,10 +15,10 @@ import router from 'next/router'
 
 const renderTabBar = (props, DefaultTabBar) => (
 	<Row justify="center" style={{ backgroundColor: 'gray' }} align="middle" >
-		<Col pull="4">
+		<Col pull="3">
 			<Title strong="true" level={4}>  Logo </Title>
 		</Col>
-		<Col pull="2">
+		<Col pull="-3">
 			<DefaultTabBar {...props} />
 		</Col>
 		<Col push="3" style={{ backgroundColor: "orange" }}>
@@ -62,9 +62,9 @@ function Gwindex(props) {
 			</Head>
 
 
-			<StickyContainer>
+			<StickyContainer /*style={{backgroundColor: "orange"}}*/>
 
-				<Tabs type="card" defaultActiveKey="1" /*onChange={callback}*/ renderTabBar={renderTabBar}>
+				<Tabs type="card" defaultActiveKey="1" /*onChange={callback}*/ renderTabBar={renderTabBar} >
 
 
 					<TabPane tab="Popular" key="1"   >
@@ -86,7 +86,7 @@ function Gwindex(props) {
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 
-					<TabPane tab="New Demand" key="2">
+					<TabPane tab="New Demand" key="2" /*style={{backgroundColor: "orange"}}*/ >
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 

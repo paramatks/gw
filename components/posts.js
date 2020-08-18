@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Tabs, Button, Avatar, Rate, List, Typography, Card, Space, } from 'antd';
+import { Tabs, Button, Avatar, Rate, List, Typography, Card, Space, Row, Col } from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { HeartFilled, MessageFilled, ShareAltOutlined, MoreOutlined, EnvironmentFilled, LoginOutlined } from '@ant-design/icons';
 import router from 'next/router'
@@ -24,7 +24,7 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 	}} /*style={{ backgroundColor: "black" }}*/ >
 
 
-		<Space style={{ position: "relative", left: "50px", top: "-5px" }} size="middle" >
+		<Space style={{ position: "relative", left: "0px", top: "-5px" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -38,7 +38,7 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 
 const IconText3 = ({ icon, Text, postID, setLikeIncrement }) => (
 	<div onClick={() => { setLikeIncrement(postID) }}>
-		<Space style={{ position: "relative", left: "75px", top: "-5px" }} size="middle" >
+		<Space style={{ position: "relative", left: "0px", top: "-5px" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -47,7 +47,7 @@ const IconText3 = ({ icon, Text, postID, setLikeIncrement }) => (
 
 const IconText1 = ({ icon, Text, postID, setShareIncrement }) => (
 	<div onClick={() => { setShareIncrement(postID) }}>
-		<Space size="middle" >
+		<Space size="middle" style={{ position: "relative", left: "0px", top: "-5px" }} >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -75,7 +75,7 @@ function Posts(props) {
 	}, []);
 
 	return (
-		<List style={{ position: "relative", left: '0px', top: '-20px' }}
+		<List style={{ position: "relative", left: '0px', top: '-20px' }} style={{ backgroundColor: "white" }}
 			itemLayout="vertical"
 			size="large"
 			bordered="true"
@@ -91,11 +91,10 @@ function Posts(props) {
 				//console.log(props);
 				return (
 					<List.Item
-
 						key={item.author}
 						actions={[
 							<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />,
-							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} style={{ position: "relative", left: '50px', top: '0px' }} />,
+							<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />,
 							//<IconText icon={HeartFilled} Text={item.like} key="list-vertical-message" />,
 							<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 
@@ -115,32 +114,66 @@ function Posts(props) {
 						<div
 							style={
 								//if type == common then we render 999, else then we render orange
-								(item.type == "common") ? { backgroundColor: '#999' } : { backgroundColor: 'orange' }
+								(item.type == "common") ? { backgroundColor: '#d3d3d3' } : { backgroundColor: '#d3d3d3' }
 
 							}
 						>
-							<Rate style={{ position: "relative", left: '55px', top: '30px' }} value={item.rating} />
-
-							<Button type="text" size="small" style={{ position: "relative", left: '55px', top: '3px' }} >
-								<Text > + Friend</Text>
-							</Button>
-							<Button type="text" size="small" style={{ position: "relative", left: '45px', top: '3px' }} >
-								<Text > + Follow</Text>
-							</Button>
-							<Button type="link" style={{ position: "relative", left: '30px', top: '5px' }} icon={<MoreOutlined style={{ color: 'gray' }} />} />
 
 
-							<List.Item.Meta style={{ position: "relative", left: '10px', top: '-25px' }}
-								avatar={<Avatar src={item.avatar} />}
-								title={item.author}
-							//description={item.description}
+							<Row style={{backgroundColor:" grey"}}>
+								<Col span={2} push={0}>
+									<List.Item.Meta //style={{ position: "relative", left: '10px', top: '-25px' }}
+										avatar={<Avatar src={item.avatar} />}
 
-							/>
-							<List style={{ position: "relative", left: '10px', top: '-15px' }} >
-								{item.content}
+									//description={item.description}
+
+									/>
+								</Col>
+								<Col span={10} push={1} >
+									<Text >
+										{item.author}
+									</Text>
+
+									<br />
+									<Rate style={{ fontSize: 14 }} value={item.rating} />
 
 
-							</List>
+
+									{/*<Row  >
+										<Col    >
+											<List.Item.Meta
+												title={item.author}
+											/>
+											
+										</Col>
+									</Row>
+									<Row >
+										<Col >
+											<Rate style={{fontSize:15}}   value={item.rating} />
+										</Col>
+									</Row>*/}
+								</Col>
+								<Col pull={1} span={1}>
+									<Button type="text" size="small" >
+										<Text > + Friend</Text>
+									</Button>
+								</Col>
+								<Col push={3} span={1}>
+									<Button type="text" size="small"  >
+										<Text > + Follow</Text>
+									</Button>
+								</Col>
+								<Col push={7} span={1}>
+									<Button type="link" /*style={{ position: "relative", left: '20px', top: '5px' }}*/ icon={<MoreOutlined style={{ color: 'black' }} />} />
+								</Col>
+							</Row>
+							<Row >
+								<Col push={1}>
+									<Text>
+										{item.content}
+									</Text>
+								</Col>
+							</Row>
 
 
 							<List

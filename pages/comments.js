@@ -5,8 +5,8 @@ import { connect } from "react-redux"
 import { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement5, getIncrement6 } from '../_actions/postsAction';
 import { ShareAltOutlined, HeartFilled, MessageFilled, EnvironmentFilled } from '@ant-design/icons';
 import { Formik } from 'formik'
+import { Form, SubmitButton, ResetButton, Input } from 'formik-antd'
 import * as Yup from 'yup';
-import { Form, Input, } from 'formik-antd';
 import ReactDOM from 'react-dom';
 
 const { Text, Title } = Typography;
@@ -27,7 +27,7 @@ const { Text, Title } = Typography;
 );*/
 
 const IconText3 = ({ icon, Text, postID, setCommentLikeIncrement }) => (
-	<div onClick={() => { setCommentLikeIncrement(postID) }} style={{ position: "relative", left: "65px", top: "-45px" }}  >
+	<div onClick={() => { setCommentLikeIncrement(postID) }} style={{ position: "relative", left: "0px", top: "0px" }}  >
 		<Space style={{ backgroundColor: "purple" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -36,7 +36,7 @@ const IconText3 = ({ icon, Text, postID, setCommentLikeIncrement }) => (
 );
 
 const IconText1 = ({ icon, Text, postID, getIncrement5 }) => (
-	<div onClick={() => { getIncrement5(postID) }} style={{ position: "relative", left: "40px", top: "-45px" }} >
+	<div onClick={() => { getIncrement5(postID) }} style={{ position: "relative", left: "0px", top: "0px" }} >
 		<Space style={{ backgroundColor: "yellow" }} size="middle" >
 			{React.createElement(icon)}
 			{Text}
@@ -44,7 +44,7 @@ const IconText1 = ({ icon, Text, postID, getIncrement5 }) => (
 	</div>
 );
 
-const IconText4 = ({ icon, Text, commentID, getIncrement6}) => (
+const IconText4 = ({ icon, Text, commentID, getIncrement6 }) => (
 	<div onClick={() => { getIncrement6(commentID) }} style={{ position: "relative", left: "0px", top: "0px" }} >
 		<Space size="middle" style={{ backgroundColor: "orange" }} >
 			{React.createElement(icon)}
@@ -103,6 +103,7 @@ function Comments(props) {
 			<List
 				itemLayout="vertical"
 				size="large"
+				style={{backgroundColor: "grey"}}
 
 				dataSource={props.appAuthReducer.post}
 
@@ -124,7 +125,7 @@ function Comments(props) {
 							<div
 								style={
 									//if type == common then we render 999, else then we render orange
-									(item.type == "common") ? { backgroundColor: '#999' } : { backgroundColor: 'orange' }
+									(item.type == "common") ? { backgroundColor: 'purple' } : { backgroundColor: 'orange' }
 
 								}
 							>
@@ -145,7 +146,7 @@ function Comments(props) {
 										gutter: 160
 
 									}}
-									style={{ position: "relative", left: '-15px', top: '0px' }}
+									style={{ position: "relative", left: '-23px', top: '0px' }}
 									dataSource={item.images}
 									renderItem={imageItem => (
 										<List.Item>
@@ -265,7 +266,30 @@ function Comments(props) {
 			/>
 
 
-
+			<Formik initialValues={{
+				comment: ""
+			}}
+				validationSchema={Yup.object({
+					comment: Yup.string()
+						.required("Required"),
+				})}
+				onSubmit={async (values, { setSubmitting }) => {
+					await new Promise(r => setTimeout(r, 500));
+					setSubmitting(false);
+				}}>
+				<Form>
+					<Form.Item
+						name="comment"  >
+						<Input
+							name="comment"
+							type="text"
+							placeholder="Write new comment"
+						/>
+					</Form.Item>
+					<SubmitButton>Submit</SubmitButton>
+					<ResetButton />
+				</Form>
+			</Formik>
 
 
 
