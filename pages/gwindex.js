@@ -14,16 +14,16 @@ import router from 'next/router'
 
 
 const renderTabBar = (props, DefaultTabBar) => (
-	<Row justify="center"  style={{backgroundColor:"gray", height:'4em'}} align="middle"  >
+	<Row justify="center"  style={{backgroundColor:"gray", height:'3rem'}} align="middle"  >
 		<Col pull="3">
-			<Title style={{fontSize:'1.5em',height:"3.5em"}}>  Logo </Title>
+			<Title style={{fontSize:'1.25rem',height:"4.5rem"}}>  Logo </Title>
 		</Col>
 		<Col  >
 			<DefaultTabBar {...props}  />
 		</Col>
-		<Col push="3" style={{ backgroundColor: "gray" , height:"6em"}}>
+		<Col push="3" style={{ backgroundColor: "gray" , height:"5rem"}}>
 			<button onClick={() => router.push('/login')} >
-				<LoginOutlined  style={{fontSize:'1em'}}/>
+				<LoginOutlined  style={{fontSize:'1rem'}}/>
 			</button>
 		</Col>
 	</Row>
