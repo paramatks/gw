@@ -106,7 +106,7 @@ function Posts(props) {
 
 
 							<Row style={{ backgroundColor: " grey" }} align="middle">
-								<Col span={2} push={0}>
+								<Col span={2} push={1}>
 									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height:"2rem", padding: '0%' }}
 										avatar={<Avatar src={item.avatar} />}
 
@@ -114,7 +114,7 @@ function Posts(props) {
 
 									/>
 								</Col>
-								<Col span={10} push={1}>
+								<Col span={10} push={2}>
 									<Text style={{ fontSize: 13}} >
 										{item.author}
 									</Text>
@@ -219,7 +219,7 @@ function Posts(props) {
 								<Col span="8" style={{ padding: "0.5em" }} >
 									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 								</Col>
-								<Col span="8" style={{ padding: "0.5em" }} push="1" >
+								<Col span="8" style={{ padding: "0.5em" }} push="0" >
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>
 								<Col span="8" style={{ padding: "0.5em" }} >
