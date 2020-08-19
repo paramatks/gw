@@ -130,7 +130,7 @@ function Comments(props) {
 								}
 							>
 
-								<Rate style={{ position: "relative", left: '50px', top: '25px' }} value={item.rating} />
+								<Rate style={{ position: "relative", left: '50px', top: '25px',fontSize: 14  }} value={item.rating} />
 
 								<List.Item.Meta style={{ position: "relative", left: "5px", top: "-25px" }}
 									avatar={<Avatar src={item.avatar} />}

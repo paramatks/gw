@@ -24,7 +24,7 @@ const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 	}}  >
 
 
-		<Space  size="middle" >
+		<Space size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -46,7 +46,7 @@ const IconText3 = ({ icon, Text, postID, setLikeIncrement }) => (
 const IconText1 = ({ icon, Text, postID, setShareIncrement }) => (
 	<div onClick={() => { setShareIncrement(postID) }}>
 		<Space size="middle">
-			{React.createElement(icon) }
+			{React.createElement(icon)}
 			{Text}
 		</Space>
 	</div>
@@ -107,20 +107,19 @@ function Posts(props) {
 
 							<Row style={{ backgroundColor: " grey" }} align="middle">
 								<Col span={2} push={0}>
-									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ padding: '10%' }}
+									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height:"2rem", padding: '0%' }}
 										avatar={<Avatar src={item.avatar} />}
 
 									//description={item.description}
 
 									/>
 								</Col>
-								<Col span={10} push={1} >
-									<Text >
+								<Col span={10} push={1}>
+									<Text style={{ fontSize: 13}} >
 										{item.author}
 									</Text>
-
 									<br />
-									<Rate style={{ fontSize: 14 }} value={item.rating} />
+									<Rate style={{ fontSize: 10, height:"2rem" }} value={item.rating} />
 
 
 
@@ -216,14 +215,14 @@ function Posts(props) {
 
 						</div>
 						<>
-							<Row style={{ width: '100%', backgroundColor:"gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
-								<Col span="8" style={{padding:"0.5em"}} >
+							<Row style={{ width: '100%', backgroundColor: "gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
+								<Col span="8" style={{ padding: "0.5em" }} >
 									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 								</Col>
-								<Col span="8" style={{padding:"0.5em"}} push="1" >
+								<Col span="8" style={{ padding: "0.5em" }} push="1" >
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>
-								<Col span="8" style={{padding:"0.5em"}} >
+								<Col span="8" style={{ padding: "0.5em" }} >
 									<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 								</Col>
 							</Row>
