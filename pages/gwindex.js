@@ -67,7 +67,7 @@ function Gwindex(props) {
 				<Tabs type="card" defaultActiveKey="1" /*onChange={callback}*/ renderTabBar={renderTabBar} >
 
 
-					<TabPane /*tab="Popular"*/ tab={<span style={{fontSize:14.5, height:"5.5em"}}>Popular</span>} key="1"  >
+					<TabPane /*tab="Popular"*/ tab={<span style={{fontSize:14.5, height:"5.5em", color:"black"}}>Popular</span>} key="1"  >
 
 						<Carousel autoplay={true} dots={false} style={{ position: "relative", left: '0px', top: '0px' }} >
 							<div>
@@ -86,7 +86,7 @@ function Gwindex(props) {
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 
-					<TabPane /*tab="New Demand"*/  tab={<span style={{fontSize:14.5, height:"5.5em"}}>New Demand</span>} key="2" /*style={{backgroundColor: "orange"}}*/ >
+					<TabPane /*tab="New Demand"*/  tab={<span style={{fontSize:14.5, height:"5.5em", color:"black"}}>New Demand</span>} key="2" /*style={{backgroundColor: "orange"}}*/ >
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
 

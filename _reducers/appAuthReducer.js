@@ -24,7 +24,7 @@ export const initialState = {
 			type: "common",
 			content: 'This is a test common post.',
 			location: 'Bangkok',
-			date: '2020-07-17',
+			date: '2020-07-17 7:11',
 			avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 			images: [
 				{
@@ -43,8 +43,8 @@ export const initialState = {
 					comment_author_id: 1,
 					rating: 5,
 					content: "That look's great",
-					date: ' 2020-07-18',
-					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+					date: '2020-07-18 7:11',
+					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					like: 2000,
 					comments: [
 						{
@@ -53,8 +53,8 @@ export const initialState = {
 							comment_author_id: 4,
 							rating: 5,
 							content: "I agree",
-							date: '2020-07-19',
-							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+							date: '2020-07-19 7:11',
+							avatar:'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 							like: 1500
 						},
 						{
@@ -63,8 +63,8 @@ export const initialState = {
 							comment_author_id: 5,
 							rating: 4,
 							content: "I don't agree!",
-							date: '2020-07-19',
-							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+							date: '2020-07-19 7:11',
+							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 							like: 1000
 
 						}
@@ -76,8 +76,8 @@ export const initialState = {
 					comment_author_id: 2,
 					rating: 4,
 					content: "That look's bad",
-					date: ' 2020-07-19',
-					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+					date: '2020-07-19 7:11',
+					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					like: 500,
 				},
 				{
@@ -86,8 +86,8 @@ export const initialState = {
 					comment_author_id: 3,
 					rating: 4,
 					content: "That look's awesome",
-					date: ' 2020-07-20',
-					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+					date: '2020-07-20 7:11',
+					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					like: 2500,
 				},
 			]
@@ -99,8 +99,8 @@ export const initialState = {
 			type: "mission",
 			content: 'This is a test mission post',
 			location: 'Samut Prakan',
-			date: '2020-07-15',
-			avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HWtAYqtC4Eve3pyYEvDragHaF7%26pid%3DApi&f=1',
+			date: '2020-07-15 7:11',
+			avatar:  'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 			images: [
 				{
 					uri: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FXqHbFmfKChI%2Fmaxresdefault.jpg&f=1&nofb=1'
@@ -118,9 +118,9 @@ export const initialState = {
 					comment_author_id: 1,
 					rating: 5,
 					content: "That look's great",
-					date: ' 2020-07-18',
+					date: '2020-07-18 7:11',
 					like: 2000,
-					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+					avatar:  'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					comments: [
 						{
 							commentid: 4,
@@ -128,9 +128,9 @@ export const initialState = {
 							comment_author_id: 4,
 							rating: 5,
 							content: "Hey!",
-							date: '2020-07-19',
+							date: '2020-07-19 7:11',
 							like: 1500,
-							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 						},
 						{
 							commentid: 5,
@@ -138,9 +138,9 @@ export const initialState = {
 							comment_author_id: 5,
 							rating: 4,
 							content: "What?!",
-							date: '2020-07-19',
+							date: '2020-07-19 7:11',
 							like: 1000,
-							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 						}
 					]
 				},
@@ -150,9 +150,9 @@ export const initialState = {
 					comment_author_id: 2,
 					rating: 4,
 					content: "Wow",
-					date: ' 2020-07-19',
+					date: '2020-07-19 7:11',
 					like: 500,
-					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 				},
 				{
 					commentid: 3,
@@ -160,9 +160,9 @@ export const initialState = {
 					comment_author_id: 3,
 					rating: 4,
 					content: "haha",
-					date: ' 2020-07-20',
+					date: '2020-07-20 7:11',
 					like: 2500,
-					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
+					avatar:  'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 				},
 
 

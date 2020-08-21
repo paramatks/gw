@@ -107,7 +107,7 @@ function Posts(props) {
 
 							<Row style={{ backgroundColor: " grey" }} align="middle">
 								<Col span={2} push={1}>
-									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height:"2rem", padding: '0%' }}
+									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height: "2rem", padding: '0%' }}
 										avatar={<Avatar src={item.avatar} />}
 
 									//description={item.description}
@@ -115,11 +115,11 @@ function Posts(props) {
 									/>
 								</Col>
 								<Col span={10} push={2}>
-									<Text style={{ fontSize: 13}} >
+									<Text style={{ fontSize: 13 }} >
 										{item.author}
 									</Text>
 									<br />
-									<Rate style={{ fontSize: 10, height:"2rem" }} value={item.rating} />
+									<Rate style={{ fontSize: 10, height: "2rem", position:"relative", top:"-0.25rem" }} value={item.rating} />
 
 
 
@@ -203,7 +203,7 @@ function Posts(props) {
 
 							<List style={{ position: "relative", left: '175px', top: '-27px' }} >
 
-								<Text style={{ position: "relative", left: '50px', top: '0px' }}>
+								<Text style={{ position: "relative", left: '35px', top: '0px' }}>
 									{item.date}
 
 
