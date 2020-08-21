@@ -1,5 +1,5 @@
 import {
-	GET_STATE, GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, GET_INCREMENT2, SET_SHARE_INCREMENT, SET_COMMENT_LIKE_INCREMENT, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE, 
+	GET_STATE, GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, GET_INCREMENT2, SET_SHARE_INCREMENT, SET_COMMENT_LIKE_INCREMENT, GET_INCREMENT5, GET_INCREMENT6, SET_LOGIN_STATE,
 } from '../_constants/action_types'
 
 import { HYDRATE } from 'next-redux-wrapper';
@@ -120,6 +120,7 @@ export const initialState = {
 					content: "That look's great",
 					date: ' 2020-07-18',
 					like: 2000,
+					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 					comments: [
 						{
 							commentid: 4,
@@ -128,7 +129,8 @@ export const initialState = {
 							rating: 5,
 							content: "Hey!",
 							date: '2020-07-19',
-							like: 1500
+							like: 1500,
+							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 						},
 						{
 							commentid: 5,
@@ -137,8 +139,8 @@ export const initialState = {
 							rating: 4,
 							content: "What?!",
 							date: '2020-07-19',
-							like: 1000
-
+							like: 1000,
+							avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 						}
 					]
 				},
@@ -150,6 +152,7 @@ export const initialState = {
 					content: "Wow",
 					date: ' 2020-07-19',
 					like: 500,
+					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 				},
 				{
 					commentid: 3,
@@ -159,6 +162,7 @@ export const initialState = {
 					content: "haha",
 					date: ' 2020-07-20',
 					like: 2500,
+					avatar: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcamo.githubusercontent.com%2F341831200626efe3e0cf83317801fcac2200fbe2%2F68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67&f=1&nofb=1',
 				},
 
 
