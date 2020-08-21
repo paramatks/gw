@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
-import { Avatar, List, Comment, PageHeader, Row, Col, Card, Rate, Space, Typography } from 'antd';
+import { Avatar, List, Comment, PageHeader, Row, Col,  Rate, Space, Typography, Button } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
 import { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement5, getIncrement6 } from '../_actions/postsAction';
-import { ShareAltOutlined, HeartFilled, MessageFilled, EnvironmentFilled } from '@ant-design/icons';
+import { ShareAltOutlined, HeartFilled,  EnvironmentFilled, MoreOutlined } from '@ant-design/icons';
 import { Formik } from 'formik'
 import { Form, SubmitButton, ResetButton, Input } from 'formik-antd'
 import * as Yup from 'yup';
-import ReactDOM from 'react-dom';
 
 const { Text, Title } = Typography;
 
@@ -27,8 +26,8 @@ const { Text, Title } = Typography;
 );*/
 
 const IconText3 = ({ icon, Text, postID, setCommentLikeIncrement }) => (
-	<div onClick={() => { setCommentLikeIncrement(postID) }} style={{ position: "relative", left: "0px", top: "0px" }}  >
-		<Space style={{ backgroundColor: "purple" }} size="middle" >
+	<div onClick={() => { setCommentLikeIncrement(postID) }}  >
+		<Space  size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -36,8 +35,8 @@ const IconText3 = ({ icon, Text, postID, setCommentLikeIncrement }) => (
 );
 
 const IconText1 = ({ icon, Text, postID, getIncrement5 }) => (
-	<div onClick={() => { getIncrement5(postID) }} style={{ position: "relative", left: "0px", top: "0px" }} >
-		<Space style={{ backgroundColor: "yellow" }} size="middle" >
+	<div onClick={() => { getIncrement5(postID) }}  >
+		<Space  size="middle" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -45,8 +44,8 @@ const IconText1 = ({ icon, Text, postID, getIncrement5 }) => (
 );
 
 const IconText4 = ({ icon, Text, commentID, getIncrement6 }) => (
-	<div onClick={() => { getIncrement6(commentID) }} style={{ position: "relative", left: "0px", top: "0px" }} >
-		<Space size="middle" style={{ backgroundColor: "orange" }} >
+	<div onClick={() => { getIncrement6(commentID) }}  >
+		<Space size="middle"  >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
@@ -92,7 +91,7 @@ function Comments(props) {
 			</Head>
 
 
-			<PageHeader style={{ backgroundColor: "gray" }}
+			<PageHeader style={{ backgroundColor: "#D3D3D3" }}
 				className="site-page-header"
 				onBack={() => window.history.back()}
 
@@ -100,10 +99,13 @@ function Comments(props) {
 			/>
 
 
-			<List
-				itemLayout="vertical"
-				size="large"
-				style={{backgroundColor: "grey"}}
+		
+<List style={{ position: "relative", left: '0px', top: '-20px' }} style={{ backgroundColor: "white" }}
+			itemLayout="vertical"
+			size="large"
+			bordered="true"
+			itemLayout="vertical"
+	
 
 				dataSource={props.appAuthReducer.post}
 
@@ -111,147 +113,139 @@ function Comments(props) {
 
 					return (
 
-						<List.Item style={{ position: "relative", top: "0px", left: "0px" }}
+						<List.Item
 							key={item.author}
-							actions={[
-								<IconText1 icon={ShareAltOutlined} Text={item.shares} postID={item.postID} getIncrement5={props.getIncrement5} key="list-vertical-star-o" />,
-								/*<IconText2 icon={MessageFilled} Text={item.comments} postID={item.postID} getIncrement2={props.getIncrement2} key="list-vertical-like-o" />,*/
-								<IconText3 icon={HeartFilled} Text={item.like} postID={item.postID} setCommentLikeIncrement={props.setCommentLikeIncrement} key="list-vertical-message" />,
-							]}
 						>
 
-
-
-							<div
-								style={
-									//if type == common then we render 999, else then we render orange
-									(item.type == "common") ? { backgroundColor: 'purple' } : { backgroundColor: 'orange' }
-
-								}
+							<div style={{ borderStyle: "solid", borderWidth: "thin", borderColor: "black", backgroundColor: '#d3d3d3' }}
+							
+						
 							>
 
-								<Rate style={{ position: "relative", left: '50px', top: '25px',fontSize: 14  }} value={item.rating} />
 
-								<List.Item.Meta style={{ position: "relative", left: "5px", top: "-25px" }}
-									avatar={<Avatar src={item.avatar} />}
-									title={item.author}
-								//description={item.description}
-								/>
-								<Text style={{ position: "relative", left: "50px", top: "-25px" }}>
-									{item.content}
-								</Text>
-								<List
-									grid={{
-										column: 4,
-										gutter: 160
+								<Row style={{ backgroundColor: " grey" }} align="middle">
+								<Col span={2} push={1}>
+									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height:"2rem", padding: '0%' }}
+										avatar={<Avatar src={item.avatar} />}
 
-									}}
-									style={{ position: "relative", left: '-23px', top: '0px' }}
-									dataSource={item.images}
-									renderItem={imageItem => (
-										<List.Item>
-											<img
-												src={imageItem.uri}
-												width={100}
-												style={{ position: "relative", left: '0px', top: '0px', height: '150px', width: '150px', objectFit: 'cover' }}
-												//style={{}}
-												alt="logo"
-											/>
-										</List.Item>
-									)}
-								/>
-								<List style={{ position: "relative", left: '20px', top: '-7px' }} >
-									<EnvironmentFilled />
-									<Text style={{ position: "relative", left: '5px', top: '0px' }}>
-										{item.location}
+									//description={item.description}
+
+									/>
+								</Col>
+								<Col span={10} push={2}>
+									<Text style={{ fontSize: 13}} >
+										{item.author}
 									</Text>
-								</List>
+									<br />
+									<Rate style={{ fontSize: 10, height:"2rem" }} value={item.rating} />
+
+
+
+									{/*<Row  >
+										<Col    >
+											<List.Item.Meta
+												title={item.author}
+											/>
+											
+										</Col>
+									</Row>
+									<Row >
+										<Col >
+											<Rate style={{fontSize:15}}   value={item.rating} />
+										</Col>
+									</Row>*/}
+								</Col>
+								<Col pull={1} span={1}>
+									<Button type="text" size="small" >
+										<Text > + Friend</Text>
+									</Button>
+								</Col>
+								<Col push={3} span={1}>
+									<Button type="text" size="small"  >
+										<Text > + Follow</Text>
+									</Button>
+								</Col>
+								<Col push={7} span={1}>
+									<Button type="link" /*style={{ position: "relative", left: '20px', top: '5px' }}*/ icon={<MoreOutlined style={{ color: 'black' }} />} />
+								</Col>
+							</Row>
+							<Row style={{ padding: '4%' }} >
+								<Col>
+									<Text >
+										{item.content}
+									</Text>
+								</Col>
+							</Row>
+
+
+							<List
+								grid={{
+									column: 4,
+									gutter: 100
+
+								}}
+								style={{ position: "relative", left: '-10px', top: '-10px' }}
+
+								dataSource={item.images}
+								renderItem={imageItem => (
+									<List.Item>
 
 
 
 
-								<Text style={{ position: "relative", left: '180px', top: '-30px' }}>
+										<img
+											src={imageItem.uri}
+											width={100}
+											style={{ position: "relative", left: '0px', top: '0px', height: '100px', width: '100px', objectFit: 'cover' }}
+											//style={{}}
+											alt="logo"
+										/>
+
+									</List.Item>
+
+
+								)}
+							/>
+							<List style={{ position: "relative", left: '15px', top: '-5px' }} >
+								<EnvironmentFilled />
+								<Text style={{ position: "relative", left: '10px', top: '0px' }}>
+									{item.location}
+
+
+								</Text>
+
+
+
+							</List>
+
+
+							<List style={{ position: "relative", left: '175px', top: '-27px' }} >
+
+								<Text style={{ position: "relative", left: '50px', top: '0px' }}>
 									{item.date}
 
 
 								</Text>
 
-								{/*<Comment
-	  					actions={[<span key="comment-nested-reply-to">Reply to</span>]}
-	 					author={item.comments[0].author}
-	  					avatar={
-							<Avatar
-		  				src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-		  				alt="Han Solo"
-							/>
-	 						 }
-	 					content={
-						item.comments[0].content
-						
-						}
-						>
-	
-					</Comment>*/}
 
 
-								{/*
+							</List>
 
-					<Comment
-						//dataSource={props.appAuthReducer.posts}
-
-
-						actions={[<span key="comment-nested-reply-to">Reply to</span>]}
-						author={<a>Han Solo</a>}
-						avatar={
-							<Avatar
-								src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-								alt="Han Solo"
-							/>
-						}
-						>
-						content={"Hi"}    //{item.comments}
-						
-						
-					</Comment>
-
-						<Formik
-
-							initialValues={{
-								comment: "",
-
-							}}
-
-							validationSchema={Yup.object({
-								comment: Yup.string()
-									.required("Required"),
-
-							})}
-
-							onSubmit={async (values, { setSubmitting }) => {
-								await new Promise(r => setTimeout(r, 500));
-								setSubmitting(false);
-							}}
-						/>
-
-							<Form>
-
-
-								<Form.Item
-									name="comment"
-								>
-									<Input
-										name="comment"
-										type="text"
-										placeholder="comment"
-									/>
-								</Form.Item>
-							</Form>
-						*/}
-							</div>
-
-						</List.Item>
-
-
+						</div>
+						<>
+							<Row style={{ width: '100%', backgroundColor: "gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
+								<Col span="12" style={{ padding: "0.5em" }} >
+									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
+								</Col>
+								{/*<Col span="8" style={{ padding: "0.5em" }} push="0" >
+									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
+								</Col>*/}
+								<Col span="12" style={{ padding: "0.5em" }} >
+									<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
+								</Col>
+							</Row>
+						</>
+					</List.Item>
 
 
 
@@ -302,6 +296,7 @@ function Comments(props) {
 				dataSource={props.appAuthReducer.post[0].comments}
 				renderItem={item => {
 					return (
+						<div style={{backgroundColor:"gray"}}> 
 						<Comment
 							key={item.commentid}
 							//actions={item.actions}
@@ -313,9 +308,10 @@ function Comments(props) {
 							actions={[
 								<IconText4 icon={HeartFilled} Text={item.like} commentID={item.commentid} getIncrement6={props.getIncrement6} key="list-vertical-message" />,
 								//<IconText5 icon={MessageFilled} Text={item.comments.length} commentID={item.commentid} getIncrement5={props.getIncrement5}/>,
-								<Rate style={{ position: "absolute", top: "-10px", left: "120px" }} value={item.rating} />
+								<Rate style={{ position: "absolute", top: "10px", left: "30px", fontSize:"0.75rem" }} value={item.rating} />
 							]}
 						/>
+						</div>
 					)
 				}}
 

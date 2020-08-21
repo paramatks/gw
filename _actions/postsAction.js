@@ -9,7 +9,7 @@ import router from 'next/router'
 
 
 
-{/*const comment = 
+const comment = 
 	{
 		commentid: '',
 		author: '',
@@ -18,7 +18,7 @@ import router from 'next/router'
 		content: '',
 		date: '',
 		like: '',
-	}*/}
+	}
 
 
 
@@ -114,7 +114,7 @@ export function getIncrement2(aaa) {
 		//var posts=JSON.parse(JSON.stringify(getState().appAuthReducer.posts));
 		//var posts = [...getState().appAuthReducer.posts];
 		var posts = getState().appAuthReducer.posts;
-
+		console.log("ok",aaa)
 		
 		/*for(var i=0; i<posts.length; i++) {
 			if(posts[i].postID == postID) {
@@ -129,11 +129,14 @@ export function getIncrement2(aaa) {
 			if (post.postID === aaa)
 
 				{
-					post.comments.reverse() 
+					//post.comments.reverse() 
+					return post 
 				}
 				//console.log("post",post)
+				/*{
+					return post[0]
+				}*/
 
-				return post
 		});
 		console.log("hi", newPosts)
 
@@ -193,7 +196,7 @@ export function setCommentLikeIncrement(postID) {
 		}
 		*/
 
-		var newPosts = posts.map((post) => {
+		var newPosts = posts.filter((post) => {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
 			if (post.postID === postID) {
@@ -273,10 +276,10 @@ export function getIncrement6(commentID) {
 			return comments
 		});*/
 
-		var newPosts = posts.map((post) => {
+		var newPosts = posts.map((comments) => {
 
-			if (post.comments.commentid === commentID) {
-				return { ...post, like: ++comments.like }
+			if (comments.commentid === commentID) {
+				return  comments, {like: ++comments.like}
 
 			}
 
