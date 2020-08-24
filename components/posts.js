@@ -73,7 +73,7 @@ function Posts(props) {
 	}, []);
 
 	return (
-		<List style={{ position: "relative", left: '0px', top: '-20px' }} style={{ backgroundColor: "white" }}
+		<List  style={{ backgroundColor: "white" }}
 			itemLayout="vertical"
 			size="large"
 			bordered="true"
@@ -106,7 +106,7 @@ function Posts(props) {
 
 
 							<Row style={{ backgroundColor: " grey" }} align="middle">
-								<Col span={2} push={1}>
+								<Col span={2} push={1} style={{position:"relative", top:"0.25rem"}}>
 									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height: "2rem", padding: '0%' }}
 										avatar={<Avatar src={item.avatar} />}
 
@@ -114,8 +114,8 @@ function Posts(props) {
 
 									/>
 								</Col>
-								<Col span={10} push={2}>
-									<Text style={{ fontSize: 13 }} >
+								<Col span={10} push={2} style={{  position:"relative", top:"0.5rem"}} >
+									<Text style={{ fontSize: 13}} >
 										{item.author}
 									</Text>
 									<br />
