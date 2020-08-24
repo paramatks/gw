@@ -73,7 +73,7 @@ function Posts(props) {
 	}, []);
 
 	return (
-		<List  style={{ backgroundColor: "white" }}
+		<List style={{ backgroundColor: "white" }}
 			itemLayout="vertical"
 			size="large"
 			bordered="true"
@@ -82,6 +82,7 @@ function Posts(props) {
 					console.log(page);
 				},
 				pageSize: 3,
+				responsive: true
 			}}
 			dataSource={props.postlist}
 
@@ -90,7 +91,6 @@ function Posts(props) {
 				return (
 					<List.Item
 						key={item.author}
-
 					>
 
 
@@ -106,7 +106,7 @@ function Posts(props) {
 
 
 							<Row style={{ backgroundColor: " grey" }} align="middle">
-								<Col span={2} push={1} style={{position:"relative", top:"0.25rem"}}>
+								<Col span={2} push={1} style={{ position: "relative", top: "0.25rem" }}>
 									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height: "2rem", padding: '0%' }}
 										avatar={<Avatar src={item.avatar} />}
 
@@ -114,12 +114,12 @@ function Posts(props) {
 
 									/>
 								</Col>
-								<Col span={10} push={2} style={{  position:"relative", top:"0.5rem"}} >
-									<Text style={{ fontSize: 13}} >
+								<Col span={10} push={2} style={{ position: "relative", top: "0.5rem" }} >
+									<Text style={{ fontSize: 13 }} >
 										{item.author}
 									</Text>
 									<br />
-									<Rate style={{ fontSize: 10, height: "2rem", position:"relative", top:"-0.25rem" }} value={item.rating} />
+									<Rate style={{ fontSize: 10, height: "2rem", position: "relative", top: "-0.25rem" }} value={item.rating} />
 
 
 
@@ -143,7 +143,7 @@ function Posts(props) {
 									</Button>
 								</Col>
 								<Col push={3} span={1}>
-									<Button type="text" size="small"  >
+									<Button type="text" size="small" >
 										<Text > + Follow</Text>
 									</Button>
 								</Col>

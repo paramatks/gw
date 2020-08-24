@@ -1,15 +1,15 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import { Form, Input, Button, Checkbox, Grid, Tag, Row, Col, Layout, Space, List, PageHeader } from 'antd';
 import CloseOutlined from '@ant-design/icons';
 import Head from 'next/head';
 import { connect } from "react-redux"
 import { useDispatch } from 'react-redux';
-import {setLoginstate} from '../_actions/postsAction';
+import { setLoginstate } from '../_actions/postsAction';
 
 
 function Login(props) {
 
-    useEffect(() =>{
+    useEffect(() => {
         window.addEventListener('load', initializeLiff);
     }, []);
 
@@ -58,8 +58,8 @@ function Login(props) {
 
             <Row justify="center" align="bottom" /*style={{ width: '100%' }}*/>
 
-                <Col flex="auto" style={{padding:"5%"}}>
-                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white', backgroundColor: 'gray' , padding:"0%", position: "relative", left: '0px', top: '0px' }}  onClick={() => { props.setLoginstate() /*liff.login({redirectUri: 'https://beta.vtra.app/redirect'});*/ }}>
+                <Col flex="auto" style={{ padding: "5%" }}>
+                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white', backgroundColor: 'gray', padding: "0%", position: "relative", left: '0px', top: '0px' }} onClick={() => { props.setLoginstate() /*liff.login({redirectUri: 'https://beta.vtra.app/redirect'});*/ }}>
                         Continue with LINE
             </Button>
                 </Col>
@@ -100,4 +100,4 @@ function Login(props) {
 
     )
 }
-export default connect(state => state,{setLoginstate})(Login);
+export default connect(state => state, { setLoginstate })(Login);

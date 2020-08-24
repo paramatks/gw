@@ -91,7 +91,7 @@ function Comments(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-		
+
 			<PageHeader style={{
 				backgroundColor: "#D3D3D3",
 			}}
@@ -100,7 +100,7 @@ function Comments(props) {
 
 				title="Post Details"
 			/>
-		
+
 
 
 
@@ -119,7 +119,7 @@ function Comments(props) {
 
 						<List.Item
 							key={item.author}
-							style={{ boxSizing: "border-box",  borderWidth: "medium", backgroundColor: '#d3d3d3',  }}
+							style={{ boxSizing: "border-box", backgroundColor: '#d3d3d3', }}
 						>
 
 
@@ -127,7 +127,7 @@ function Comments(props) {
 
 
 
-							<Row style={{ backgroundColor: "grey" , width:"115%", position:"relative", top:"-1rem", left:"-1.50rem"}} align="middle">
+							<Row style={{ backgroundColor: "grey", width: "115%", position: "relative", top: "-1rem", left: "-1.50rem",  borderBottom: "black solid", borderTop: "black solid",  borderWidth: "thin" }} align="middle">
 								<Col span={2} push={1}>
 									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height: "2rem", padding: '0%' }}
 										avatar={<Avatar src={item.avatar} />}
@@ -237,7 +237,7 @@ function Comments(props) {
 
 
 							<>
-								<Row style={{ position:"relative", left:"-1.50rem", width: '115%', backgroundColor: "gray", borderBottom: "black solid", borderTop:"black solid", borderWidth: "thin", }} >
+								<Row style={{ position: "relative", left: "-1.50rem", width: '115%', backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} >
 									<Col span="12" style={{ padding: "0.5em" }} >
 										<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 									</Col>
@@ -300,7 +300,7 @@ function Comments(props) {
 				dataSource={props.appAuthReducer.post[0].comments}
 				renderItem={item => {
 					return (
-						<Comment style={{ boxSizing: "border-box", backgroundColor: "#D3D3D3", padding: "3%", borderTop: "solid white", height: "10rem", borderWidth: "medium",  }}
+						<Comment style={{ boxSizing: "border-box", backgroundColor: "#D3D3D3", padding: "3%", borderTop: "solid white", height: "10rem", borderWidth: "medium", }}
 							key={item.commentid}
 							//actions={item.actions}
 							author={<span style={{ fontSize: 13, color: "black", position: "relative", top: "0rem" }}>{item.author}</span>}

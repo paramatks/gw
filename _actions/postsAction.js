@@ -200,10 +200,10 @@ export function setCommentLikeIncrement(postID) {
 			//post.postID === postID ?  {...post, like: post.like++} :  post
 
 			if (post.postID === postID) {
-				return { ...post, like: ++post.like }
+				return { post, like: ++post.like }
 			}
 
-			return post
+			//return post
 		});
 
 

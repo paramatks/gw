@@ -54,7 +54,7 @@ export const initialState = {
 							rating: 5,
 							content: "I agree",
 							date: '2020-07-19 7:11',
-							avatar:'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 							like: 1500
 						},
 						{
@@ -100,7 +100,7 @@ export const initialState = {
 			content: 'This is a test mission post',
 			location: 'Samut Prakan',
 			date: '2020-07-15 7:11',
-			avatar:  'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+			avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 			images: [
 				{
 					uri: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FXqHbFmfKChI%2Fmaxresdefault.jpg&f=1&nofb=1'
@@ -120,7 +120,7 @@ export const initialState = {
 					content: "That look's great",
 					date: '2020-07-18 7:11',
 					like: 2000,
-					avatar:  'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					comments: [
 						{
 							commentid: 4,
@@ -162,7 +162,7 @@ export const initialState = {
 					content: "haha",
 					date: '2020-07-20 7:11',
 					like: 2500,
-					avatar:  'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 				},
 
 
