@@ -127,9 +127,9 @@ function Comments(props) {
 
 
 
-							<Row style={{ backgroundColor: "grey", width: "115%", position: "relative", top: "-1rem", left: "-1.50rem",  borderBottom: "black solid", borderTop: "black solid",  borderWidth: "thin" }} align="middle">
+							<Row style={{ align:"middle", backgroundColor: "grey", width: "115%", position: "relative", top: "-1rem", left: "-1.50rem", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} align="middle">
 								<Col span={2} push={1}>
-									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height: "2rem", padding: '0%' }}
+									<List.Item.Meta  style={{ height: "auto", padding: '0%', position:"relative", top:"0.25rem" }}
 										avatar={<Avatar src={item.avatar} />}
 
 									//description={item.description}
@@ -137,7 +137,7 @@ function Comments(props) {
 									/>
 								</Col>
 								<Col span={10} push={2}>
-									<Text style={{ fontSize: 13 }} >
+									<Text style={{ fontSize: 13, position:"relative", top:"0.35rem" }} >
 										{item.author}
 									</Text>
 									<br />
