@@ -12,7 +12,6 @@ import router from 'next/router'
 //import { useRouter } from 'next/router'
 //import { withRouter } from 'next/router'
 
-
 const renderTabBar = (props, DefaultTabBar) => (
 	<Row justify="center" style={{ backgroundColor: "gray", height: '3rem' }} align="middle"  >
 		<Col pull="3">
@@ -29,15 +28,9 @@ const renderTabBar = (props, DefaultTabBar) => (
 	</Row>
 );
 
-
-
-
-
-
 const { Text, Title } = Typography;
 const { Meta } = Card;
 const { TabPane } = Tabs;
-
 
 function Gwindex(props) {
 
@@ -55,37 +48,30 @@ function Gwindex(props) {
 
 	return (
 		<>
-
 			<Head>
 				<title>We Work</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-
 			<StickyContainer /*style={{backgroundColor: "orange"}}*/>
 
 				<Tabs type="card" defaultActiveKey="1" /*onChange={callback}*/ renderTabBar={renderTabBar} >
 
-
 					<TabPane /*tab="Popular"*/ tab={<span style={{ fontSize: 14.5, height: "auto", color: "black" }}>Popular</span>} key="1"  >
-
-						<Carousel autoplay={true} dots={false} style={{ position: "relative", left: '0px', top: '0px' }} >
+						<Carousel autoplay={true} dots={false}>
 							<div>
-
-								<img
+								<img style={{ position: "relative", top: "auto", height: 'auto', width: 'auto', objectFit: 'cover' }}
 									src="/images/welcome.png"
 								/>
 							</div>
 							<div>
-								<img
+								<img style={{ postiton: "relative", top: "auto", height: 'auto', width: 'auto', objectFit: 'cover' }}
 									src="/images/Welcome 2.png"
 								/>
 							</div>
 						</Carousel>
-
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
-
 					<TabPane /*tab="New Demand"*/ tab={<span style={{ fontSize: 14.5, height: "auto", color: "black" }}>New Demand</span>} key="2" /*style={{backgroundColor: "orange"}}*/ >
 						<Posts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 					</TabPane>
@@ -97,12 +83,5 @@ function Gwindex(props) {
 	)
 
 }
-
-
-
-
-
-
-
 
 export default connect(state => state, { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement2 })(authWrapper(Gwindex));

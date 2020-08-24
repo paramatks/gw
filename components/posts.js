@@ -73,7 +73,7 @@ function Posts(props) {
 	}, []);
 
 	return (
-		<List style={{ backgroundColor: "white" }}
+		<List style={{ backgroundColor: "white", position:"relative",top:"-0.5rem" }}
 			itemLayout="vertical"
 			size="large"
 			bordered="true"
@@ -93,9 +93,6 @@ function Posts(props) {
 						key={item.author}
 					>
 
-
-
-
 						<div style={{ borderStyle: "solid", borderWidth: "thin", borderColor: "black", backgroundColor: '#d3d3d3' }}
 						/*{
 							//if type == common then we render 999, else then we render orange
@@ -109,9 +106,7 @@ function Posts(props) {
 								<Col span={2} push={1} style={{ position: "relative", top: "0.25rem" }}>
 									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height: "2rem", padding: '0%' }}
 										avatar={<Avatar src={item.avatar} />}
-
 									//description={item.description}
-
 									/>
 								</Col>
 								<Col span={10} push={2} style={{ position: "relative", top: "0.5rem" }} >
