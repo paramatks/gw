@@ -6,7 +6,6 @@ import { connect } from "react-redux"
 import { useDispatch } from 'react-redux';
 import { setLoginstate } from '../_actions/postsAction';
 
-
 const { Text, Title } = Typography;
 
 function Login(props) {
@@ -61,11 +60,11 @@ function Login(props) {
                     you have agreed to this
                 </Col>
             </Row>
-            <Row justify="center" align="bottom" style={{ position: "relative", left: '0px', top: '-1rem' }}>
 
+            <Row justify="center" align="bottom" style={{ position: "relative", left: '0px', top: '-1rem' }}>
                 <Col style={{ color: 'orange' }}>
                     platform agreement
-       </Col>
+                </Col>
             </Row>
         </>
     )

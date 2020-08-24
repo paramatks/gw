@@ -203,7 +203,7 @@ function Posts(props) {
 
 							<List style={{ position: "relative", left: '175px', top: '-27px' }} >
 
-								<Text style={{ position: "relative", left: '35px', top: '0px' }}>
+								<Text style={{ position: "relative", left: '4rem', top: '0px' }}>
 									{item.date}
 
 
