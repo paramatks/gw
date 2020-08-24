@@ -121,30 +121,19 @@ function Comments(props) {
 							key={item.author}
 							style={{ boxSizing: "border-box", backgroundColor: '#d3d3d3', }}
 						>
-
-
-
-
-
-
-							<Row style={{ align:"middle", backgroundColor: "grey", width: "115%", position: "relative", top: "-1rem", left: "-1.50rem", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} align="middle">
+							<Row style={{ align: "middle", backgroundColor: "grey", width: "115%", position: "relative", top: "-1rem", left: "-1.50rem", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} align="middle">
 								<Col span={2} push={1}>
-									<List.Item.Meta  style={{ height: "auto", padding: '0%', position:"relative", top:"0.25rem" }}
+									<List.Item.Meta style={{ height: "auto", padding: '0%', position: "relative", top: "0.25rem" }}
 										avatar={<Avatar src={item.avatar} />}
-
 									//description={item.description}
-
 									/>
 								</Col>
 								<Col span={10} push={2}>
-									<Text style={{ fontSize: 13, position:"relative", top:"0.35rem" }} >
+									<Text style={{ fontSize: 13, position: "relative", top: "0.35rem" }} >
 										{item.author}
 									</Text>
 									<br />
 									<Rate style={{ fontSize: 10, height: "2rem" }} value={item.rating} />
-
-
-
 									{/*<Row  >
 										<Col    >
 											<List.Item.Meta
@@ -181,7 +170,6 @@ function Comments(props) {
 								</Col>
 							</Row>
 
-
 							<List
 								grid={{
 									column: 4,
@@ -189,14 +177,9 @@ function Comments(props) {
 
 								}}
 								style={{ position: "relative", left: '-10px', top: '-10px' }}
-
 								dataSource={item.images}
 								renderItem={imageItem => (
 									<List.Item>
-
-
-
-
 										<img
 											src={imageItem.uri}
 											width={100}
@@ -204,38 +187,21 @@ function Comments(props) {
 											//style={{}}
 											alt="logo"
 										/>
-
 									</List.Item>
-
-
 								)}
 							/>
-							<List style={{ position: "relative", left: '15px', top: '-5px' }} >
+							<List style={{ position: "relative", left: '0rem', top: '-0.30rem' }} >
 								<EnvironmentFilled />
 								<Text style={{ position: "relative", left: '10px', top: '0px' }}>
 									{item.location}
-
-
 								</Text>
-
-
-
 							</List>
 
-
-							<List style={{ position: "relative", left: '175px', top: '-27px' }} >
-
-								<Text style={{ position: "relative", left: '35px', top: '0px' }}>
+							<List style={{ position: "relative", left: '16.5rem', top: '-1.70rem' }} >
+								<Text>
 									{item.date}
-
-
 								</Text>
-
-
-
 							</List>
-
-
 							<>
 								<Row style={{ position: "relative", left: "-1.50rem", width: '115%', backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} >
 									<Col span="12" style={{ padding: "0.5em" }} >
