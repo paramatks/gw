@@ -36,6 +36,7 @@ export const initialState = {
 			],
 			like: 1000,
 			shares: 1500,
+			details: 9999,
 			comments: [
 				{
 					commentid: 1,
@@ -46,6 +47,7 @@ export const initialState = {
 					date: '2020-07-18 7:11',
 					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					like: 2000,
+					share: "999",
 					comments: [
 						{
 							commentid: 4,
@@ -55,7 +57,9 @@ export const initialState = {
 							content: "I agree",
 							date: '2020-07-19 7:11',
 							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-							like: 1500
+							like: 1500,
+							share: "99995",
+							comments: []
 						},
 						{
 							commentid: 5,
@@ -65,8 +69,9 @@ export const initialState = {
 							content: "I don't agree!",
 							date: '2020-07-19 7:11',
 							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-							like: 1000
-
+							like: 1000,
+							share: "9898",
+							comments: []
 						}
 					]
 				},
@@ -79,6 +84,8 @@ export const initialState = {
 					date: '2020-07-19 7:11',
 					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					like: 500,
+					share: "500",
+					comments: []
 				},
 				{
 					commentid: 3,
@@ -89,6 +96,8 @@ export const initialState = {
 					date: '2020-07-20 7:11',
 					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
 					like: 2500,
+					share: "5000",
+					comments: []
 				},
 			]
 		},
@@ -111,6 +120,7 @@ export const initialState = {
 			],
 			like: 5000,
 			shares: 100,
+			details: 999,
 			comments: [
 				{
 					commentid: 1,
@@ -131,6 +141,8 @@ export const initialState = {
 							date: '2020-07-19 7:11',
 							like: 1500,
 							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+							share: "6000",
+							comments: []
 						},
 						{
 							commentid: 5,
@@ -141,6 +153,8 @@ export const initialState = {
 							date: '2020-07-19 7:11',
 							like: 1000,
 							avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+							share: "7000",
+							comments: []
 						}
 					]
 				},
@@ -153,6 +167,8 @@ export const initialState = {
 					date: '2020-07-19 7:11',
 					like: 500,
 					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+					share: "8000",
+					comments: []
 				},
 				{
 					commentid: 3,
@@ -163,21 +179,14 @@ export const initialState = {
 					date: '2020-07-20 7:11',
 					like: 2500,
 					avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+					share: "1000",
+					comments: []
 				},
-
-
-
-
-
 
 			]
 		}
-
-
-
 	],
 	post: {}
-
 }
 
 

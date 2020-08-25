@@ -3,7 +3,7 @@ import { Avatar, List, Comment, PageHeader, Row, Col, Rate, Space, Typography, B
 import Head from 'next/head'
 import { connect } from "react-redux"
 import { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement5, getIncrement6 } from '../_actions/postsAction';
-import { ShareAltOutlined, HeartFilled, EnvironmentFilled, MoreOutlined } from '@ant-design/icons';
+import { ShareAltOutlined, HeartFilled, EnvironmentFilled, MoreOutlined, MessageOutlined } from '@ant-design/icons';
 import { Formik } from 'formik'
 import { Form, SubmitButton, ResetButton, Input } from 'formik-antd'
 import * as Yup from 'yup';
@@ -26,41 +26,60 @@ const { Text, Title } = Typography;
 	</div>
 );*/
 
-const IconText3 = ({ icon, Text, postID, setCommentLikeIncrement }) => (
-	<div onClick={() => { setCommentLikeIncrement(postID) }}  >
-		<Space size="middle" >
+const PostLikes = ({ icon, Text, postID, setCommentLikeIncrement }) => (
+	<div onClick={() => { setCommentLikeIncrement(postID) }} style={{ position: "relative", top: "auto", left: "12rem" }}>
+		<Space size="small">
 			{React.createElement(icon)}
 			{Text}
 		</Space>
 	</div>
 );
 
-const IconText1 = ({ icon, Text, postID, getIncrement5 }) => (
-	<div onClick={() => { getIncrement5(postID) }}  >
-		<Space size="middle" >
+const PostDetails = ({ icon, Text, postID, setDetailIncrement }) => (
+	<div onClick={() => { setDetailIncrement(postID) }} style={{ position:"relative", top:"auto", left:"1.15rem"}} >
+		<Space size="small">
 			{React.createElement(icon)}
 			{Text}
 		</Space>
 	</div>
 );
 
-const CommentActions = ({ icon, Text, commentID, getIncrement6 }) => (
-	<div onClick={() => { getIncrement6(commentID) }} style={{ position: "absolute", top: "5.85rem", left: "14rem" }}>
-		<Space size="middle"  >
+const PostShares = ({ icon, Text, postID, getIncrement5 }) => (
+	<div onClick={() => { getIncrement5(postID) }} style={{ position: "relative", top: "auto", left: "-2rem" }}>
+		<Space size="small" >
 			{React.createElement(icon)}
 			{Text}
 		</Space>
 	</div>
 );
 
-/*const IconText5 = ({ icon, Text, commentID, getIncrement5}) => (
-	<div onclick={() => { getIncrement5(commentID)}} style={{backgroundColor:"red"}} >
-		<Space size="middle">
+
+const CommentLikeActions = ({ icon, Text, commentID, getIncrement6 }) => (
+	<div onClick={() => { getIncrement6(commentID) }}  style={{ position: "relative", top: "4rem", left: "17.75rem" }} >
+		<Space size="small">
 			{React.createElement(icon)}
 			{Text}
 		</Space>
 	</div>
-)*/
+);
+
+const CommentShareActions = ({ icon, Text, commentID, getIncrement5 }) => (
+	<div onClick={() => { getIncrement5(commentID) }} style={{ backgroundColor: "transparent", position: "absolute", top: "5.95rem", left: "11rem" }} >
+		<Space size="small">
+			{React.createElement(icon)}
+			{Text}
+		</Space>
+	</div>
+);
+
+const CommentMessageActions = ({ icon, Text, commentID, getIncrement7 }) => (
+	<div onClick={() => { getIncrement7(commentID) }} style={{ backgroundColor: "transparent", position: "absolute", top: "5.95rem", left: "15rem" }}>
+		<Space size="small">
+			{React.createElement(icon)}
+			{Text}
+		</Space>
+	</div>
+);
 
 
 
@@ -119,7 +138,7 @@ function Comments(props) {
 
 						<List.Item
 							key={item.author}
-							style={{ boxSizing: "border-box", backgroundColor: '#d3d3d3', height:"17.30rem" }}
+							style={{ boxSizing: "border-box", backgroundColor: '#d3d3d3', height: "17.30rem" }}
 						>
 							<Row style={{ align: "middle", backgroundColor: "grey", width: "115%", position: "relative", top: "-1rem", left: "-1.50rem", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} align="middle">
 								<Col span={2} push={1}>
@@ -162,7 +181,7 @@ function Comments(props) {
 									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
-							<Row style={{  position:"relative", left:"auto", top:"-1rem", margin: "auto auto auto auto", backgroundColor:"transparent" }} >
+							<Row style={{ position: "relative", left: "auto", top: "-1rem", margin: "auto auto auto auto", backgroundColor: "transparent" }} >
 								<Col>
 									<Text>
 										{item.content}
@@ -176,7 +195,7 @@ function Comments(props) {
 									gutter: 100
 
 								}}
-								style={{ position:  "relative", backgroundColor:"transparent", left: 'auto', top: '-1rem', }}
+								style={{ position: "relative", backgroundColor: "transparent", left: 'auto', top: '-1rem', }}
 								dataSource={item.images}
 								renderItem={imageItem => (
 									<List.Item>
@@ -190,7 +209,7 @@ function Comments(props) {
 									</List.Item>
 								)}
 							/>
-							<List style={{ position: "relative", left: '0rem', top: '-2rem' , backgroundColor:"transparent" }} >
+							<List style={{ position: "relative", left: '0rem', top: '-2rem', backgroundColor: "transparent" }} >
 								<EnvironmentFilled />
 								<Text style={{ position: "relative", left: '10px', top: '0px' }}>
 									{item.location}
@@ -203,15 +222,18 @@ function Comments(props) {
 								</Text>
 							</List>
 							<>
-								<Row style={{ height:"auto",position: "relative", top:"-3.25rem",left: "-1.50rem", width: '115%', backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} >
-									<Col span="12" style={{ padding: "0.5em" }} >
-										<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
+								<Row style={{ height: "auto", position: "relative", top: "-3.25rem", left: "-1.50rem", width: '115%', backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} >
+									<Col span="8" style={{ padding: "0.5em" }}>
+										<PostDetails icon={MessageOutlined} Text={item.details} key="list-vertical-star-o" postID={item.postID} setDetailIncrement={props.setDetailIncrement} />
 									</Col>
 									{/*<Col span="8" style={{ padding: "0.5em" }} push="0" >
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>*/}
-									<Col span="12" style={{ padding: "0.5em" }} >
-										<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
+									<Col span="8" style={{ padding: "0.5em" }}>
+										<PostLikes icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
+									</Col>
+									<Col span="8" style={{ padding: "0.5em" }}>
+										<PostShares icon={ShareAltOutlined} Text={item.shares} postID={item.postID} setShareIncrement={props.setShareIncrement} />
 									</Col>
 								</Row>
 							</>
@@ -274,8 +296,9 @@ function Comments(props) {
 							content={<span style={{ fontSize: 13, color: "black", position: "absolute", top: "3rem", left: "0rem" }}>{item.content}</span>}
 							datetime={<span style={{ fontSize: 13, color: "black", position: "absolute", top: "6rem", left: "-2rem" }}>{item.date}</span>}
 							actions={[
-								<CommentActions icon={HeartFilled} Text={item.like} commentID={item.commentid} getIncrement6={props.getIncrement6} key="list-vertical-message" />,
-								//<IconText5 icon={MessageFilled} Text={item.comments.length} commentID={item.commentid} getIncrement5={props.getIncrement5}/>,
+								<CommentLikeActions icon={HeartFilled} Text={item.like} commentID={item.commentid} getIncrement6={props.getIncrement6} key="list-vertical-message" />,
+								<CommentShareActions icon={ShareAltOutlined} Text={item.share} commentID={item.commentid} getIncrement5={props.getIncrement5} />,
+								<CommentMessageActions icon={MessageOutlined} Text={item.comments.length} commentID={item.commentid} getIncrement7={props.getIncrement7} />,
 								<Rate style={{ position: "absolute", top: "1rem", left: "2px", fontSize: "0.70rem" }} value={item.rating} />
 							]}
 						/>
