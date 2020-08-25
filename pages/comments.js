@@ -104,7 +104,7 @@ function Comments(props) {
 
 
 
-			<List style={{ position: "relative", left: '0px', top: '-20px' }} style={{ backgroundColor: "white" }}
+			<List style={{ position: "relative", left: 'auto', top: 'auto' }} style={{ backgroundColor: "white" }}
 				itemLayout="vertical"
 				size="large"
 				bordered="true"
@@ -119,7 +119,7 @@ function Comments(props) {
 
 						<List.Item
 							key={item.author}
-							style={{ boxSizing: "border-box", backgroundColor: '#d3d3d3', }}
+							style={{ boxSizing: "border-box", backgroundColor: '#d3d3d3', height:"17.30rem" }}
 						>
 							<Row style={{ align: "middle", backgroundColor: "grey", width: "115%", position: "relative", top: "-1rem", left: "-1.50rem", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} align="middle">
 								<Col span={2} push={1}>
@@ -148,23 +148,23 @@ function Comments(props) {
 										</Col>
 									</Row>*/}
 								</Col>
-								<Col pull={1} span={1}>
+								{/*<Col pull={1} span={1}>
 									<Button type="text" size="small" >
 										<Text > + Friend</Text>
 									</Button>
-								</Col>
-								<Col push={3} span={1}>
+								</Col>*/}
+								{/*	<Col push={3} span={1}>
 									<Button type="text" size="small"  >
 										<Text > + Follow</Text>
 									</Button>
-								</Col>
-								<Col push={7} span={1}>
-									<Button type="link" /*style={{ position: "relative", left: '20px', top: '5px' }}*/ icon={<MoreOutlined style={{ color: 'black' }} />} />
+								</Col>*/}
+								<Col push={9} span={1} >
+									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
-							<Row style={{ padding: '4%' }} >
+							<Row style={{  position:"relative", left:"auto", top:"-1rem", margin: "auto auto auto auto", backgroundColor:"transparent" }} >
 								<Col>
-									<Text >
+									<Text>
 										{item.content}
 									</Text>
 								</Col>
@@ -176,7 +176,7 @@ function Comments(props) {
 									gutter: 100
 
 								}}
-								style={{ position: "relative", left: '-10px', top: '-10px' }}
+								style={{ position:  "relative", backgroundColor:"transparent", left: 'auto', top: '-1rem', }}
 								dataSource={item.images}
 								renderItem={imageItem => (
 									<List.Item>
@@ -190,20 +190,20 @@ function Comments(props) {
 									</List.Item>
 								)}
 							/>
-							<List style={{ position: "relative", left: '0rem', top: '-0.30rem' }} >
+							<List style={{ position: "relative", left: '0rem', top: '-2rem' , backgroundColor:"transparent" }} >
 								<EnvironmentFilled />
 								<Text style={{ position: "relative", left: '10px', top: '0px' }}>
 									{item.location}
 								</Text>
 							</List>
 
-							<List style={{ position: "relative", left: '16.5rem', top: '-1.70rem' }} >
+							<List style={{ position: "relative", left: '16.5rem', top: '-3.40rem' }} >
 								<Text>
 									{item.date}
 								</Text>
 							</List>
 							<>
-								<Row style={{ position: "relative", left: "-1.50rem", width: '115%', backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} >
+								<Row style={{ height:"auto",position: "relative", top:"-3.25rem",left: "-1.50rem", width: '115%', backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} >
 									<Col span="12" style={{ padding: "0.5em" }} >
 										<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 									</Col>
