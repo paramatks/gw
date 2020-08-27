@@ -73,7 +73,7 @@ function Posts(props) {
 	}, []);
 
 	return (
-		<List style={{ backgroundColor: "white", position: "relative", top: "-0.5rem" }}
+		<List style={{ backgroundColor: "white" }}
 			itemLayout="vertical"
 			size="large"
 			bordered="true"
@@ -103,20 +103,19 @@ function Posts(props) {
 
 
 							<Row style={{ backgroundColor: " grey" }} align="middle">
-								<Col span={2} push={1} style={{ position: "relative", top: "0.25rem" }}>
-									<List.Item.Meta /*style={{ position: "relative", left: '10px', top: '-25px' }}*/ style={{ height: "2rem", padding: '0%' }}
+								<Col span={2} style={{ marginLeft: 5, marginTop: 5, marginRight: 5, marginTop: 10 }} >
+									<List.Item.Meta
 										avatar={<Avatar src={item.avatar} />}
 									//description={item.description}
 									/>
 								</Col>
-								<Col span={10} push={2} style={{ position: "relative", top: "0.5rem" }} >
-									<Text style={{ fontSize: 13 }} >
-										{item.author}
-									</Text>
-									<br />
-									<Rate style={{ fontSize: 10, height: "2rem", position: "relative", top: "-0.25rem" }} value={item.rating} />
-
-
+								<Col span={8} style={{ marginLeft: 5, marginTop: 5, marginBottom: 10 }} >
+									<Space direction="vertical" size={0}>
+										<Text style={{ fontSize: 13 }} >
+											{item.author}
+										</Text>
+										<Rate style={{ fontSize: 10 }} value={item.rating} />
+									</Space>
 
 									{/*<Row  >
 										<Col    >
@@ -132,21 +131,21 @@ function Posts(props) {
 										</Col>
 									</Row>*/}
 								</Col>
-								<Col pull={1} span={1}>
-									<Button type="text" size="small" >
+								<Col span={5} style={{ marginRight: 3 }} >
+									<Button type="text" size="small"  >
 										<Text > + Friend</Text>
 									</Button>
 								</Col>
-								<Col push={3} span={1}>
+								<Col span={5} style={{ marginRight: 5 }}>
 									<Button type="text" size="small" >
 										<Text > + Follow</Text>
 									</Button>
 								</Col>
-								<Col push={7} span={1}>
-									<Button type="link" /*style={{ position: "relative", left: '20px', top: '5px' }}*/ icon={<MoreOutlined style={{ color: 'black' }} />} />
+								<Col span={2}>
+									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
-							<Row style={{ padding: '4%' }} >
+							<Row align="middle" style={{ marginLeft: 10, marginTop: 10, marginBottom: 5 }} >
 								<Col>
 									<Text >
 										{item.content}
@@ -161,8 +160,6 @@ function Posts(props) {
 									gutter: 100
 
 								}}
-								style={{ position: "relative", left: '-10px', top: '-10px' }}
-
 								dataSource={item.images}
 								renderItem={imageItem => (
 									<List.Item>
@@ -183,41 +180,38 @@ function Posts(props) {
 
 								)}
 							/>
-							<List style={{ position: "relative", left: '15px', top: '-5px' }} >
-								<EnvironmentFilled />
-								<Text style={{ position: "relative", left: '10px', top: '0px' }}>
-									{item.location}
+							<Row style={{ marginLeft: 10 }} align="middle" >
+								<Col span="1" style={{marginRight:10, marginBottom:10}}>
+									<EnvironmentFilled />
+								</Col>
+								<Col span="7" style={{ marginLeft: 5, marginBottom:10 }}>
+									<Text  >
+										{item.location}
+									</Text>
+								</Col>
+								<Col span="11" style={{marginLeft:30, marginBottom:10}}>
+									<Row justify="end">
+									<Text >
+										{item.date}
+									</Text>
+									</Row>
 
-
-								</Text>
-
-
-
-							</List>
-
-
-							<List style={{ position: "relative", left: '175px', top: '-27px' }} >
-
-								<Text style={{ position: "relative", left: '4rem', top: '0px' }}>
-									{item.date}
-
-
-								</Text>
+								</Col>
+							</Row>
 
 
 
-							</List>
 
 						</div>
 						<>
 							<Row style={{ width: '100%', backgroundColor: "gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
-								<Col span="8" style={{ padding: "0.5em" }} >
+								<Col span="6" style={{ marginTop:10,marginLeft:15, marginBottom:10}} >
 									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 								</Col>
-								<Col span="8" style={{ padding: "0.5em" }} push="0" >
+								<Col span="6"    style={{ marginTop:10, marginBottom:10, marginLeft:30}}>
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>
-								<Col span="8" style={{ padding: "0.5em" }} >
+								<Col span="6"  style={{ marginTop:10, marginBottom:10, marginLeft:20}} >
 									<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 								</Col>
 							</Row>
