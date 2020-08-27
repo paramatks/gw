@@ -73,7 +73,7 @@ function Posts(props) {
 	}, []);
 
 	return (
-		<List style={{ backgroundColor: "white", position:"relative",top:"-0.5rem" }}
+		<List style={{ backgroundColor: "white", position: "relative", top: "-0.5rem" }}
 			itemLayout="vertical"
 			size="large"
 			bordered="true"
