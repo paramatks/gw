@@ -31,41 +31,41 @@ function Login(props) {
                 title="Login"
             />
 
-            <Row justify="center" >
-                <Col style={{ position: "relative", left: "-2.5rem", top: "auto" }} >
+            <Row justify="center">
+                <Col span="24" style={{ marginRight: 125 }}>
                     <img
                         src="/images/login.jpg"
-                        style={{ position: "relative", objectFit: 'cover' }}
                     />
                 </Col>
             </Row>
 
-            <Row justify="center" align="bottom" /*style={{ width: '100%' }}*/>
-                <Col flex="auto" style={{ padding: "5%" }}>
-                    <Button type="primary" block="true" shape="round" size="large" style={{ color: 'white', backgroundColor: 'gray', padding: "0%", position: "relative", left: '0px', top: '0px' }} onClick={() => { props.setLoginstate() /*liff.login({redirectUri: 'https://beta.vtra.app/redirect'});*/ }}>
-                        <Text style={{ fontSize: "1.15rem" }}>
+            <Row justify="center" align="bottom">
+                <Col span="20" >
+                    <Button type="primary" block="true" shape="round" size="large" style={{ backgroundColor: 'gray' }} onClick={() => { props.setLoginstate() /*liff.login({redirectUri: 'https://beta.vtra.app/redirect'});*/ }}>
+                        <Text>
                             Continue with LINE
                        </Text>
                     </Button>
                 </Col>
             </Row>
-            <Row justify="center" align="bottom" style={{ position: "relative", left: '0px', top: '-1rem' }}>
-                <Col>
+            <Row justify="center" align="bottom" >
+                <Col span="10" style={{marginLeft:75, marginTop:25}}>
                     Log in means
                 </Col>
             </Row>
 
-            <Row justify="center" align="bottom" style={{ position: "relative", left: '0px', top: '-1rem' }}>
-                <Col>
+            <Row justify="center" align="bottom" >
+                <Col span="10" style={{marginLeft:10}}>
                     you have agreed to this
                 </Col>
             </Row>
 
-            <Row justify="center" align="bottom" style={{ position: "relative", left: '0px', top: '-1rem' }}>
-                <Col style={{ color: 'orange' }}>
+            <Row justify="center" align="bottom">
+                <Col span="10" style={{ color: 'orange',marginLeft:35, marginBottom:40 }}>
                     platform agreement
                 </Col>
             </Row>
+
         </>
     )
 }

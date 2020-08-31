@@ -51,7 +51,7 @@ function Gwindex(props) {
 	return (
 		<>
 			<Head>
-				<title>We Work</title>
+				<title>GoodWork</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
