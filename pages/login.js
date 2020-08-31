@@ -49,19 +49,19 @@ function Login(props) {
                 </Col>
             </Row>
             <Row justify="center" align="bottom" >
-                <Col span="10" style={{marginLeft:75, marginTop:25}}>
+                <Col span="10" style={{ marginLeft: 75, marginTop: 25 }}>
                     Log in means
                 </Col>
             </Row>
 
             <Row justify="center" align="bottom" >
-                <Col span="10" style={{marginLeft:10}}>
+                <Col span="10" style={{ marginLeft: 10 }}>
                     you have agreed to this
                 </Col>
             </Row>
 
             <Row justify="center" align="bottom">
-                <Col span="10" style={{ color: 'orange',marginLeft:35, marginBottom:40 }}>
+                <Col span="10" style={{ color: 'orange', marginLeft: 35, marginBottom: 40 }}>
                     platform agreement
                 </Col>
             </Row>

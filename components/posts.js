@@ -181,19 +181,19 @@ function Posts(props) {
 								)}
 							/>
 							<Row style={{ marginLeft: 10 }} align="middle" >
-								<Col span="1" style={{marginRight:10, marginBottom:10}}>
+								<Col span="1" style={{ marginRight: 10, marginBottom: 10 }}>
 									<EnvironmentFilled />
 								</Col>
-								<Col span="7" style={{ marginLeft: 5, marginBottom:10 }}>
+								<Col span="7" style={{ marginLeft: 5, marginBottom: 10 }}>
 									<Text  >
 										{item.location}
 									</Text>
 								</Col>
-								<Col span="11" style={{marginLeft:30, marginBottom:10}}>
+								<Col span="11" style={{ marginLeft: 30, marginBottom: 10 }}>
 									<Row justify="end">
-									<Text >
-										{item.date}
-									</Text>
+										<Text >
+											{item.date}
+										</Text>
 									</Row>
 
 								</Col>
@@ -205,13 +205,13 @@ function Posts(props) {
 						</div>
 						<>
 							<Row style={{ width: '100%', backgroundColor: "gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
-								<Col span="6" style={{ marginTop:10,marginLeft:15, marginBottom:10}} >
+								<Col span="6" style={{ marginTop: 10, marginLeft: 15, marginBottom: 10 }} >
 									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 								</Col>
-								<Col span="6"    style={{ marginTop:10, marginBottom:10, marginLeft:30}}>
+								<Col span="6" style={{ marginTop: 10, marginBottom: 10, marginLeft: 30 }}>
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>
-								<Col span="6"  style={{ marginTop:10, marginBottom:10, marginLeft:20}} >
+								<Col span="6" style={{ marginTop: 10, marginBottom: 10, marginLeft: 20 }} >
 									<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 								</Col>
 							</Row>

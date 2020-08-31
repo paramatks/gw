@@ -13,16 +13,16 @@ import router from 'next/router'
 //import { withRouter } from 'next/router'
 
 const renderTabBar = (props, DefaultTabBar) => (
-	<Row  style={{ backgroundColor: "gray" }} align="middle"  >
-		<Col span="3" style={{ marginLeft:20, marginTop:8}} >
-			<Title style={{ fontSize:17}}>  Logo </Title>
+	<Row style={{ backgroundColor: "gray" }} align="middle"  >
+		<Col span="3" style={{ marginLeft: 20, marginTop: 8 }} >
+			<Title style={{ fontSize: 17 }}>  Logo </Title>
 		</Col>
-	
-		<Col span="15" style={{ marginLeft:25}}>
+
+		<Col span="15" style={{ marginLeft: 25 }}>
 			<DefaultTabBar {...props} />
 		</Col>
-		
-		<Col style={{ marginLeft:3}} span="1">
+
+		<Col style={{ marginLeft: 3 }} span="1">
 			<button onClick={() => router.push('/login')} >
 				<LoginOutlined style={{ fontSize: '1rem' }} />
 			</button>
@@ -57,7 +57,7 @@ function Gwindex(props) {
 
 			<StickyContainer >
 
-				<Tabs type="card" defaultActiveKey="1"  renderTabBar={renderTabBar} >
+				<Tabs type="card" defaultActiveKey="1" renderTabBar={renderTabBar} >
 
 					<TabPane tab={<span style={{ fontSize: 14.5, color: "black" }}>Popular</span>} key="1"  >
 						<Carousel autoplay={true} dots={false}>
@@ -67,7 +67,7 @@ function Gwindex(props) {
 								/>
 							</div>
 							<div>
-								<img style={{objectFit: 'cover' }}
+								<img style={{ objectFit: 'cover' }}
 									src="/images/Welcome 2.png"
 								/>
 							</div>
