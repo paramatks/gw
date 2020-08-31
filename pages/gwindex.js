@@ -13,16 +13,16 @@ import router from 'next/router'
 //import { withRouter } from 'next/router'
 
 const renderTabBar = (props, DefaultTabBar) => (
-	<Row  style={{ backgroundColor: "gray", }} align="middle"  >
-		<Col span="5" style={{backgroundColor:"orange"}} >
-			<Title style={{ fontSize: '1.25rem',  marginleft:20}}>  Logo </Title>
+	<Row  style={{ backgroundColor: "gray" }} align="middle"  >
+		<Col span="3" style={{ marginLeft:20, marginTop:8}} >
+			<Title style={{ fontSize:17}}>  Logo </Title>
 		</Col>
 	
-		<Col span="15" style={{backgroundColor:"purple", }}>
+		<Col span="15" style={{ marginLeft:25}}>
 			<DefaultTabBar {...props} />
 		</Col>
 		
-		<Col style={{ backgroundColor: "gray", marginleft:20}} span="1">
+		<Col style={{ marginLeft:3}} span="1">
 			<button onClick={() => router.push('/login')} >
 				<LoginOutlined style={{ fontSize: '1rem' }} />
 			</button>
@@ -62,12 +62,12 @@ function Gwindex(props) {
 					<TabPane tab={<span style={{ fontSize: 14.5, color: "black" }}>Popular</span>} key="1"  >
 						<Carousel autoplay={true} dots={false}>
 							<div>
-								<img style={{ position: "relative", top: "auto", height: 'auto', width: 'auto', objectFit: 'cover' }}
+								<img style={{ objectFit: 'cover' }}
 									src="/images/welcome.png"
 								/>
 							</div>
 							<div>
-								<img style={{ postiton: "relative", top: "auto", height: 'auto', width: 'auto', objectFit: 'cover' }}
+								<img style={{objectFit: 'cover' }}
 									src="/images/Welcome 2.png"
 								/>
 							</div>
