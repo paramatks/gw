@@ -141,10 +141,10 @@ function Comments(props) {
 							style={{ backgroundColor: '#d3d3d3' }}
 						>
 							<Row style={{ backgroundColor: "grey", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} justify="start" align="middle">
-								<Col span={2} style={{ marginLeft: 15 }} >
+								<Col span={2} style={{ marginLeft: 15, marginBottom: "2%", marginTop: "2%" }} >
 									<Avatar src={item.avatar} />
 								</Col>
-								<Col span={13} style={{ marginLeft: 5 }}>
+								<Col span={13} style={{ marginLeft: 5, marginBottom: "2%", marginTop: "2%" }}>
 									<Space size={0} direction="vertical">
 										<Text style={{ fontSize: 12 }} >
 											{item.author}
@@ -152,7 +152,7 @@ function Comments(props) {
 										<Rate style={{ fontSize: 10 }} value={item.rating} />
 									</Space>
 								</Col>
-								<Col style={{ marginLeft: 70 }} span={1} >
+								<Col style={{ marginLeft: 70, marginBottom: "2%", marginTop: "2%" }} span={1} >
 									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
@@ -186,19 +186,21 @@ function Comments(props) {
 							/>
 
 
-							<Row style={{ backgroundColor: "transparent", margin: "auto auto 2% auto" }} >
-								<Col span="2" push="1">
+							<Row style={{ backgroundColor: "transparent", margin: "auto auto 3% auto" }} >
+								<Col span="1" style={{ marginLeft: "5%", marginRight: "3%" }} >
 									<EnvironmentFilled />
 								</Col>
-								<Col span="7" push="1">
+								<Col span="10" style={{ marginRight: "3%" }} >
 									<Text>
 										{item.location}
 									</Text>
 								</Col>
-								<Col span="8" push="7">
-									<Text>
-										{item.date}
-									</Text>
+								<Col span="10"  >
+									<Row justify="end" style={{ marginRight: "6%" }}>
+										<Text>
+											{item.date}
+										</Text>
+									</Row>
 								</Col>
 							</Row>
 
@@ -272,45 +274,40 @@ function Comments(props) {
 						<>
 							{/*key={item.commentid}*/}
 
-
-
-
 							<Row style={{ backgroundColor: "#D3D3D3", width: "100%", borderTopWidth: "medium", borderTopStyle: "solid", borderTopColor: "white" }} align="middle">
-								<Col span="3" style={{ height: "auto", padding: '2%', position: "relative", top: "auto" }}>
+								<Col span="3" style={{ height: "auto", padding: '2%', marginBottom: "3%" }}>
 									<List.Item.Meta
 										avatar={<Avatar src={item.avatar} />}
-									//description={item.description}
 									/>
 								</Col>
-								<Col span="12">
+								<Col span="17" style={{ marginBottom: "3%" }}>
 									{item.author}
 									<br></br>
 									<Rate style={{ fontSize: 10, }} value={item.rating} />
-
 								</Col>
-								<Col span="3" push="6">
+								<Col span="2" style={{ marginBottom: "3%", marginLeft: "3%" }}>
 									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
 
 							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black" }} justify="center" >
-								<Col span="12" pull="3" style={{ margin: "auto auto 3% auto" }}>
+								<Col span="12" pull="3" style={{ margin: "2% auto 3% auto" }}>
 									{item.content}
 								</Col>
 							</Row>
 							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black" }} >
-								<Col span="7" push="1">
+								<Col span="9" style={{ marginTop: "2%", marginBottom: "3%" }}>
 									<Text>
 										{item.date}
 									</Text>
 								</Col>
-								<Col span="5" push="3">
+								<Col span="5" style={{ marginTop: "2%", marginBottom: "3%" }}>
 									<CommentLikeActions icon={HeartFilled} Text={item.like} commentID={item.commentid} getIncrement6={props.getIncrement6} key="list-vertical-message" />
 								</Col>
-								<Col span="5" push="3">
+								<Col span="5" style={{ marginTop: "2%", marginBottom: "3%" }}>
 									<CommentShareActions icon={ShareAltOutlined} Text={item.share} commentID={item.commentid} getIncrement5={props.getIncrement5} />
 								</Col>
-								<Col span="5" push="3">
+								<Col span="5" style={{ marginTop: "2%", marginBottom: "3%" }}>
 									<CommentMessageActions icon={MessageOutlined} Text={item.comments.length} commentID={item.commentid} getIncrement7={props.getIncrement7} />
 								</Col>
 							</Row>
