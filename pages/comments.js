@@ -10,15 +10,10 @@ import * as Yup from 'yup';
 import { StickyContainer, Sticky } from 'react-sticky';
 import ReactDOM from 'react-dom';
 
-
-
 const { Text, Title } = Typography;
 
 //const { Meta } = Card;
 //const listData = [];
-
-
-
 
 /*const IconText2 = ({ icon, Text, postID, getIncrement2 }) => (
 	<div onClick={() => { getIncrement2(postID); }} style={{ position: "relative", left: "50px", top: "-45px" }} >
@@ -56,7 +51,6 @@ const PostShares = ({ icon, Text, postID, getIncrement5 }) => (
 	</div>
 );
 
-
 const CommentLikeActions = ({ icon, Text, commentID, getIncrement6 }) => (
 	<div style={{ marginRight: 15 }} onClick={() => { getIncrement6(commentID) }}  >
 		<Space size="small">
@@ -84,9 +78,6 @@ const CommentMessageActions = ({ icon, Text, commentID, getIncrement7 }) => (
 	</div>
 );
 
-
-
-
 const IconText = ({ icon, text }) => (
 	<Space>
 		{React.createElement(icon)}
@@ -94,12 +85,9 @@ const IconText = ({ icon, text }) => (
 	</Space>
 );
 
-
 //const Comments = ({ children }) => (
 
 function Comments(props) {
-
-
 
 	useEffect(() => {
 		//props.getIncrement(999)
@@ -136,11 +124,8 @@ function Comments(props) {
 		setVisible(false)
 	};
 
-
-
 	//console.log(props);
 	return (
-
 		<>
 			<Head>
 				<title>GoodWork</title>
@@ -158,15 +143,11 @@ function Comments(props) {
 				title="Post Details"
 			/>
 
-
-
-
 			<List style={{ backgroundColor: "white" }}
 				itemLayout="vertical"
 				size="large"
 				bordered="true"
 				itemLayout="vertical"
-
 
 				dataSource={props.appAuthReducer.post}
 
@@ -262,17 +243,8 @@ function Comments(props) {
 								</Row>
 							</>
 						</div>
-
-
-
-
 					)
 				}}
-
-
-
-
-
 			/>
 
 
@@ -300,13 +272,6 @@ function Comments(props) {
 					<ResetButton />
 				</Form>
 			</Formik>*/}
-
-
-
-
-
-
-
 
 			<List
 				dataSource={props.appAuthReducer.post[0].comments}
@@ -356,6 +321,7 @@ function Comments(props) {
 								Write new comment
         					</Button>
 							<Modal
+								style={{marginTop:"80%" }}
 								title="New Comment"
 								visible={visible}
 								onOk={() => handleOk()}
@@ -376,7 +342,7 @@ function Comments(props) {
 									}}>
 									<Form>
 										<Form.Item
-											name="comment"  >
+											name="comment">
 											<Input
 												name="comment"
 												type="text"
@@ -389,8 +355,6 @@ function Comments(props) {
 								</Formik>
 							</Modal>
 
-
-
 						</>
 					)
 				}}
@@ -398,7 +362,6 @@ function Comments(props) {
 			/>
 		</>
 	)
-
 }
 
 export default connect(state => state, { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement5, getIncrement6 })(Comments);
