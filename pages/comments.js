@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Avatar, List, Comment, PageHeader, Row, Col, Rate, Space, Typography, Button } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Avatar, List, Comment, PageHeader, Row, Col, Rate, Space, Typography, Button, Modal } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
 import { getPopularPosts, getNewDemand, setLikeIncrement, setShareIncrement, setCommentLikeIncrement, getIncrement5, getIncrement6 } from '../_actions/postsAction';
@@ -8,6 +8,8 @@ import { Formik } from 'formik'
 import { Form, SubmitButton, ResetButton, Input } from 'formik-antd'
 import * as Yup from 'yup';
 import { StickyContainer, Sticky } from 'react-sticky';
+import ReactDOM from 'react-dom';
+
 
 const { Text, Title } = Typography;
 
@@ -91,14 +93,48 @@ const IconText = ({ icon, text }) => (
 	</Space>
 );
 
+
 //const Comments = ({ children }) => (
 
 function Comments(props) {
+
+	
 
 	useEffect(() => {
 		//props.getIncrement(999)
 
 	}, []);
+
+	const [visible, setVisible ]= useState (false);
+	const [modalText, setModalText] = useState ( 'Content of the modal');
+	const [confirmLoading, setConfirmLoading] = useState (false)
+
+	/*const [state, setstate] = useState({
+		ModalText: 'Content of the modal',
+		Visible: false,
+		ConfirmLoading: false,
+	});*/
+
+	const showModal = () => {
+		setVisible(true)
+	};
+
+	const handleOk = () => {
+		
+			setModalText('The modal will be closed after two seconds')
+			setConfirmLoading(true)
+		
+		setTimeout(() => {
+			setVisible(false)
+			setConfirmLoading(false)
+		}, 2000);
+	};
+
+	const handleCancel = () => {
+		console.log('Clicked cancel button');
+		setVisible(false)
+	};
+
 
 
 	//console.log(props);
@@ -205,18 +241,22 @@ function Comments(props) {
 							</Row>
 
 							<>
-								<Row style={{ backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} >
-									<Col span="8" push="1" style={{ padding: "0.5em" }}>
+								<Row style={{ backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} align="middle" >
+									<Col span="6" style={{ padding: "0.5em" }}>
 										<PostDetails icon={MessageOutlined} Text={item.details} key="list-vertical-star-o" postID={item.postID} setDetailIncrement={props.setDetailIncrement} />
 									</Col>
 									{/*<Col span="8" style={{ padding: "0.5em" }} push="0" >
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>*/}
-									<Col span="8" push="5" style={{ padding: "0.5em" }}>
-										<PostShares icon={ShareAltOutlined} Text={item.shares} key="list-vertical-message" postID={item.postID} setShareIncrement={props.setShareIncrement} />
+									<Col span="6" style={{ marginLeft: "17%" }}>
+										<Row justify="end">
+											<PostShares icon={ShareAltOutlined} Text={item.shares} key="list-vertical-message" postID={item.postID} setShareIncrement={props.setShareIncrement} />
+										</Row>
 									</Col>
-									<Col span="8" push="3" style={{ padding: "0.5em" }}>
-										<PostLikes icon={HeartFilled} Text={item.like} postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
+									<Col span="6" style={{ marginLeft: "5%" }}>
+										<Row justify="end">
+											<PostLikes icon={HeartFilled} Text={item.like} postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
+										</Row>
 									</Col>
 								</Row>
 							</>
@@ -311,6 +351,21 @@ function Comments(props) {
 									<CommentMessageActions icon={MessageOutlined} Text={item.comments.length} commentID={item.commentid} getIncrement7={props.getIncrement7} />
 								</Col>
 							</Row>
+							<Button type="primary" onClick={() => showModal() }>
+								Open Modal with async logic
+        					</Button>
+							<Modal
+								title="Title"
+								visible={visible}
+								onOk={() => handleOk()}
+								confirmLoading={() => setConfirmLoading()}
+								onCancel={() => handleCancel()}
+							>
+								<p>{modalText}</p>
+							</Modal>
+
+
+
 						</>
 					)
 				}}
