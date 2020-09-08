@@ -164,10 +164,10 @@ function Comments(props) {
 								</Col>
 								<Col span={13} style={{ marginLeft: 5, marginBottom: "2%", marginTop: "2%" }}>
 									<Space size={0} direction="vertical">
-										<Text style={{ fontSize: 12 }} >
+										<Text style={{ fontSize: 13 }} >
 											{item.author}
 										</Text>
-										<Rate style={{ fontSize: 10 }} value={item.rating} />
+										<Rate style={{ fontSize: 12 }} value={item.rating} />
 									</Space>
 								</Col>
 								<Col style={{ marginLeft: 70, marginBottom: "2%", marginTop: "2%" }} span={1} >
@@ -294,9 +294,11 @@ function Comments(props) {
 									/>
 								</Col>
 								<Col span="17" style={{ marginBottom: "3%" }}>
-									{item.author}
+									<Text style={{ fontSize: 12 }}>
+										{item.author}
+									</Text>
 									<br></br>
-									<Rate style={{ fontSize: 10, }} value={item.rating} />
+									<Rate style={{ fontSize: 11, }} value={item.rating} />
 								</Col>
 								<Col span="2" style={{ marginBottom: "3%", marginLeft: "3%" }}>
 									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
