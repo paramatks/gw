@@ -5,7 +5,6 @@ import {
 import { HYDRATE } from 'next-redux-wrapper';
 //import * as t from './actionTypes';
 
-
 export const initialState = {
 	isLoggedIn: false,
 	isLoggingIn: false,

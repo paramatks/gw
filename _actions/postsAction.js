@@ -6,9 +6,6 @@ import { GET_POPULAR, GET_NEWDEMAND, SET_LIKE_INCREMENT, SET_COMMENT_LIKE_INCREM
 import router from 'next/router'
 //import comments from '../pages/comments';
 
-
-
-
 const comment =
 {
 	commentid: '',
@@ -19,10 +16,6 @@ const comment =
 	date: '',
 	like: '',
 }
-
-
-
-
 
 export function getPopularPosts() {
 	return function (dispatch, getState) {
@@ -311,5 +304,3 @@ export function setLoginstate() {
 		});
 	}
 }
-
-

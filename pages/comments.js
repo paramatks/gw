@@ -11,6 +11,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ReactDOM from 'react-dom';
 
 const { Text, Title } = Typography;
+const { TextArea } = Input;
 
 //const { Meta } = Card;
 //const listData = [];
@@ -132,7 +133,6 @@ function Comments(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-
 			<PageHeader style={{
 				backgroundColor: "#D3D3D3",
 				height: "3.5rem"
@@ -224,21 +224,28 @@ function Comments(props) {
 
 							<>
 								<Row style={{ backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} align="middle" >
-									<Col span="6" style={{ padding: "0.5em" }}>
+									<Col span="6" style={{ marginLeft: "3%", marginTop: "2%", marginBottom: "2%" }}>
 										<PostDetails icon={MessageOutlined} Text={item.details} key="list-vertical-star-o" postID={item.postID} setDetailIncrement={props.setDetailIncrement} />
 									</Col>
 									{/*<Col span="8" style={{ padding: "0.5em" }} push="0" >
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>*/}
-									<Col span="6" style={{ marginLeft: "17%" }}>
+									<Col span="6" style={{ marginLeft: "15%", marginTop: "2%", marginBottom: "2%" }}>
 										<Row justify="end">
 											<PostShares icon={ShareAltOutlined} Text={item.shares} key="list-vertical-message" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 										</Row>
 									</Col>
-									<Col span="6" style={{ marginLeft: "5%" }}>
+									<Col span="6" style={{ marginTop: "2%", marginBottom: "2%" }}>
 										<Row justify="end">
 											<PostLikes icon={HeartFilled} Text={item.like} postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 										</Row>
+									</Col>
+								</Row>
+								<Row style={{ backgroundColor: "#D3D3D3" }} justify="center">
+									<Col span="10">
+										<Button style={{ backgroundColor: "#D3D3D3", borderBottomStyle: "none", borderTopStyle: "none", borderRightColor: "black", borderLeftColor: "black", color: "black" }} type="primary" onClick={() => showModal()}>
+											Write new comment
+        								</Button>
 									</Col>
 								</Row>
 							</>
@@ -301,7 +308,7 @@ function Comments(props) {
 									{item.content}
 								</Col>
 							</Row>
-							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black" }} >
+							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black", borderBottomWidth: "thin", borderBottomStyle: "solid", borderBottomColor: "black" }} >
 								<Col span="9" style={{ marginTop: "2%", marginBottom: "3%" }}>
 									<Text>
 										{item.date}
@@ -317,16 +324,21 @@ function Comments(props) {
 									<CommentMessageActions icon={MessageOutlined} Text={item.comments.length} commentID={item.commentid} getIncrement7={props.getIncrement7} />
 								</Col>
 							</Row>
-							<Button type="primary" onClick={() => showModal()}>
-								Write new comment
-        					</Button>
+							<Row style={{ backgroundColor: "#D3D3D3" }} justify="center">
+								<Col span="10">
+									<Button style={{ backgroundColor: "#D3D3D3", borderBottomStyle: "none", borderTopStyle: "none", borderRightColor: "black", borderLeftColor: "black", color: "black" }} type="primary" onClick={() => showModal()}>
+										Write new comment
+        							</Button>
+								</Col>
+							</Row>
 							<Modal
-								style={{marginTop:"80%" }}
+								style={{ marginTop: "80%" }}
 								title="New Comment"
 								visible={visible}
 								onOk={() => handleOk()}
 								confirmLoading={() => setConfirmLoading()}
 								onCancel={() => handleCancel()}
+								footer={null}
 							>
 								{/*<p>{modalText}</p>*/}
 								<Formik initialValues={{
@@ -343,13 +355,17 @@ function Comments(props) {
 									<Form>
 										<Form.Item
 											name="comment">
-											<Input
+											<TextArea
+												rows={5}
+												size="large"
 												name="comment"
 												type="text"
 												placeholder="Write new comment"
 											/>
 										</Form.Item>
-										<SubmitButton>Submit</SubmitButton>
+										<SubmitButton
+											style={{ marginLeft: "75%", marginBottom: "-15%" }}
+										>Submit</SubmitButton>
 										<ResetButton />
 									</Form>
 								</Formik>
