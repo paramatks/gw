@@ -11,6 +11,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ReactDOM from 'react-dom';
 
 
+
 const { Text, Title } = Typography;
 
 //const { Meta } = Card;
@@ -98,16 +99,16 @@ const IconText = ({ icon, text }) => (
 
 function Comments(props) {
 
-	
+
 
 	useEffect(() => {
 		//props.getIncrement(999)
 
 	}, []);
 
-	const [visible, setVisible ]= useState (false);
-	const [modalText, setModalText] = useState ( 'Content of the modal');
-	const [confirmLoading, setConfirmLoading] = useState (false)
+	const [visible, setVisible] = useState(false);
+	/*const [modalText, setModalText] = useState('New Comment')*/
+	const [confirmLoading, setConfirmLoading] = useState(false)
 
 	/*const [state, setstate] = useState({
 		ModalText: 'Content of the modal',
@@ -120,10 +121,10 @@ function Comments(props) {
 	};
 
 	const handleOk = () => {
-		
-			setModalText('The modal will be closed after two seconds')
-			setConfirmLoading(true)
-		
+
+		setModalText('The modal will be closed after two seconds')
+		setConfirmLoading(true)
+
 		setTimeout(() => {
 			setVisible(false)
 			setConfirmLoading(false)
@@ -351,17 +352,41 @@ function Comments(props) {
 									<CommentMessageActions icon={MessageOutlined} Text={item.comments.length} commentID={item.commentid} getIncrement7={props.getIncrement7} />
 								</Col>
 							</Row>
-							<Button type="primary" onClick={() => showModal() }>
-								Open Modal with async logic
+							<Button type="primary" onClick={() => showModal()}>
+								Write new comment
         					</Button>
 							<Modal
-								title="Title"
+								title="New Comment"
 								visible={visible}
 								onOk={() => handleOk()}
 								confirmLoading={() => setConfirmLoading()}
 								onCancel={() => handleCancel()}
 							>
-								<p>{modalText}</p>
+								{/*<p>{modalText}</p>*/}
+								<Formik initialValues={{
+									comment: ""
+								}}
+									validationSchema={Yup.object({
+										comment: Yup.string()
+											.required("Required"),
+									})}
+									onSubmit={async (values, { setSubmitting }) => {
+										await new Promise(r => setTimeout(r, 500));
+										setSubmitting(false);
+									}}>
+									<Form>
+										<Form.Item
+											name="comment"  >
+											<Input
+												name="comment"
+												type="text"
+												placeholder="Write new comment"
+											/>
+										</Form.Item>
+										<SubmitButton>Submit</SubmitButton>
+										<ResetButton />
+									</Form>
+								</Formik>
 							</Modal>
 
 
