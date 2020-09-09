@@ -159,10 +159,10 @@ function Comments(props) {
 							style={{ backgroundColor: '#d3d3d3' }}
 						>
 							<Row style={{ backgroundColor: "grey", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} justify="start" align="middle">
-								<Col span={2} style={{ marginLeft: 15, marginBottom: "2%", marginTop: "2%" }} >
+								<Col span={2} style={{ marginLeft: 15, marginBottom: "0.25rem", marginTop: "0.25rem" }} >
 									<Avatar src={item.avatar} />
 								</Col>
-								<Col span={13} style={{ marginLeft: 5, marginBottom: "2%", marginTop: "2%" }}>
+								<Col span={13} style={{ marginLeft: 5, marginBottom: "0.25rem", marginTop: "0.25rem" }}>
 									<Space size={0} direction="vertical">
 										<Text style={{ fontSize: 13 }} >
 											{item.author}
@@ -170,12 +170,12 @@ function Comments(props) {
 										<Rate style={{ fontSize: 12 }} value={item.rating} />
 									</Space>
 								</Col>
-								<Col style={{ marginLeft: 70, marginBottom: "2%", marginTop: "2%" }} span={1} >
+								<Col style={{ marginLeft: "4.25rem", marginBottom: "0.25rem", marginTop: "0.25rem" }} span="1" >
 									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
-							<Row style={{ margin: "2% auto auto auto", backgroundColor: "transparent" }} >
-								<Col push="2" span="24">
+							<Row style={{ backgroundColor: "transparent" }} >
+								<Col span="24" style={{ marginLeft: "1rem", marginTop: "0.5rem" }}>
 									<Text>
 										{item.content}
 									</Text>
@@ -204,17 +204,17 @@ function Comments(props) {
 							/>
 
 
-							<Row style={{ backgroundColor: "transparent", margin: "auto auto 3% auto" }} >
-								<Col span="1" style={{ marginLeft: "5%", marginRight: "3%" }} >
+							<Row style={{ backgroundColor: "transparent", margin: "auto auto 0.5rem auto" }} >
+								<Col span="1" style={{ marginLeft: "0.75rem", marginRight: "0.5rem" }} >
 									<EnvironmentFilled />
 								</Col>
-								<Col span="10" style={{ marginRight: "3%" }} >
+								<Col span="10">
 									<Text>
 										{item.location}
 									</Text>
 								</Col>
-								<Col span="10"  >
-									<Row justify="end" style={{ marginRight: "6%" }}>
+								<Col span="10">
+									<Row justify="end" style={{ marginRight: "0.25rem" }}>
 										<Text>
 											{item.date}
 										</Text>
@@ -224,18 +224,18 @@ function Comments(props) {
 
 							<>
 								<Row style={{ backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} align="middle" >
-									<Col span="6" style={{ marginLeft: "3%", marginTop: "2%", marginBottom: "2%" }}>
+									<Col span="6" style={{ marginLeft: "0.5rem", marginTop: "0.5rem", marginBottom: "0.5rem" }}>
 										<PostDetails icon={MessageOutlined} Text={item.details} key="list-vertical-star-o" postID={item.postID} setDetailIncrement={props.setDetailIncrement} />
 									</Col>
 									{/*<Col span="8" style={{ padding: "0.5em" }} push="0" >
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>*/}
-									<Col span="6" style={{ marginLeft: "15%", marginTop: "2%", marginBottom: "2%" }}>
+									<Col span="6" style={{ marginLeft: "4rem", marginTop: "0.5rem", marginBottom: "0.5rem" }}>
 										<Row justify="end">
 											<PostShares icon={ShareAltOutlined} Text={item.shares} key="list-vertical-message" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 										</Row>
 									</Col>
-									<Col span="6" style={{ marginTop: "2%", marginBottom: "2%" }}>
+									<Col span="6" style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>
 										<Row justify="end">
 											<PostLikes icon={HeartFilled} Text={item.like} postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 										</Row>
@@ -287,44 +287,44 @@ function Comments(props) {
 						<>
 							{/*key={item.commentid}*/}
 
-							<Row style={{ backgroundColor: "#D3D3D3", width: "100%", borderTopWidth: "medium", borderTopStyle: "solid", borderTopColor: "white" }} align="middle">
-								<Col span="3" style={{ height: "auto", padding: '2%', marginBottom: "3%" }}>
+							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "medium", borderTopStyle: "solid", borderTopColor: "white" }} align="middle">
+								<Col span="3" style={{ height: "auto", marginBottom: "0.75rem", marginLeft: "0.5rem" }}>
 									<List.Item.Meta
 										avatar={<Avatar src={item.avatar} />}
 									/>
 								</Col>
-								<Col span="17" style={{ marginBottom: "3%" }}>
+								<Col span="17" style={{ marginBottom: "0.5rem" }}>
 									<Text style={{ fontSize: 12 }}>
 										{item.author}
 									</Text>
 									<br></br>
 									<Rate style={{ fontSize: 11, }} value={item.rating} />
 								</Col>
-								<Col span="2" style={{ marginBottom: "3%", marginLeft: "3%" }}>
+								<Col span="2" style={{ marginBottom: "0.5rem", marginLeft: "0.5rem" }}>
 									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
 
 							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black" }} justify="start" >
-								<Col span="10" /*style={{ margin: "2% auto 3% auto" }}*/ style={{ marginLeft: "12%", marginBottom: "3%", marginTop: "3%" }}>
+								<Col span="10" style={{ marginLeft: "2.75rem", marginBottom: "0.75rem", marginTop: "0.5rem" }}>
 									<Text>
 										{item.content}
 									</Text>
 								</Col>
 							</Row>
 							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black", borderBottomWidth: "thin", borderBottomStyle: "solid", borderBottomColor: "black" }} justify="end" >
-								<Col span="8" style={{ marginTop: "2%", marginBottom: "3%", marginRight: "10%" }}>
+								<Col span="8" style={{ marginTop: "0.5rem", marginBottom: "0.5rem", marginRight: "2.5rem" }}>
 									<Text>
 										{item.date}
 									</Text>
 								</Col>
-								<Col span="4" style={{ marginTop: "2%", marginBottom: "3%", marginRight:"3%" }}>
+								<Col span="4" style={{ marginTop: "0.5rem", marginBottom: "0.5rem", marginRight: "0.25rem" }}>
 									<CommentLikeActions icon={HeartFilled} Text={item.like} commentID={item.commentid} getIncrement6={props.getIncrement6} key="list-vertical-message" />
 								</Col>
-								<Col span="4" style={{ marginTop: "2%", marginBottom: "3%" }}>
+								<Col span="4" style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>
 									<CommentShareActions icon={ShareAltOutlined} Text={item.share} commentID={item.commentid} getIncrement5={props.getIncrement5} />
 								</Col>
-								<Col span="4" style={{ marginTop: "2%", marginBottom: "3%" }}>
+								<Col span="4" style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>
 									<CommentMessageActions icon={MessageOutlined} Text={item.comments.length} commentID={item.commentid} getIncrement7={props.getIncrement7} />
 								</Col>
 							</Row>
@@ -336,7 +336,7 @@ function Comments(props) {
 								</Col>
 							</Row>
 							<Modal
-								style={{ marginTop: "80%" }}
+								style={{ marginTop: "20rem" }}
 								title="New Comment"
 								visible={visible}
 								onOk={() => handleOk()}
@@ -353,8 +353,9 @@ function Comments(props) {
 											.required("Required"),
 									})}
 									onSubmit={async (values, { setSubmitting }) => {
-										await new Promise(r => setTimeout(r, 500));
-										setSubmitting(false);
+										//await new Promise(r => setTimeout(r, 500));
+										//setSubmitting(false);
+										console.log(values)
 									}}>
 									<Form>
 										<Form.Item
@@ -368,13 +369,12 @@ function Comments(props) {
 											/>
 										</Form.Item>
 										<SubmitButton
-											style={{ marginLeft: "75%", marginBottom: "-15%" }}
+											style={{ marginLeft: "13.75rem" }}
 										>Submit</SubmitButton>
 										<ResetButton />
 									</Form>
 								</Formik>
 							</Modal>
-
 						</>
 					)
 				}}
