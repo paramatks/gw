@@ -305,24 +305,26 @@ function Comments(props) {
 								</Col>
 							</Row>
 
-							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black" }} justify="center" >
-								<Col span="12" pull="3" style={{ margin: "2% auto 3% auto" }}>
-									{item.content}
+							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black" }} justify="start" >
+								<Col span="10" /*style={{ margin: "2% auto 3% auto" }}*/ style={{ marginLeft: "12%", marginBottom: "3%", marginTop: "3%" }}>
+									<Text>
+										{item.content}
+									</Text>
 								</Col>
 							</Row>
-							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black", borderBottomWidth: "thin", borderBottomStyle: "solid", borderBottomColor: "black" }} >
-								<Col span="9" style={{ marginTop: "2%", marginBottom: "3%" }}>
+							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "thin", borderTopStyle: "solid", borderTopColor: "black", borderBottomWidth: "thin", borderBottomStyle: "solid", borderBottomColor: "black" }} justify="end" >
+								<Col span="8" style={{ marginTop: "2%", marginBottom: "3%", marginRight: "10%" }}>
 									<Text>
 										{item.date}
 									</Text>
 								</Col>
-								<Col span="5" style={{ marginTop: "2%", marginBottom: "3%" }}>
+								<Col span="4" style={{ marginTop: "2%", marginBottom: "3%", marginRight:"3%" }}>
 									<CommentLikeActions icon={HeartFilled} Text={item.like} commentID={item.commentid} getIncrement6={props.getIncrement6} key="list-vertical-message" />
 								</Col>
-								<Col span="5" style={{ marginTop: "2%", marginBottom: "3%" }}>
+								<Col span="4" style={{ marginTop: "2%", marginBottom: "3%" }}>
 									<CommentShareActions icon={ShareAltOutlined} Text={item.share} commentID={item.commentid} getIncrement5={props.getIncrement5} />
 								</Col>
-								<Col span="5" style={{ marginTop: "2%", marginBottom: "3%" }}>
+								<Col span="4" style={{ marginTop: "2%", marginBottom: "3%" }}>
 									<CommentMessageActions icon={MessageOutlined} Text={item.comments.length} commentID={item.commentid} getIncrement7={props.getIncrement7} />
 								</Col>
 							</Row>
