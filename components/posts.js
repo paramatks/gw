@@ -103,13 +103,13 @@ function Posts(props) {
 
 
 							<Row style={{ backgroundColor: " grey" }} align="middle">
-								<Col span={2} style={{ marginLeft: 5, marginTop: 5, marginRight: 5, marginTop: 10 }} >
+								<Col span={2} style={{ marginLeft: "0.25rem", marginTop: "0.75rem", marginRight: "0.25rem"}} >
 									<List.Item.Meta
 										avatar={<Avatar src={item.avatar} />}
 									//description={item.description}
 									/>
 								</Col>
-								<Col span={8} style={{ marginLeft: 5, marginTop: 5, marginBottom: 10 }} >
+								<Col span={8} style={{ marginLeft: "0.5rem", marginTop: "0.75rem", marginBottom: "0.75rem" }} >
 									<Space direction="vertical" size={0}>
 										<Text style={{ fontSize: 13 }} >
 											{item.author}
@@ -131,12 +131,12 @@ function Posts(props) {
 										</Col>
 									</Row>*/}
 								</Col>
-								<Col span={5} style={{ marginRight: 3 }} >
+								<Col span={5} style={{ marginRight: "0.25rem" }} >
 									<Button type="text" size="small"  >
 										<Text > + Friend</Text>
 									</Button>
 								</Col>
-								<Col span={5} style={{ marginRight: 5 }}>
+								<Col span={5} style={{ marginRight: "0.25rem" }}>
 									<Button type="text" size="small" >
 										<Text > + Follow</Text>
 									</Button>
@@ -145,7 +145,7 @@ function Posts(props) {
 									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
 								</Col>
 							</Row>
-							<Row align="middle" style={{ marginLeft: 10, marginTop: 10, marginBottom: 5 }} >
+							<Row align="middle" style={{ marginLeft: "1rem", marginTop: "0.75rem", marginBottom: "0.25rem"}} >
 								<Col>
 									<Text >
 										{item.content}
@@ -163,10 +163,6 @@ function Posts(props) {
 								dataSource={item.images}
 								renderItem={imageItem => (
 									<List.Item>
-
-
-
-
 										<img
 											src={imageItem.uri}
 											width={100}
@@ -174,22 +170,20 @@ function Posts(props) {
 											//style={{}}
 											alt="logo"
 										/>
-
 									</List.Item>
-
 
 								)}
 							/>
-							<Row style={{ marginLeft: 10 }} align="middle" >
-								<Col span="1" style={{ marginRight: 10, marginBottom: 10 }}>
+							<Row style={{ marginLeft: "0.6rem" }} align="middle" >
+								<Col span="1" style={{ marginRight: "0.6rem", marginBottom: "0.6rem" }}>
 									<EnvironmentFilled />
 								</Col>
-								<Col span="7" style={{ marginLeft: 5, marginBottom: 10 }}>
+								<Col span="7" style={{ marginLeft: "0.5rem", marginBottom: "0.6rem" }}>
 									<Text  >
 										{item.location}
 									</Text>
 								</Col>
-								<Col span="11" style={{ marginLeft: 30, marginBottom: 10 }}>
+								<Col span="11" style={{ marginLeft: "2rem", marginBottom: "0.6rem" }}>
 									<Row justify="end">
 										<Text >
 											{item.date}
@@ -205,13 +199,13 @@ function Posts(props) {
 						</div>
 						<>
 							<Row style={{ width: '100%', backgroundColor: "gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
-								<Col span="6" style={{ marginTop: 10, marginLeft: 15, marginBottom: 10 }} >
+								<Col span="6" style={{ marginTop: "0.6rem", marginBottom: "0.6rem", marginLeft: "1rem"}} >
 									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 								</Col>
-								<Col span="6" style={{ marginTop: 10, marginBottom: 10, marginLeft: 30 }}>
+								<Col span="6" style={{ marginTop:  "0.6rem", marginBottom: "0.6rem", marginLeft: "1.5rem" }}>
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>
-								<Col span="6" style={{ marginTop: 10, marginBottom: 10, marginLeft: 20 }} >
+								<Col span="6" style={{ marginTop:  "0.6rem", marginBottom: "0.6rem", marginLeft: "1rem" }} >
 									<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 								</Col>
 							</Row>
