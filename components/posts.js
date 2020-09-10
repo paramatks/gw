@@ -73,7 +73,7 @@ function Posts(props) {
 	}, []);
 
 	return (
-		<List style={{ backgroundColor: "white" }}
+		<List className="postsliststyle"/*style={{ backgroundColor: "white" }}*/
 			itemLayout="vertical"
 			size="large"
 			bordered="true"
@@ -93,7 +93,7 @@ function Posts(props) {
 						key={item.author}
 					>
 
-						<div style={{ borderStyle: "solid", borderWidth: "thin", borderColor: "black", backgroundColor: '#d3d3d3' }}
+						<div className="postsdivstyle"
 						/*{
 							//if type == common then we render 999, else then we render orange
 							(item.type == "common") ? { backgroundColor: '#d3d3d3' } : { backgroundColor: '#d3d3d3' }
@@ -102,19 +102,18 @@ function Posts(props) {
 						>
 
 
-							<Row style={{ backgroundColor: " grey" }} align="middle">
-								<Col span={2} style={{ marginLeft: "0.25rem", marginTop: "0.75rem", marginRight: "0.25rem"}} >
+							<Row className="postsavatarowstyle" /*style={{ backgroundColor: "grey" }}*/ align="middle">
+								<Col span={2} className="postsavatarstyle"  /*style={{ marginLeft: "0.25rem", marginTop: "0.75rem", marginRight: "0.25rem"}}*/ >
 									<List.Item.Meta
 										avatar={<Avatar src={item.avatar} />}
-									//description={item.description}
 									/>
 								</Col>
-								<Col span={8} style={{ marginLeft: "0.5rem", marginTop: "0.75rem", marginBottom: "0.75rem" }} >
+								<Col span={8} className="postsauthorcolstyle" /*style={{ marginLeft: "0.5rem", marginTop: "0.75rem", marginBottom: "0.75rem" }}*/ >
 									<Space direction="vertical" size={0}>
-										<Text style={{ fontSize: 13 }} >
+										<Text className="postsauthortextstyle" /*style={{ fontSize: 13 }}*/ >
 											{item.author}
 										</Text>
-										<Rate style={{ fontSize: 10 }} value={item.rating} />
+										<Rate className="postsratestyle" /*style={{ fontSize: 10 }}*/ value={item.rating} />
 									</Space>
 
 									{/*<Row  >
@@ -131,21 +130,21 @@ function Posts(props) {
 										</Col>
 									</Row>*/}
 								</Col>
-								<Col span={5} style={{ marginRight: "0.25rem" }} >
+								<Col span={5} className="postsfriendfollowstyle" /*style={{ marginRight: "0.25rem" }}*/ >
 									<Button type="text" size="small"  >
 										<Text > + Friend</Text>
 									</Button>
 								</Col>
-								<Col span={5} style={{ marginRight: "0.25rem" }}>
+								<Col span={5} className="postsfriendfollowstyle"  /*style={{ marginRight: "0.25rem" }}*/ >
 									<Button type="text" size="small" >
 										<Text > + Follow</Text>
 									</Button>
 								</Col>
 								<Col span={2}>
-									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
+									<Button type="link" icon={<MoreOutlined className="postsmorebuttonstyle"  /*style={{ color: 'black' }}*/ />} />
 								</Col>
 							</Row>
-							<Row align="middle" style={{ marginLeft: "1rem", marginTop: "0.75rem", marginBottom: "0.25rem"}} >
+							<Row align="middle" className="postscontentstyle" /*style={{ marginLeft: "1rem", marginTop: "0.75rem", marginBottom: "0.25rem"}}*/ >
 								<Col>
 									<Text >
 										{item.content}
@@ -166,24 +165,24 @@ function Posts(props) {
 										<img
 											src={imageItem.uri}
 											width={100}
-											style={{ position: "relative", left: '0px', top: '0px', height: '100px', width: '100px', objectFit: 'cover' }}
-											//style={{}}
+											/*style={{ position: "relative", left: '0px', top: '0px', height: '100px', width: '100px', objectFit: 'cover' }}*/
+											className="postsimgstyle"
 											alt="logo"
 										/>
 									</List.Item>
 
 								)}
 							/>
-							<Row style={{ marginLeft: "0.6rem" }} align="middle" >
-								<Col span="1" style={{ marginRight: "0.6rem", marginBottom: "0.6rem" }}>
+							<Row className="postsbottomrowstyle" /*style={{ marginLeft: "0.6rem" }}*/ align="middle" >
+								<Col span="1" className="postslocationiconstyle" /*style={{ marginRight: "0.6rem", marginBottom: "0.6rem" }}*/>
 									<EnvironmentFilled />
 								</Col>
-								<Col span="7" style={{ marginLeft: "0.5rem", marginBottom: "0.6rem" }}>
-									<Text  >
+								<Col span="7" className="postslocationtextstyle"/*style={{ marginLeft: "0.5rem", marginBottom: "0.6rem" }}*/>
+									<Text>
 										{item.location}
 									</Text>
 								</Col>
-								<Col span="11" style={{ marginLeft: "2rem", marginBottom: "0.6rem" }}>
+								<Col span="11" className="postsdatestyle" /*style={{ marginLeft: "2rem", marginBottom: "0.6rem" }}*/ >
 									<Row justify="end">
 										<Text >
 											{item.date}
@@ -198,14 +197,14 @@ function Posts(props) {
 
 						</div>
 						<>
-							<Row style={{ width: '100%', backgroundColor: "gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }} >
-								<Col span="6" style={{ marginTop: "0.6rem", marginBottom: "0.6rem", marginLeft: "1rem"}} >
+							<Row className="postsactioncolstyle"/*style={{ width: '100%', backgroundColor: "gray", borderStyle: "solid", borderWidth: "thin", borderColor: "black" }}*/ >
+								<Col span="6" className="postsshareheartactionstyle" /*style={{ marginTop: "0.6rem", marginBottom: "0.6rem", marginLeft: "1rem" }}*/ >
 									<IconText1 icon={ShareAltOutlined} Text={item.shares} key="list-vertical-star-o" postID={item.postID} setShareIncrement={props.setShareIncrement} />
 								</Col>
-								<Col span="6" style={{ marginTop:  "0.6rem", marginBottom: "0.6rem", marginLeft: "1.5rem" }}>
+								<Col span="6" className="postscommentactionstyle" /*style={{ marginTop: "0.6rem", marginBottom: "0.6rem", marginLeft: "1.5rem" }}*/>
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>
-								<Col span="6" style={{ marginTop:  "0.6rem", marginBottom: "0.6rem", marginLeft: "1rem" }} >
+								<Col span="6" className="postsshareheartactionstyle"/*style={{ marginTop: "0.6rem", marginBottom: "0.6rem", marginLeft: "1rem" }}*/ >
 									<IconText3 icon={HeartFilled} Text={item.like} key="list-vertical-message" postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 								</Col>
 							</Row>
