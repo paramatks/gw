@@ -99,4 +99,114 @@ color: black;
     margin-left: 1.5rem;
 }
 
-  
+.commentlikeshareactionstyle {
+    margin-right: 15px;
+}
+
+.commentpageheaderstyle {
+    background-color: #d3d3d3;
+    height: 3.5rem;
+}
+
+.commentdivstyle {
+    background-color: #d3d3d3;
+}
+
+.commentrowstyle {
+    background-color: grey;
+    border-bottom: solid black;
+    border-top: solid black;
+    border-width: thin;
+}
+
+.commentavatarstyle {
+    margin-left: 15px;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.commentauthorcolstyle {
+    margin-left: 5px;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.commentratestyle {
+    font-size: 12px;
+}
+
+.commentmorebuttoncolstyle {
+    margin-left: 4.25rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.commentcontentstyle {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.commentbottomrowstyle {
+    margin: auto auto 0.5rem auto;
+}
+
+.commentlocationiconstyle {
+    margin-left: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.commentdatestyle {
+    margin-right: 0.25rem;
+}
+
+.commentactionrowstyle {
+    background-color: gray;
+    border-bottom: solid black;
+    border-top: solid black;
+    border-width: thin;
+}
+
+.commentactionpostdetailstyle {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.commentpostsharestyle {
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.commentpostlikestyle {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.commentnewcommentmodalrow {
+    background-color: #d3d3d3;
+}
+
+.commentnewcommentmodalbutton {
+    background-color: #d3d3d3;
+    border-right-color: black;
+    border-left-color: black;
+    color: black;
+}
+
+.commentnestedrowstyle {
+    background-color: #d3d3d3;
+    border-top-width: medium;
+    border-top-style: solid;
+    border-top-color: white;
+}
+
+.commentnestedcolstyle {
+    margin-bottom: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.commentnestedauthorcolstyle {
+    margin-bottom: 0.5rem;
+}
+

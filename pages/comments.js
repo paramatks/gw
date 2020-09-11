@@ -26,7 +26,7 @@ const { TextArea } = Input;
 );*/
 
 const PostLikes = ({ icon, Text, postID, setCommentLikeIncrement }) => (
-	<div onClick={() => { setCommentLikeIncrement(postID) }} style={{ position: "relative", top: "auto", left: "auto" }}>
+	<div onClick={() => { setCommentLikeIncrement(postID) }} >
 		<Space size="small">
 			{React.createElement(icon)}
 			{Text}
@@ -35,7 +35,7 @@ const PostLikes = ({ icon, Text, postID, setCommentLikeIncrement }) => (
 );
 
 const PostDetails = ({ icon, Text, postID, setDetailIncrement }) => (
-	<div onClick={() => { setDetailIncrement(postID) }} style={{ position: "relative", top: "auto", left: "auto" }} >
+	<div onClick={() => { setDetailIncrement(postID) }} >
 		<Space size="small">
 			{React.createElement(icon)}
 			{Text}
@@ -44,7 +44,7 @@ const PostDetails = ({ icon, Text, postID, setDetailIncrement }) => (
 );
 
 const PostShares = ({ icon, Text, postID, getIncrement5 }) => (
-	<div onClick={() => { getIncrement5(postID) }} style={{ position: "relative", top: "auto", left: "auto" }}>
+	<div onClick={() => { getIncrement5(postID) }} >
 		<Space size="small" >
 			{React.createElement(icon)}
 			{Text}
@@ -53,7 +53,7 @@ const PostShares = ({ icon, Text, postID, getIncrement5 }) => (
 );
 
 const CommentLikeActions = ({ icon, Text, commentID, getIncrement6 }) => (
-	<div style={{ marginRight: 15 }} onClick={() => { getIncrement6(commentID) }}  >
+	<div className="commentlikeshareactionstyle" /*style={{ marginRight: 15 }}*/ onClick={() => { getIncrement6(commentID) }}  >
 		<Space size="small">
 			{React.createElement(icon)}
 			{Text}
@@ -62,7 +62,7 @@ const CommentLikeActions = ({ icon, Text, commentID, getIncrement6 }) => (
 );
 
 const CommentShareActions = ({ icon, Text, commentID, getIncrement5 }) => (
-	<div style={{ marginRight: 15 }} onClick={() => { getIncrement5(commentID) }} >
+	<div className="commentlikeshareactionstyle" /*(style={{ marginRight: 15 }}*/ onClick={() => { getIncrement5(commentID) }} >
 		<Space size="small">
 			{React.createElement(icon)}
 			{Text}
@@ -133,17 +133,19 @@ function Comments(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<PageHeader style={{
+			<PageHeader /*style={{
 				backgroundColor: "#D3D3D3",
 				height: "3.5rem"
-			}}
-				className="site-page-header"
+			}}*/
+				className="commentpageheaderstyle"
 				onBack={() => window.history.back()}
 
 				title="Post Details"
 			/>
 
-			<List style={{ backgroundColor: "white" }}
+			<List
+				className="postsliststyle"
+				/*style={{ backgroundColor: "white" }}*/
 				itemLayout="vertical"
 				size="large"
 				bordered="true"
@@ -156,26 +158,27 @@ function Comments(props) {
 					return (
 						<div
 							key={item.author}
-							style={{ backgroundColor: '#d3d3d3' }}
+							/*style={{ backgroundColor: '#d3d3d3' }}*/
+							className="commentdivstyle"
 						>
-							<Row style={{ backgroundColor: "grey", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }} justify="start" align="middle">
-								<Col span={2} style={{ marginLeft: 15, marginBottom: "0.25rem", marginTop: "0.25rem" }} >
+							<Row className="commentrowstyle" /*style={{ backgroundColor: "grey", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin" }}*/ justify="start" align="middle">
+								<Col span={2} className="commentavatarstyle" /*style={{ marginLeft: 15, marginBottom: "0.25rem", marginTop: "0.25rem" }}*/>
 									<Avatar src={item.avatar} />
 								</Col>
-								<Col span={13} style={{ marginLeft: 5, marginBottom: "0.25rem", marginTop: "0.25rem" }}>
+								<Col span={13} className="commentauthorcolstyle" /*style={{ marginLeft: 5, marginBottom: "0.25rem", marginTop: "0.25rem" }}*/>
 									<Space size={0} direction="vertical">
-										<Text style={{ fontSize: 13 }} >
+										<Text /*style={{ fontSize: 13 }}*/ className="postsauthortextstyle" >
 											{item.author}
 										</Text>
-										<Rate style={{ fontSize: 12 }} value={item.rating} />
+										<Rate /*style={{ fontSize: 12 }}*/ className="commentratestyle" value={item.rating} />
 									</Space>
 								</Col>
-								<Col style={{ marginLeft: "4.25rem", marginBottom: "0.25rem", marginTop: "0.25rem" }} span="1" >
-									<Button type="link" icon={<MoreOutlined style={{ color: 'black' }} />} />
+								<Col className="commentmorebuttoncolstyle"/*style={{ marginLeft: "4.25rem", marginBottom: "0.25rem", marginTop: "0.25rem" }}*/ span="1" >
+									<Button type="link" icon={<MoreOutlined className="postsmorebuttonstyle" /*style={{ color: 'black' }}*/ />} />
 								</Col>
 							</Row>
-							<Row style={{ backgroundColor: "transparent" }} >
-								<Col span="24" style={{ marginLeft: "1rem", marginTop: "0.5rem" }}>
+							<Row >
+								<Col span="24" className="commentcontentstyle" /*style={{ marginLeft: "1rem", marginTop: "0.5rem" }}*/>
 									<Text>
 										{item.content}
 									</Text>
@@ -188,15 +191,14 @@ function Comments(props) {
 									gutter: 100
 
 								}}
-								style={{ backgroundColor: "transparent", }}
 								dataSource={item.images}
 								renderItem={imageItem => (
 									<List.Item>
 										<img
 											src={imageItem.uri}
 											width={100}
-											style={{ position: "relative", left: '0px', top: '0px', height: '100px', width: '100px', objectFit: 'cover' }}
-											//style={{}}
+											/*style={{ position: "relative", left: '0px', top: '0px', height: '100px', width: '100px', objectFit: 'cover' }}*/
+											className="postsimgstyle"
 											alt="logo"
 										/>
 									</List.Item>
@@ -204,8 +206,8 @@ function Comments(props) {
 							/>
 
 
-							<Row style={{ backgroundColor: "transparent", margin: "auto auto 0.5rem auto" }} >
-								<Col span="1" style={{ marginLeft: "0.75rem", marginRight: "0.5rem" }} >
+							<Row className="commentbottomrowstyle" /*style={{ margin: "auto auto 0.5rem auto" }}*/  >
+								<Col span="1" className="commentlocationiconstyle" /*style={{ marginLeft: "0.75rem", marginRight: "0.5rem" }}*/ >
 									<EnvironmentFilled />
 								</Col>
 								<Col span="10">
@@ -214,7 +216,7 @@ function Comments(props) {
 									</Text>
 								</Col>
 								<Col span="10">
-									<Row justify="end" style={{ marginRight: "0.25rem" }}>
+									<Row justify="end" className="commentdatestyle" /*style={{ marginRight: "0.25rem" }}*/ >
 										<Text>
 											{item.date}
 										</Text>
@@ -223,27 +225,27 @@ function Comments(props) {
 							</Row>
 
 							<>
-								<Row style={{ backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }} align="middle" >
-									<Col span="6" style={{ marginLeft: "0.5rem", marginTop: "0.5rem", marginBottom: "0.5rem" }}>
-										<PostDetails icon={MessageOutlined} Text={item.details} key="list-vertical-star-o" postID={item.postID} setDetailIncrement={props.setDetailIncrement} />
+								<Row className="commentactionrowstyle" /*style={{ backgroundColor: "gray", borderBottom: "black solid", borderTop: "black solid", borderWidth: "thin", }}*/ align="middle" >
+									<Col span="6" className="commentactionpostdetailstyle" /*style={{ marginLeft: "0.5rem", marginTop: "0.5rem", marginBottom: "0.5rem" }}*/>
+										<PostDetails icon={MessageOutlined} Text={item.details} postID={item.postID} setDetailIncrement={props.setDetailIncrement} />
 									</Col>
 									{/*<Col span="8" style={{ padding: "0.5em" }} push="0" >
 									<IconText2 icon={MessageFilled} Text={item.comments.length} key="list-vertical-like-o" postID={item.postID} getIncrement2={props.getIncrement2} />
 								</Col>*/}
-									<Col span="6" style={{ marginLeft: "4rem", marginTop: "0.5rem", marginBottom: "0.5rem" }}>
+									<Col span="6" className="commentpostsharestyle" /*style={{ marginLeft: "4rem", marginTop: "0.5rem", marginBottom: "0.5rem" }}*/>
 										<Row justify="end">
-											<PostShares icon={ShareAltOutlined} Text={item.shares} key="list-vertical-message" postID={item.postID} setShareIncrement={props.setShareIncrement} />
+											<PostShares icon={ShareAltOutlined} Text={item.shares} postID={item.postID} setShareIncrement={props.setShareIncrement} />
 										</Row>
 									</Col>
-									<Col span="6" style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>
+									<Col span="6" className="commentpostlikestyle" /*style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}*/>
 										<Row justify="end">
 											<PostLikes icon={HeartFilled} Text={item.like} postID={item.postID} setLikeIncrement={props.setLikeIncrement} />
 										</Row>
 									</Col>
 								</Row>
-								<Row style={{ backgroundColor: "#D3D3D3" }} justify="center">
+								<Row className="commentnewcommentmodalrow"/*style={{ backgroundColor: "#D3D3D3" }}*/ justify="center">
 									<Col span="10">
-										<Button style={{ backgroundColor: "#D3D3D3", borderBottomStyle: "none", borderTopStyle: "none", borderRightColor: "black", borderLeftColor: "black", color: "black" }} type="primary" onClick={() => showModal()}>
+										<Button className="commentnewcommentmodalbutton"/*style={{ backgroundColor: "#D3D3D3", borderBottomStyle: "none", borderTopStyle: "none", borderRightColor: "black", borderLeftColor: "black", color: "black" }}*/ type="primary" onClick={() => showModal()}>
 											Write new comment
         								</Button>
 									</Col>
@@ -287,13 +289,13 @@ function Comments(props) {
 						<>
 							{/*key={item.commentid}*/}
 
-							<Row style={{ backgroundColor: "#D3D3D3", borderTopWidth: "medium", borderTopStyle: "solid", borderTopColor: "white" }} align="middle">
-								<Col span="3" style={{ height: "auto", marginBottom: "0.75rem", marginLeft: "0.5rem" }}>
+							<Row className="commentnestedrowstyle"/*style={{ backgroundColor: "#D3D3D3", borderTopWidth: "medium", borderTopStyle: "solid", borderTopColor: "white" }}*/ align="middle">
+								<Col span="3" className="commentnestedcolstyle" /*style={{ marginBottom: "0.75rem", marginLeft: "0.5rem" }}*/ >
 									<List.Item.Meta
 										avatar={<Avatar src={item.avatar} />}
 									/>
 								</Col>
-								<Col span="17" style={{ marginBottom: "0.5rem" }}>
+								<Col span="17" className="commentnestedauthorcolstyle"/*style={{ marginBottom: "0.5rem" }}*/>
 									<Text style={{ fontSize: 12 }}>
 										{item.author}
 									</Text>
