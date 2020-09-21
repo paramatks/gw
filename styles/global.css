@@ -2,7 +2,6 @@
 
 .postsliststyle {
     background-color: white;
- 
 }
 
 
@@ -210,3 +209,111 @@ color: black;
     margin-bottom: 0.5rem;
 }
 
+.indexnewstyle {
+    background: linear-gradient(#ff0177,#ff8235);
+}
+
+.postsnewliststyle {
+    background-color: #fff;
+    border-top-color: #f3f2ed ;
+    border-top-style: solid;
+    border-top-width: thick;
+}
+
+.postsnewavatarowstyle {
+    background-color: #fff;
+}
+
+.postsnewavatarstyle {
+    margin-left: 0.75rem;
+    
+}
+
+.postsnewauthorcolstyle {
+    margin-left: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+   
+}
+
+.postsnewauthortextstyle {
+    font-size: 13px;
+}
+
+.postsnewratestyle {
+    font-size: 10px;
+}
+
+.postsnewfriendfollowstyle {
+    margin-left: 0.5rem;
+
+}
+
+.postsnewfriendbuttonstyle {
+    border-color: #ff8235;
+    border-radius: 30px
+}
+
+.postsnewfollowbuttonstyle {
+    border-color:#ff0177  ;
+    border-radius: 30px ;
+}
+
+.postsnewfriendtextstyle {
+    color: #ff8235;
+}
+
+.postsnewfollowtextstyle {
+    color: #ff0177 ;
+}
+
+
+.postsnewmorebuttonstyle {
+    color: black;
+}
+
+.postsnewcontentstyle {
+    margin-left: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.postsnewimgstyle {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.postsnewbottomrowstyle {
+    margin-left: 0.6rem;
+}
+
+.postsnewlocationiconcolstyle {
+    margin-left: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.postsnewlocatoniconstyle {
+    color: #146af4;
+}
+
+.postsnewlocationtextcolstyle {
+    margin-left: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.postsnewlocationtextstyle {
+    color: #146af4;
+}
+
+.postsnewsdatecolstyle {
+    margin-left: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+.postsnewdatestextsyle {
+    color: #6e6e74;
+}
