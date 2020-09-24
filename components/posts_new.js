@@ -1,26 +1,9 @@
 import React, { useEffect } from 'react';
-import {  Button, Avatar, Rate, List, Typography, Card, Space, Row, Col } from 'antd';
+import { Button, Avatar, Rate, List, Typography, Space, Row, Col } from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 import { MoreOutlined, EnvironmentFilled } from '@ant-design/icons';
 
-
-
 const { Text } = Typography;
-
-
-
-function callback(key) {
-	console.log(key);
-}
-
-const actions = {
-	increment: () => {
-		return {
-			type: 'GET_INCREMENT',
-		}
-	}
-}
-
 
 function Postsnew(props) {
 
@@ -33,13 +16,13 @@ function Postsnew(props) {
 		<List className="postsnewliststyle"/*style={{ backgroundColor: "white" }}*/
 			itemLayout="vertical"
 			bordered="true"
-			pagination={{
+			/*pagination={{
 				onChange: page => {
 					console.log(page);
 				},
 				pageSize: 3,
 				responsive: true
-			}}
+			}}*/
 			dataSource={props.postlist}
 			renderItem={item => {
 				//console.log(props);
@@ -117,7 +100,7 @@ function Postsnew(props) {
 						/>
 						<Row className="postsnewbottomrowstyle" /*style={{ marginLeft: "0.6rem" }}*/ align="middle" >
 							<Col span="1" className="postsnewlocationiconcolstyle" /*style={{ marginRight: "0.6rem", marginBottom: "0.6rem" }}*/>
-								<EnvironmentFilled className="postsnewlocatoniconstyle"/>
+								<EnvironmentFilled className="postsnewlocatoniconstyle" />
 							</Col>
 							<Col span="7" className="postsnewlocationtextcolstyle"/*style={{ marginLeft: "0.5rem", marginBottom: "0.6rem" }}*/>
 								<Text className="postsnewlocationtextstyle">
@@ -133,13 +116,6 @@ function Postsnew(props) {
 
 							</Col>
 						</Row>
-
-
-
-
-
-
-					
 					</>
 				)
 			}}

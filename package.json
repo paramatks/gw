@@ -19,7 +19,7 @@
     "lodash": "^4.17.20",
     "next": "9.3.6",
     "next-redux-wrapper": "^6.0.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "query-string": "^6.13.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -32,6 +32,7 @@
     "yup": "^0.28.5"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.4.0",
     "@typescript-eslint/parser": "^4.0.1",
     "eslint": "^7.8.1",
     "eslint-plugin-react-hooks": "^4.1.0",

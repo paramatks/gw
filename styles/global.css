@@ -218,6 +218,9 @@ color: black;
     border-top-color: #f3f2ed ;
     border-top-style: solid;
     border-top-width: thick;
+    border-bottom-color: rgba(126, 80, 212, 0.20);
+    border-bottom-width: medium;
+    border-bottom-style: solid;
 }
 
 .postsnewavatarowstyle {
@@ -270,6 +273,7 @@ color: black;
 
 .postsnewmorebuttonstyle {
     color: black;
+    font-size: 1.5rem;
 }
 
 .postsnewcontentstyle {
