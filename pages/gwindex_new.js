@@ -1,23 +1,24 @@
 import React, { useEffect } from 'react';
-import { Tabs, Row, Col, Button, Typography, Menu } from 'antd';
+import { Tabs, Row, Col, Button, Typography } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
 import Postsnew from '../components/posts_new';
 import { BellOutlined, CameraOutlined, HomeOutlined, MessageOutlined, RocketOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
+import router from 'next/router'
 
 const { Text } = Typography;
 
 
 const renderTabBar = (props, DefaultTabBar) => (
 	<div >
-		<Row className="indexnewstyle" align="middle" justify="center">
+		<Row className="indexnewstyle" align="middle" justify="center" >
 			<Col span="3" style={{ marginRight: "5rem" }}>
 				<Button style={{ backgroundColor: "transparent", borderStyle: "none" }}>
 					<CameraOutlined style={{ fontSize: '1.5rem', color: "white" }} />
 				</Button>
 			</Col>
 
-			<Col span="7" >
+			<Col span="7" style={{ marginTop: "0.75rem", marginBottom: "0.25rem" }} >
 				<img style={{ objectFit: "cover", position: "relative", height: '5rem', width: '6rem' }}
 					src="images\Goodwork_6A rev SC_cropped_transparentBackground.png"
 				/>
@@ -38,7 +39,6 @@ const renderTabBar = (props, DefaultTabBar) => (
 	</div>
 );
 
-
 const { TabPane } = Tabs;
 
 function Gwindexnew(props) {
@@ -52,10 +52,8 @@ function Gwindexnew(props) {
 
 			<Head>
 				<title>GoodWork</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
 			</Head>
-
-
 
 			<Tabs type="card" defaultActiveKey="1" renderTabBar={renderTabBar} >
 
@@ -69,39 +67,39 @@ function Gwindexnew(props) {
 					<Postsnew postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 				</TabPane>
 			</Tabs>
-			<Row  align="top" style={{marginTop:"0.5rem"}}>
-				<Col span="4"  style={{marginLeft:"0.5rem"}}>
+			<Row align="top" style={{ marginTop: "0.5rem" }}>
+				<Col span="4" style={{ marginLeft: "0.5rem" }}>
 
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none",  marginBottom: "0.5rem" }}>
-						<HomeOutlined style={{ fontSize: '2rem', color: "#ff8235"}} />
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
+						<HomeOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
 					</Button>
 
-					<Text style={{ marginTop: "0.5rem", marginLeft:"0.75rem" }}>
+					<Text style={{ marginTop: "0.5rem", marginLeft: "0.75rem" }}>
 						Home
 
 					</Text>
 
 				</Col>
 
-				<Col span="4"  style={{marginLeft:"0.5rem"}}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none",  marginBottom: "0.5rem" }}>
+				<Col span="4" style={{ marginLeft: "0.5rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
 						<MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
 					</Button>
 
-					<Text style={{ marginLeft:"0.25rem", marginTop: "0.5rem" }}>
+					<Text style={{ marginLeft: "0.25rem", marginTop: "0.5rem" }}>
 						Message
 					</Text>
 
 				</Col>
-				<Col span="4"  style={{marginLeft:"0.5rem"}}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none",  marginBottom: "0.5rem" }}>
+				<Col span="4" style={{ marginLeft: "0.5rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
 						<RocketOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
 					</Button>
 
 
 				</Col>
 
-				<Col span="4"  style={{marginLeft:"0.5rem"}}>
+				<Col span="4" style={{ marginLeft: "0.5rem" }}>
 					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
 						<MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
 					</Button>
@@ -110,20 +108,19 @@ function Gwindexnew(props) {
 					</Text>
 				</Col>
 
-				<Col span="4" style={{marginLeft:"0.5rem"}}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none",  marginBottom: "0.5rem" }}>
-						<UserOutlined  style={{ fontSize: '2rem', color: "#ff8235" }} />
+				<Col span="4" style={{ marginLeft: "0.5rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+						onClick={() => { router.push({ pathname: '/profile' }); }}
+					>
+						<UserOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
 					</Button>
-					<Text style={{ marginLeft: "1.5rem", marginTop: "0.5rem" }}>
-						My
+					<Text style={{ marginLeft: "0.75rem", marginTop: "0.5rem" }}>
+						Profile
 					</Text>
 				</Col>
-
 			</Row>
-
 		</>
 	)
-
 }
 
-export default connect(state => state)(Gwindexnew);
+export default connect(state => state,)(Gwindexnew);

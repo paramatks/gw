@@ -13,7 +13,7 @@ function Postsnew(props) {
 	}, []);
 
 	return (
-		<List className="postsnewliststyle"/*style={{ backgroundColor: "white" }}*/
+		<List className="postsnewliststyle"
 			itemLayout="vertical"
 			bordered="true"
 			/*pagination={{
@@ -25,7 +25,6 @@ function Postsnew(props) {
 			}}*/
 			dataSource={props.postlist}
 			renderItem={item => {
-				//console.log(props);
 				return (
 					<>
 

@@ -321,3 +321,8 @@ color: black;
 .postsnewdatestextsyle {
     color: #6e6e74;
 }
+
+.profilerownewstyle {
+    background: linear-gradient(#ff0177,#ff8235);
+    
+}
