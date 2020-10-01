@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Button, Avatar, Rate, List, Typography, Space, Row, Col } from 'antd';
-import { createFromIconfontCN } from '@ant-design/icons';
 import { MoreOutlined, EnvironmentFilled } from '@ant-design/icons';
 
 const { Text } = Typography;
@@ -76,7 +75,6 @@ function Postsnew(props) {
 							</Col>
 						</Row>
 
-
 						<List
 							grid={{
 								column: 4,
@@ -94,7 +92,6 @@ function Postsnew(props) {
 										alt="logo"
 									/>
 								</List.Item>
-
 							)}
 						/>
 						<Row className="postsnewbottomrowstyle" /*style={{ marginLeft: "0.6rem" }}*/ align="middle" >
@@ -112,7 +109,6 @@ function Postsnew(props) {
 										{item.date}
 									</Text>
 								</Row>
-
 							</Col>
 						</Row>
 					</>

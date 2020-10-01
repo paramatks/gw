@@ -18,11 +18,11 @@ function Profile() {
 
         <>
 
-        
-			<Head>
-				<title>GoodWork</title>
-				<link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
-			</Head>
+
+            <Head>
+                <title>GoodWork</title>
+                <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
+            </Head>
 
             <Row align="middle" className="profilerownewstyle">
                 <Col span="3" style={{ marginLeft: "0.50rem", marginBottom: "0.75rem", marginTop: "2rem" }}>
@@ -68,7 +68,7 @@ function Profile() {
             </Row>
 
             <Row justify="center" style={{ marginTop: "1.5rem" }}>
-                <Col span="3">
+                <Col span="3"  >
                     <Text style={{ color: "black" }}>
                         1,655
                     </Text>
@@ -78,7 +78,7 @@ function Profile() {
                         Posts
                     </Text>
                 </Col>
-                <Col span="4">
+                <Col span="4"style={{marginLeft:"2rem"}}>
                     <Text style={{ color: "black", marginLeft: "1.25rem" }} >
                         33K
                     </Text>
@@ -89,7 +89,7 @@ function Profile() {
                     </Text>
 
                 </Col>
-                <Col span="4">
+                <Col span="4" style={{marginLeft:"2rem"}}>
                     <Text style={{ color: "black", marginLeft: "1.25rem" }}>
                         10K
                     </Text>
@@ -99,7 +99,7 @@ function Profile() {
                         Following
                     </Text>
                 </Col>
-                <Col span="4"  >
+                <Col span="4" style={{marginLeft:"2rem"}} >
 
                     <Text style={{ color: "black", marginLeft: "0.75rem" }}>
                         256
