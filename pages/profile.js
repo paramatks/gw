@@ -77,39 +77,39 @@ function Profile() {
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black" }}>
+                    <Text style={{ color: "black",marginLeft:"0.20rem" }}>
                         Posts
                     </Text>
                 </Col>
-                <Col span="4" style={{ marginLeft: "2rem" }}>
+                <Col span="5" style={{ marginLeft: "1rem" }}>
                     <Text style={{ color: "black", marginLeft: "1.25rem" }} >
                         33K
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black" }}>
+                    <Text style={{ color: "black" ,marginLeft:"0.25rem"}}>
                         Followers
                     </Text>
 
                 </Col>
-                <Col span="4" style={{ marginLeft: "2rem" }}>
+                <Col span="5" style={{ marginLeft: "1rem" }}>
                     <Text style={{ color: "black", marginLeft: "1.25rem" }}>
                         10K
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black" }}>
+                    <Text style={{ color: "black", marginLeft:"0.15rem" }}>
                         Following
                     </Text>
                 </Col>
-                <Col span="4" style={{ marginLeft: "2rem" }} >
+                <Col span="4" style={{ marginLeft: "1rem" }} >
 
                     <Text style={{ color: "black", marginLeft: "0.75rem" }}>
                         256
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black" }}>
+                    <Text style={{ color: "black",marginLeft:"0.25rem" }}>
                         Friends
                 </Text>
 
