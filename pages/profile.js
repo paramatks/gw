@@ -24,8 +24,8 @@ function Profile() {
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
-            <Row align="middle" className="profilerownewstyle">
-                <Col span="3" style={{ marginLeft: "0.50rem", marginBottom: "0.75rem", marginTop: "2rem" }}>
+            <Row align="top" className="profilerownewstyle">
+                <Col span="3" style={{marginLeft:"0.5rem",marginTop:"1rem"}}>
                     <img style={{ objectFit: "cover", position: "relative", height: '3rem', width: '3rem' }}
                         src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
                     />
@@ -33,14 +33,17 @@ function Profile() {
 
 
 
-                <Col span="5" style={{ marginTop: "2.5rem", marginLeft: "0.50rem", marginBottom: "0.75rem" }}>
+                <Col span="8" style={{ marginTop: "1.25rem", marginLeft: "0.50rem", marginBottom:"0.75rem"}}>
                     <Text style={{ color: "white" }}>
                         Boom
                     </Text>
+                    <Rate value={5} style={{ fontSize: "1rem" }}>
+
+                    </Rate>
                 </Col>
 
 
-                <Col span="2" style={{ marginLeft: "13rem", marginTop: "2.5rem", marginBottom: "0.75rem" }}>
+                <Col span="2" style={{marginLeft:"9rem",marginTop:"2rem"}}>
                     <EditOutlined style={{ fontSize: "1.5rem", color: "white" }} />
                 </Col>
             </Row>
@@ -78,7 +81,7 @@ function Profile() {
                         Posts
                     </Text>
                 </Col>
-                <Col span="4"style={{marginLeft:"2rem"}}>
+                <Col span="4" style={{ marginLeft: "2rem" }}>
                     <Text style={{ color: "black", marginLeft: "1.25rem" }} >
                         33K
                     </Text>
@@ -89,7 +92,7 @@ function Profile() {
                     </Text>
 
                 </Col>
-                <Col span="4" style={{marginLeft:"2rem"}}>
+                <Col span="4" style={{ marginLeft: "2rem" }}>
                     <Text style={{ color: "black", marginLeft: "1.25rem" }}>
                         10K
                     </Text>
@@ -99,7 +102,7 @@ function Profile() {
                         Following
                     </Text>
                 </Col>
-                <Col span="4" style={{marginLeft:"2rem"}} >
+                <Col span="4" style={{ marginLeft: "2rem" }} >
 
                     <Text style={{ color: "black", marginLeft: "0.75rem" }}>
                         256
@@ -115,22 +118,22 @@ function Profile() {
 
             </Row>
 
-            <Row justify="center" style={{ marginTop: "1rem" }} >
-                <Col span="5">
+            <Row justify="start" style={{ marginTop: "1rem" }} >
+                <Col span="6" style={{ marginRight: "3rem", marginLeft: "1rem" }}>
                     <EyeInvisibleOutlined style={{ marginLeft: "1.25rem", fontSize: "3rem" }} />
                     <Text style={{ marginLeft: "0.30rem" }} >
                         Blocking List
                     </Text>
                 </Col>
 
-                <Col span="3" style={{ marginLeft: "3rem" }}>
+                <Col span="3" style={{ marginRight: "4rem" }}>
                     <CloudServerOutlined style={{ fontSize: "3rem" }} />
                     <Text style={{ marginLeft: "0.30rem" }} >
                         Drafts
                     </Text>
                 </Col>
 
-                <Col span="4" style={{ marginLeft: "3rem" }}>
+                <Col span="4" >
                     <HeartOutlined style={{ fontSize: "3rem", marginLeft: "0.25rem" }} />
                     <Text >
                         Favorites
@@ -139,7 +142,7 @@ function Profile() {
 
             </Row>
             <Row justify="center" style={{ marginTop: "1rem" }}>
-                <Col span="6">
+                <Col span="7" style={{ marginRight: "1rem" }}>
                     <Text style={{ color: "black", fontSize: "1rem" }}>
                         Overall Rating
                     </Text>
@@ -148,14 +151,14 @@ function Profile() {
             </Row>
 
             <Row justify="center">
-                <Col span="10" style={{ marginLeft: "1rem" }}>
+                <Col span="11" style={{ marginRight: "0.5rem" }} >
                     <Rate value={5} style={{ fontSize: "1.5rem" }}>
 
                     </Rate>
                 </Col>
             </Row>
             <Row justify="center">
-                <Col span="9" style={{ marginLeft: "1rem" }}>
+                <Col span="10" >
                     <Text style={{ fontSize: "1rem", }}>
                         Positive Rate: 100%
                    </Text>
