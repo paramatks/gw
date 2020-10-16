@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import { Row, Col, Typography, Rate } from 'antd';
+import { Row, Col, Typography, Rate, Progress, Button } from 'antd';
 import { connect } from "react-redux"
-import { EditOutlined, EnvironmentFilled, EyeInvisibleOutlined, HeartOutlined, CloudServerOutlined } from '@ant-design/icons'
+import { EditOutlined, EnvironmentFilled, EyeInvisibleOutlined, HeartOutlined, CloudServerOutlined, SettingOutlined } from '@ant-design/icons'
 import Head from 'next/head'
+import { HomeOutlined, MessageOutlined, RocketOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
+import router from 'next/router'
 
 const { Text } = Typography;
 
@@ -24,8 +26,10 @@ function Profile() {
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
+
             <Row align="top" className="profilerownewstyle">
-                <Col span="3" style={{marginLeft:"0.5rem",marginTop:"1rem"}}>
+
+                <Col span="3" style={{ marginLeft: "0.5rem", marginTop: "1rem" }}>
                     <img style={{ objectFit: "cover", position: "relative", height: '3rem', width: '3rem' }}
                         src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
                     />
@@ -33,7 +37,7 @@ function Profile() {
 
 
 
-                <Col span="8" style={{ marginTop: "1.25rem", marginLeft: "0.50rem", marginBottom:"0.75rem"}}>
+                <Col span="8" style={{ marginTop: "1.25rem", marginLeft: "0.50rem", marginBottom: "0.75rem" }}>
                     <Text style={{ color: "white" }}>
                         Boom
                     </Text>
@@ -43,7 +47,7 @@ function Profile() {
                 </Col>
 
 
-                <Col span="2" style={{marginLeft:"9rem",marginTop:"2rem"}}>
+                <Col span="2" style={{ marginLeft: "9rem", marginTop: "2rem" }}>
                     <EditOutlined style={{ fontSize: "1.5rem", color: "white" }} />
                 </Col>
             </Row>
@@ -77,7 +81,7 @@ function Profile() {
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black",marginLeft:"0.20rem" }}>
+                    <Text style={{ color: "black", marginLeft: "0.20rem" }}>
                         Posts
                     </Text>
                 </Col>
@@ -87,7 +91,7 @@ function Profile() {
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black" ,marginLeft:"0.25rem"}}>
+                    <Text style={{ color: "black", marginLeft: "0.25rem" }}>
                         Followers
                     </Text>
 
@@ -98,7 +102,7 @@ function Profile() {
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black", marginLeft:"0.15rem" }}>
+                    <Text style={{ color: "black", marginLeft: "0.15rem" }}>
                         Following
                     </Text>
                 </Col>
@@ -109,7 +113,7 @@ function Profile() {
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black",marginLeft:"0.25rem" }}>
+                    <Text style={{ color: "black", marginLeft: "0.25rem" }}>
                         Friends
                 </Text>
 
@@ -165,10 +169,80 @@ function Profile() {
                 </Col>
             </Row>
             <Row>
-                <Col span="9" style={{ marginLeft: "1rem" }}>
+                <Col span="22" style={{ marginLeft: "1rem" }}>
                     <Text style={{ fontSize: "0.75rem", }}>
                         Service Attitude:
                    </Text>
+                    <Progress percent={90} strokeColor={{ from: '#ff8235', to: '#f8d829' }} strokeWidth={20} />
+                </Col>
+                <Col span="22" style={{ marginLeft: "1rem" }}>
+                    <Text style={{ fontSize: "0.75rem", }}>
+                        Service Quality:
+                   </Text>
+                    <Progress percent={90} strokeColor={{ from: '#d8f715', to: '#00ffd3', }} strokeWidth={20} />
+                </Col>
+                <Col span="22" style={{ marginLeft: "1rem" }}>
+                    <Text style={{ fontSize: "0.75rem", }}>
+                        Service Efficiency:
+                   </Text>
+                    <Progress percent={90} strokeColor={{ from: '#ff02af', to: '#f23051', }} strokeWidth={20} />
+                </Col>
+
+
+            </Row>
+
+            <Row align="top" style={{ marginTop: "7rem" }}>
+                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+                        onClick={() => { router.push({ pathname: '/gwindex_new' }); }}
+                    >
+                        <HomeOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+                    </Button>
+
+                    <Text style={{ marginTop: "0.5rem", marginLeft: "0.75rem" }}>
+                        Home
+
+					</Text>
+
+                </Col>
+
+                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
+                        <MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+                    </Button>
+
+                    <Text style={{ marginLeft: "0.25rem", marginTop: "0.5rem" }}>
+                        Message
+					</Text>
+
+                </Col>
+                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
+                        <RocketOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+                    </Button>
+
+
+                </Col>
+
+                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
+                        <MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+                    </Button>
+                    <Text style={{ marginLeft: "0.5rem", marginTop: "0.5rem" }}>
+                        Orders
+					</Text>
+                </Col>
+
+                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+                        onClick={() => { router.push({ pathname: '/profile' }); }}
+                    >
+                        <UserOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+                    </Button>
+                    <Text style={{ marginLeft: "0.75rem", marginTop: "0.5rem" }}>
+                        Profile
+					</Text>
                 </Col>
             </Row>
 
