@@ -1,109 +1,95 @@
-import React, { useEffect, useState } from 'react';
-import { Tabs, Row, Col, Button, Typography, PageHeader , Modal} from 'antd';
+import React, { useEffect } from 'react';
+import { Row, Col, Button, Typography, PageHeader, Modal } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
-import Postsnew from '../components/posts_new';
-import { BellOutlined, CameraOutlined, HomeOutlined, MessageOutlined, RocketOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
-import router from 'next/router'
-import {Formik} from 'formik'
+import { Formik } from 'formik'
 import * as Yup from 'yup';
 import { Form, SubmitButton, ResetButton, Input } from 'formik-antd'
+import { EnvironmentOutlined, GlobalOutlined, DownOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 const { TextArea } = Input;
 
 function Newpost() {
 
-    useEffect(() => {
+	useEffect(() => {
 
-    }, [])
+	}, [])
 
-    const [visible, setVisible] = useState(false);
-	/*const [modalText, setModalText] = useState('New Comment')*/
-	const [confirmLoading, setConfirmLoading] = useState(false)
+	return (
 
-	/*const [state, setstate] = useState({
-		ModalText: 'Content of the modal',
-		Visible: false,
-		ConfirmLoading: false,
-	});*/
+		<>
 
-	const showModal = () => {
-		setVisible(true)
-	};
+			<Head>
+				<title>GoodWork</title>
+				<link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
+			</Head>
 
-	const handleOk = () => {
+			<PageHeader
+				className="profilerownewstyle"
+				onBack={() => window.history.back()}
 
-		setModalText('The modal will be closed after two seconds')
-		setConfirmLoading(true)
+				title={<span style={{ marginLeft: "5rem" }}><Text style={{ color: "white" }}>New Post</Text> </span>}
 
-		setTimeout(() => {
-			setVisible(false)
-			setConfirmLoading(false)
-		}, 2000);
-	};
+				extra={
+					<Button shape="round" size="medium" style={{ backgroundColor: "#f8d829" }}>
+						<Text style={{ color: "red" }}>
+							Share
+						</Text>
+					</Button>}
+			/>
 
-	const handleCancel = () => {
-		console.log('Clicked cancel button');
-		setVisible(false)
-	};
+			<Formik initialValues={{
+				newpost: ""
+			}}
+				validationSchema={Yup.object({
+					newpost: Yup.string()
+						.required("Required"),
+				})}
+				onSubmit={async (values, { setSubmitting }) => {
+					console.log(values)
+				}}>
+				<Form>
+					<Form.Item
+						name="newpost">
+						<TextArea
+							rows={25}
+							size="large"
+							name="newpost"
+							type="text"
+							placeholder="Say something..."
+						/>
+					</Form.Item>
+					<SubmitButton style={{ marginLeft: "17rem" }}>
+						Submit
+					</SubmitButton>
+				</Form>
+			</Formik>
 
-    return (
+			<Row style={{ marginTop: "1rem" }}>
+				<Col span="12" style={{ marginLeft: "1rem" }}>
+					<Button shape="round">
+						<EnvironmentOutlined style={{ color: "blue" }} />
+						<Text style={{ color: "blue" }}>
+							Bangkok, Thailand
+						</Text>
+					</Button>
+				</Col>
+
+				<Col span="8" style={{ marginLeft: "2rem" }}>
+					<Button shape="round">
+						<GlobalOutlined style={{ color: "blue" }} />
+						<Text style={{ color: "blue" }} >
+							Public
+						</Text>
+						<DownOutlined style={{ color: "blue" }} />
+					</Button>
+				</Col>
+			</Row>
 
 
-
-        <>
-
-            <Head>
-                <title>GoodWork</title>
-                <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
-            </Head>
-
-            <PageHeader
-                className="profilerownewstyle"
-                onBack={() => window.history.back()}
-
-                title={<span style={{marginLeft:"5rem"}}><Text style={{color:"white"}}>New Post</Text> </span>}
-
-                extra={
-                    <Button shape="round" size="medium" style={{backgroundColor:"#f8d829"}}><Text style={{color:"red"}}>Share
-                        
-                        </Text> </Button>}
-            />
-
-                        
-								<Formik initialValues={{
-									comment: ""
-								}}
-									validationSchema={Yup.object({
-										comment: Yup.string()
-											.required("Required"),
-									})}
-									onSubmit={async (values, { setSubmitting }) => {
-										//await new Promise(r => setTimeout(r, 500));
-										//setSubmitting(false);
-										console.log(values)
-									}}>
-									<Form>
-										<Form.Item
-											name="Post">
-											<TextArea
-												rows={25}
-												size="large"
-												name="Post"
-												type="text"							
-											/>
-										</Form.Item>
-										<SubmitButton
-											style={{ marginLeft: "17rem" }}
-										>Submit</SubmitButton>
-										<ResetButton />
-									</Form>
-								</Formik>
-						
-
-        </>
-    )
+		</>
+	)
 }
 
 
