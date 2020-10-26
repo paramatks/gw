@@ -4,13 +4,13 @@ import Head from 'next/head'
 import { connect } from "react-redux"
 import { Formik } from 'formik'
 import * as Yup from 'yup';
-import { Form, SubmitButton, ResetButton, Input } from 'formik-antd'
+import { Form, SubmitButton, Input } from 'formik-antd'
 import { EnvironmentOutlined, GlobalOutlined, DownOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 const { TextArea } = Input;
 
-function Newpost() {
+function newPost() {
 
 	useEffect(() => {
 
@@ -93,4 +93,4 @@ function Newpost() {
 }
 
 
-export default connect(state => state,)(Newpost);
+export default connect(state => state,)(newPost);

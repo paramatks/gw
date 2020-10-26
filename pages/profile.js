@@ -8,7 +8,7 @@ import router from 'next/router'
 
 const { Text } = Typography;
 
-function Profile() {
+function profile() {
 
     useEffect(() => {
 
@@ -195,7 +195,7 @@ function Profile() {
                 <Col span="4" style={{ marginLeft: "0.5rem" }}>
 
                     <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-                        onClick={() => { router.push({ pathname: '/gwindex_new' }); }}
+                        onClick={() => { router.push({ pathname: '/newgwindex' }); }}
                     >
                         <HomeOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
                     </Button>
@@ -249,7 +249,7 @@ function Profile() {
         </>
     )
 }
-export default connect(state => state)(Profile);
+export default connect(state => state)(profile);
 
 
 

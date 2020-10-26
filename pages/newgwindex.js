@@ -41,7 +41,7 @@ const renderTabBar = (props, DefaultTabBar) => (
 
 const { TabPane } = Tabs;
 
-function Gwindexnew(props) {
+function newGwIndex(props) {
 
 	useEffect(() => {
 
@@ -123,4 +123,4 @@ function Gwindexnew(props) {
 	)
 }
 
-export default connect(state => state,)(Gwindexnew);
+export default connect(state => state,)(newGwIndex);
