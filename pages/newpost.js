@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Row, Col, Button, Typography, PageHeader, Modal } from 'antd';
+import { Row, Col, Button, Typography, PageHeader } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
 import { Formik } from 'formik'

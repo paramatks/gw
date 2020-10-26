@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { Row, Col, Button, Typography } from 'antd';
+import { Row, Col, Typography } from 'antd';
 import Head from 'next/head'
 import { connect } from "react-redux"
-import { BellOutlined, CameraOutlined, HomeOutlined, MessageOutlined, RocketOutlined, MenuOutlined, UserOutlined, PlusCircleOutlined } from '@ant-design/icons';
-import router from 'next/router'
+import { BellOutlined, PlusCircleOutlined } from '@ant-design/icons';
 import { Formik } from 'formik'
 import * as Yup from 'yup';
 import { Form, Input } from 'formik-antd'
