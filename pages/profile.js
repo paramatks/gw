@@ -193,7 +193,6 @@ function profile() {
 
             <Row align="top" style={{ marginTop: "7rem" }}>
                 <Col span="4" style={{ marginLeft: "0.5rem" }}>
-
                     <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
                         onClick={() => { router.push({ pathname: '/newgwindex' }); }}
                     >
@@ -202,39 +201,37 @@ function profile() {
 
                     <Text style={{ marginTop: "0.5rem", marginLeft: "0.75rem" }}>
                         Home
-
 					</Text>
-
                 </Col>
 
-                <Col span="4" style={{ marginLeft: "0.5rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
+                <Col span="5" style={{ marginLeft: "0.5rem" }}>
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+                        onClick={() => { router.push({ pathname: '/messages' }); }}
+                    >
                         <MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
                     </Button>
 
                     <Text style={{ marginLeft: "0.25rem", marginTop: "0.5rem" }}>
-                        Message
+                        Messages
 					</Text>
-
                 </Col>
-                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+
+                <Col span="4" style={{ marginLeft: "-0.5rem" }}>
                     <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
-                        <RocketOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+                        <RocketOutlined style={{ fontSize: '3rem', color: "#ff8235" }} />
                     </Button>
-
-
                 </Col>
 
-                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+                <Col span="4" style={{ marginLeft: "1rem" }}>
                     <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
                         <MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
                     </Button>
-                    <Text style={{ marginLeft: "0.5rem", marginTop: "0.5rem" }}>
+                    <Text style={{ marginLeft: "0.65rem", marginTop: "0.5rem" }}>
                         Orders
 					</Text>
                 </Col>
 
-                <Col span="4" style={{ marginLeft: "0.5rem" }}>
+                <Col span="4" style={{ marginLeft: "0rem" }}>
                     <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
                         onClick={() => { router.push({ pathname: '/profile' }); }}
                     >

@@ -4,7 +4,7 @@ import { MoreOutlined, EnvironmentFilled } from '@ant-design/icons';
 
 const { Text } = Typography;
 
-function Postsnew(props) {
+function newPost (props) {
 
 	useEffect(() => {
 		//props.getIncrement(999)
@@ -120,4 +120,4 @@ function Postsnew(props) {
 }
 
 
-export default Postsnew;
+export default newPost;
