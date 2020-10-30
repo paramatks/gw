@@ -293,7 +293,9 @@ function messages() {
                 </Col>
 
                 <Col span="4" style={{ marginLeft: "-0.5rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+                        onClick={() => { router.push({ pathname: '/newpost' }); }}
+                    >
                         <RocketOutlined style={{ fontSize: '3rem', color: "#ff8235" }} />
                     </Button>
                 </Col>
