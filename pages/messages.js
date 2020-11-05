@@ -63,7 +63,7 @@ function messages() {
 
                 </Row>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid" }}>
+            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
                 <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
@@ -92,7 +92,7 @@ function messages() {
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid" }}>
+            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
                 <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
@@ -121,7 +121,7 @@ function messages() {
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid" }}>
+            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
                 <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
@@ -150,7 +150,7 @@ function messages() {
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid" }}>
+            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
                 <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
@@ -179,7 +179,7 @@ function messages() {
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid" }}>
+            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
                 <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
@@ -208,7 +208,7 @@ function messages() {
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid" }}>
+            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
                 <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
@@ -237,7 +237,7 @@ function messages() {
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid" }}>
+            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
                 <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}

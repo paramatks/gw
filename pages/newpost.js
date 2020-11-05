@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { connect } from "react-redux"
 import { Formik } from 'formik'
 import * as Yup from 'yup';
-import { Form, SubmitButton, Input } from 'formik-antd'
+import { Form, Input } from 'formik-antd'
 import { EnvironmentOutlined, GlobalOutlined, DownOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
@@ -60,9 +60,6 @@ function newPost() {
 							placeholder="Say something..."
 						/>
 					</Form.Item>
-					<SubmitButton style={{ marginLeft: "17rem" }}>
-						Submit
-					</SubmitButton>
 				</Form>
 			</Formik>
 

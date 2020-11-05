@@ -7,11 +7,6 @@ import { connect } from "react-redux"
 
 const { Text } = Typography;
 
-const gridStyle = {
-    width: '25%',
-    textAlign: 'center',
-};
-
 function orders() {
 
     useEffect(() => {
@@ -250,19 +245,8 @@ function orders() {
                 </Col>
             </Row>
 
-
-
-
-
-
-
-
-
-
-
         </>
-
-
+        
     )
 
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Row, Col, Typography, Rate, Progress, Button } from 'antd';
 import { connect } from "react-redux"
-import { EditOutlined, EnvironmentFilled, EyeInvisibleOutlined, HeartOutlined, CloudServerOutlined, SettingOutlined } from '@ant-design/icons'
+import { EditOutlined, EnvironmentFilled, EyeInvisibleOutlined, HeartOutlined, CloudServerOutlined } from '@ant-design/icons'
 import Head from 'next/head'
 import { HomeOutlined, MessageOutlined, RocketOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
 import router from 'next/router'
@@ -16,9 +16,7 @@ function profile() {
 
     return (
 
-
-
-        <>
+<>
 
 
             <Head>
