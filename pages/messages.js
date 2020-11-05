@@ -267,7 +267,7 @@ function messages() {
                 </Col>
             </Row>
 
-            <Row align="top" style={{ marginTop: "4rem" }}>
+            <Row align="top" style={{ marginTop: "4rem" , position: "sticky", bottom: "0", backgroundColor:"white" }}>
                 <Col span="4" style={{ marginLeft: "0.5rem" }}>
                     <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
                         onClick={() => { router.push({ pathname: '/newgwindex' }); }}
@@ -301,7 +301,9 @@ function messages() {
                 </Col>
 
                 <Col span="4" style={{ marginLeft: "1rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}>
+                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }} 	
+                        onClick={() => { router.push({ pathname: '/orders' }); }}
+                    >
                         <MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
                     </Button>
                     <Text style={{ marginLeft: "0.65rem", marginTop: "0.5rem" }}>

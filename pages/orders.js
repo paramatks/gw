@@ -189,7 +189,7 @@ function orders() {
                 </Col>
             </Row>
 
-            <Row align="top" style={{ marginTop: "7rem" }}>
+            <Row align="top" style={{ marginTop: "7rem", position: "sticky", bottom: "0", backgroundColor: "white" }}>
                 <Col span="4" style={{ marginLeft: "0.5rem" }}>
                     <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
                         onClick={() => { router.push({ pathname: '/newgwindex' }); }}
@@ -246,7 +246,7 @@ function orders() {
             </Row>
 
         </>
-        
+
     )
 
 }
