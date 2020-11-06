@@ -67,7 +67,7 @@ function newGwIndex(props) {
 					<Newposts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
 				</TabPane>
 			</Tabs>
-			<Row align="top" style={{ marginTop: "0.5rem", position: "sticky", bottom: "0", backgroundColor:"white" }}>
+			<Row align="top" style={{ marginTop: "0.5rem", position: "sticky", bottom: "0", backgroundColor: "white" }}>
 				<Col span="4" style={{ marginLeft: "0.5rem" }}>
 					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
 						onClick={() => { router.push({ pathname: '/newgwindex' }); }}

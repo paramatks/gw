@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 import { Formik } from 'formik'
 import * as Yup from 'yup';
 import { Form, Input } from 'formik-antd'
-import { EnvironmentOutlined, GlobalOutlined, DownOutlined } from '@ant-design/icons';
+import { EnvironmentOutlined, GlobalOutlined, DownOutlined, CameraOutlined, VideoCameraOutlined, ContainerOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -63,7 +63,7 @@ function newPost() {
 				</Form>
 			</Formik>
 
-			<Row style={{ marginTop: "1rem" }}>
+			<Row style={{ marginTop: "1rem", position: "sticky", bottom: "0" }}>
 				<Col span="12" style={{ marginLeft: "1rem" }}>
 					<Button shape="round">
 						<EnvironmentOutlined style={{ color: "blue" }} />
@@ -82,7 +82,46 @@ function newPost() {
 						<DownOutlined style={{ color: "blue" }} />
 					</Button>
 				</Col>
+				<Row style={{ marginTop: "0.75rem", backgroundColor: "white", width: "100%" }}>
+					<Col span="4" style={{ marginLeft: "0.25rem", marginBottom: "0.75rem" }}>
+						<Button type="link">
+							<CameraOutlined style={{ fontSize: "1.5rem", color: "black" }} />
+						</Button>
+					</Col>
+					<Col span="4" style={{ marginBottom: "0.75rem" }}>
+						<Button type="link">
+							<VideoCameraOutlined style={{ fontSize: "1.5rem", color: "black" }} />
+						</Button>
+					</Col>
+					<Col span="4" style={{ marginBottom: "0.75rem" }}>
+						<Button type="link">
+							<Text strong="true" style={{ color: "black", fontSize: "23px", marginTop: "-0.55rem" }} >
+								@
+							</Text>
+						</Button>
+					</Col>
+					<Col span="4" style={{ marginBottom: "0.75rem" }} >
+						<Button type="link">
+							<Text strong="true" style={{ color: "black", fontSize: "23px", marginTop: "-0.50rem" }}>
+								#
+							</Text>
+						</Button>
+					</Col>
+					<Col span="4" style={{ marginBottom: "0.75rem", borderLeftStyle: "solid", borderLeftColor: "gray", borderLeftWidth: "thin" }}>
+						<Button type="link">
+							<ContainerOutlined style={{ fontSize: "1.5rem", color: "black" }} />
+						</Button>
+					</Col>
+					<Col span="3">
+						<Button type="link" style={{ marginLeft: "-1rem" }}>
+							<Text style={{ color: "black", fontSize: "16px", marginTop: "-1rem" }}>
+								Drafts
+							</Text>
+						</Button>
+					</Col>
+				</Row>
 			</Row>
+
 
 
 		</>
