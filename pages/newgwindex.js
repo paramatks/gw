@@ -68,7 +68,7 @@ function newGwIndex(props) {
 				</TabPane>
 			</Tabs>
 			<Row align="top" style={{ marginTop: "0.5rem", position: "sticky", bottom: "0", backgroundColor: "white" }}>
-				<Col span="4" style={{ marginLeft: "0.5rem" }}>
+				<Col span="4" style={{ marginLeft: "0.75rem" }}>
 					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
 						onClick={() => { router.push({ pathname: '/newgwindex' }); }}
 					>
@@ -80,19 +80,18 @@ function newGwIndex(props) {
 					</Text>
 				</Col>
 
-				<Col span="5" style={{ marginLeft: "0.5rem" }}>
+				<Col span="5" style={{ marginLeft: "0.75rem" }}>
 					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
 						onClick={() => { router.push({ pathname: '/messages' }); }}
 					>
 						<MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
 					</Button>
-
-					<Text style={{ marginLeft: "0.25rem", marginTop: "0.5rem" }}>
+					<Text style={{ marginTop: "0.5rem" }}>
 						Messages
 					</Text>
 				</Col>
 
-				<Col span="4" style={{ marginLeft: "-0.5rem" }}>
+				<Col span="4" style={{ marginLeft: "-0.85rem" }}>
 					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
 						onClick={() => { router.push({ pathname: '/newpost' }); }}
 					>
@@ -111,7 +110,7 @@ function newGwIndex(props) {
 					</Text>
 				</Col>
 
-				<Col span="4" style={{ marginLeft: "0rem" }}>
+				<Col span="4" style={{ marginLeft: "0.25rem" }}>
 					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
 						onClick={() => { router.push({ pathname: '/profile' }); }}
 					>

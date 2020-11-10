@@ -324,5 +324,11 @@ color: black;
 
 .profilerownewstyle {
     background: linear-gradient(#ff0177,#ff8235);
-    
+}
+
+.messagesstyle {
+    background: linear-gradient(#ff0177,#ff8235);
+    position: sticky;
+    top: 0;
+    z-index:1;
 }

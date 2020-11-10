@@ -26,7 +26,7 @@ function messages() {
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
-            <Row className="indexnewstyle" align="middle" justify="start" >
+            <Row className="messagesstyle" align="middle" justify="start" >
                 <Col span="3" style={{ marginLeft: "1rem", marginTop: "1rem", marginBottom: "1rem" }}>
                     <PlusCircleOutlined style={{ color: "white", fontSize: "2rem" }} />
                 </Col>
@@ -70,7 +70,7 @@ function messages() {
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }}>
+                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }} >
                     <Text style={{ color: "black" }}>
                         Scott Williams
                    </Text>
@@ -267,62 +267,60 @@ function messages() {
                 </Col>
             </Row>
 
-            <Row align="top" style={{ marginTop: "4rem", position: "sticky", bottom: "0", backgroundColor: "white" }}>
-                <Col span="4" style={{ marginLeft: "0.5rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-                        onClick={() => { router.push({ pathname: '/newgwindex' }); }}
-                    >
-                        <HomeOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-                    </Button>
+        	<Row align="top" style={{ marginTop: "4rem", position: "sticky", bottom: "0", backgroundColor: "white" }}>
+				<Col span="4" style={{ marginLeft: "0.75rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+						onClick={() => { router.push({ pathname: '/newgwindex' }); }}
+					>
+						<HomeOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+					</Button>
 
-                    <Text style={{ marginTop: "0.5rem", marginLeft: "0.75rem" }}>
-                        Home
+					<Text style={{ marginTop: "0.5rem", marginLeft: "0.75rem" }}>
+						Home
 					</Text>
-                </Col>
+				</Col>
 
-                <Col span="5" style={{ marginLeft: "0.5rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-                        onClick={() => { router.push({ pathname: '/messages' }); }}
-                    >
-                        <MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-                    </Button>
-
-                    <Text style={{ marginLeft: "0.25rem", marginTop: "0.5rem" }}>
-                        Messages
+				<Col span="5" style={{ marginLeft: "0.75rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+						onClick={() => { router.push({ pathname: '/messages' }); }}
+					>
+						<MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+					</Button>
+					<Text style={{ marginTop: "0.5rem" }}>
+						Messages
 					</Text>
-                </Col>
+				</Col>
 
-                <Col span="4" style={{ marginLeft: "-0.5rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-                        onClick={() => { router.push({ pathname: '/newpost' }); }}
-                    >
-                        <RocketOutlined style={{ fontSize: '3rem', color: "#ff8235" }} />
-                    </Button>
-                </Col>
+				<Col span="4" style={{ marginLeft: "-0.85rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+						onClick={() => { router.push({ pathname: '/newpost' }); }}
+					>
+						<RocketOutlined style={{ fontSize: '3rem', color: "#ff8235" }} />
+					</Button>
+				</Col>
 
-                <Col span="4" style={{ marginLeft: "1rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-                        onClick={() => { router.push({ pathname: '/orders' }); }}
-                    >
-                        <MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-                    </Button>
-                    <Text style={{ marginLeft: "0.65rem", marginTop: "0.5rem" }}>
-                        Orders
+				<Col span="4" style={{ marginLeft: "1rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+						onClick={() => { router.push({ pathname: '/orders' }); }}
+					>
+						<MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+					</Button>
+					<Text style={{ marginLeft: "0.65rem", marginTop: "0.5rem" }}>
+						Orders
 					</Text>
-                </Col>
+				</Col>
 
-                <Col span="4" style={{ marginLeft: "0rem" }}>
-                    <Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-                        onClick={() => { router.push({ pathname: '/profile' }); }}
-                    >
-                        <UserOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-                    </Button>
-                    <Text style={{ marginLeft: "0.75rem", marginTop: "0.5rem" }}>
-                        Profile
+				<Col span="4" style={{ marginLeft: "0.25rem" }}>
+					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+						onClick={() => { router.push({ pathname: '/profile' }); }}
+					>
+						<UserOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+					</Button>
+					<Text style={{ marginLeft: "0.75rem", marginTop: "0.5rem" }}>
+						Profile
 					</Text>
-                </Col>
-            </Row>
-
+				</Col>
+			</Row>
         </>
     )
 
