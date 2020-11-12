@@ -267,60 +267,60 @@ function messages() {
                 </Col>
             </Row>
 
-        	<Row align="top" style={{ marginTop: "4rem", position: "sticky", bottom: "0", backgroundColor: "white" }}>
-				<Col span="4" style={{ marginLeft: "0.75rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-						onClick={() => { router.push({ pathname: '/newgwindex' }); }}
-					>
-						<HomeOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-					</Button>
+            <Row align="top" className="footermessagesrowstyle">
+                <Col span="4" className="footerhomemessagescolstyle">
+                    <Button size="large" type="link" className="footerbuttonstyle"
+                        onClick={() => { router.push({ pathname: '/newgwindex' }); }}
+                    >
+                        <HomeOutlined className="footericonstyle" />
+                    </Button>
 
-					<Text style={{ marginTop: "0.5rem", marginLeft: "0.75rem" }}>
-						Home
+                    <Text className="footerhometextstyle">
+                        Home
 					</Text>
-				</Col>
+                </Col>
 
-				<Col span="5" style={{ marginLeft: "0.75rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-						onClick={() => { router.push({ pathname: '/messages' }); }}
-					>
-						<MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-					</Button>
-					<Text style={{ marginTop: "0.5rem" }}>
-						Messages
+                <Col span="5" className="footerhomemessagescolstyle">
+                    <Button size="large" type="link" className="footerbuttonstyle"
+                        onClick={() => { router.push({ pathname: '/messages' }); }}
+                    >
+                        <MessageOutlined className="footericonstyle" />
+                    </Button>
+                    <Text className="footermessagestextstyle">
+                        Messages
 					</Text>
-				</Col>
+                </Col>
 
-				<Col span="4" style={{ marginLeft: "-0.85rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-						onClick={() => { router.push({ pathname: '/newpost' }); }}
-					>
-						<RocketOutlined style={{ fontSize: '3rem', color: "#ff8235" }} />
-					</Button>
-				</Col>
+                <Col span="4" className="footercolrocketstyle">
+                    <Button size="large" type="link" className="footerbuttonstyle"
+                        onClick={() => { router.push({ pathname: '/newpost' }); }}
+                    >
+                        <RocketOutlined className="footericonrocketstyle" />
+                    </Button>
+                </Col>
 
-				<Col span="4" style={{ marginLeft: "1rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-						onClick={() => { router.push({ pathname: '/orders' }); }}
-					>
-						<MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-					</Button>
-					<Text style={{ marginLeft: "0.65rem", marginTop: "0.5rem" }}>
-						Orders
+                <Col span="4" className="footerorderscolstyle">
+                    <Button size="large" type="link" className="footerbuttonstyle"
+                        onClick={() => { router.push({ pathname: '/orders' }); }}
+                    >
+                        <MenuOutlined className="footericonstyle" />
+                    </Button>
+                    <Text className="footerorderstextstyle">
+                        Orders
 					</Text>
-				</Col>
+                </Col>
 
-				<Col span="4" style={{ marginLeft: "0.25rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
-						onClick={() => { router.push({ pathname: '/profile' }); }}
-					>
-						<UserOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
-					</Button>
-					<Text style={{ marginLeft: "0.75rem", marginTop: "0.5rem" }}>
-						Profile
+                <Col span="4" className="footerprofilecolstyle">
+                    <Button size="large" type="link" className="footerbuttonstyle"
+                        onClick={() => { router.push({ pathname: '/profile' }); }}
+                    >
+                        <UserOutlined className="footericonstyle" />
+                    </Button>
+                    <Text className="footerprofiletextstyle">
+                        Profile
 					</Text>
-				</Col>
-			</Row>
+                </Col>
+            </Row>
         </>
     )
 

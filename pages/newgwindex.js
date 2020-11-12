@@ -12,27 +12,27 @@ const { Text } = Typography;
 const renderTabBar = (props, DefaultTabBar) => (
 	<div >
 		<Row className="indexnewstyle" align="middle" justify="center" >
-			<Col span="3" style={{ marginRight: "5rem" }}>
-				<Button style={{ backgroundColor: "transparent", borderStyle: "none" }}>
-					<CameraOutlined style={{ fontSize: '1.5rem', color: "white" }} />
+			<Col span="3" className="indexnewcameracolstyle">
+				<Button type="link" >
+					<CameraOutlined className="indexnewcamerastyle" />
 				</Button>
 			</Col>
 
-			<Col span="7" style={{ marginTop: "0.75rem", marginBottom: "0.25rem" }} >
-				<img style={{ objectFit: "cover", position: "relative", height: '5rem', width: '6rem' }}
+			<Col span="7" className="indexnewlogocolstyle" >
+				<img className="indexnewlogoimgstyle"
 					src="images\Goodwork_6A rev SC_cropped_transparentBackground.png"
 				/>
 			</Col>
 
-			<Col /*style={{ marginRight: "1rem" }}*/ style={{ marginLeft: "4rem" }} span="3">
-				<Button /*onClick={() => router.push('/login')}*/ style={{ backgroundColor: "transparent", borderStyle: "none" }}>
+			<Col className="indexnewbellcolstyle" span="3">
+				<Button type="link">
 					<BellOutlined style={{ fontSize: '1.5rem', color: "white" }} />
 				</Button>
 			</Col>
 		</Row>
 
 		<Row justify="start" >
-			<Col span="24" style={{ backgroundColor: "white" }}>
+			<Col span="24" className="indexnewtabbarcolstyle">
 				<DefaultTabBar {...props} />
 			</Col>
 		</Row>
@@ -57,66 +57,66 @@ function newGwIndex(props) {
 
 			<Tabs type="card" defaultActiveKey="1" renderTabBar={renderTabBar} >
 
-				<TabPane tab={<span style={{ fontSize: 14.5, color: "black", marginLeft: "1.5rem" }}>Friends</span>} key="1"  >
-					<Newposts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
+				<TabPane tab={<span className="indexnewfriendstabpane">Friends</span>} key="1"  >
+					<Newposts postlist={props.appAuthReducer.posts} />
 				</TabPane>
-				<TabPane tab={<span style={{ fontSize: 14.5, color: "black", marginLeft: "3rem" }}>Follow</span>} key="2"  >
-					<Newposts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
+				<TabPane tab={<span className="indexnewfollowpopulartabpanes">Follow</span>} key="2"  >
+					<Newposts postlist={props.appAuthReducer.posts} />
 				</TabPane>
-				<TabPane tab={<span style={{ fontSize: 14.5, color: "black", marginLeft: "3rem" }}>Popular</span>} key="3" >
-					<Newposts postlist={props.appAuthReducer.posts} setLikeIncrement={props.setLikeIncrement} getIncrement2={props.getIncrement2} setShareIncrement={props.setShareIncrement} />
+				<TabPane tab={<span className="indexnewfollowpopulartabpanes">Popular</span>} key="3" >
+					<Newposts postlist={props.appAuthReducer.posts} />
 				</TabPane>
 			</Tabs>
-			<Row align="top" style={{ marginTop: "0.5rem", position: "sticky", bottom: "0", backgroundColor: "white" }}>
-				<Col span="4" style={{ marginLeft: "0.75rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+			<Row align="top" className="footernewindexrowstyle">
+				<Col span="4" className="footerhomemessagescolstyle">
+					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/newgwindex' }); }}
 					>
-						<HomeOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+						<HomeOutlined className="footericonstyle" />
 					</Button>
 
-					<Text style={{ marginTop: "0.5rem", marginLeft: "0.75rem" }}>
+					<Text className="footerhometextstyle">
 						Home
 					</Text>
 				</Col>
 
-				<Col span="5" style={{ marginLeft: "0.75rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+				<Col span="5" className="footerhomemessagescolstyle">
+					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/messages' }); }}
 					>
-						<MessageOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+						<MessageOutlined className="footericonstyle" />
 					</Button>
-					<Text style={{ marginTop: "0.5rem" }}>
+					<Text className="footermessagestextstyle">
 						Messages
 					</Text>
 				</Col>
 
-				<Col span="4" style={{ marginLeft: "-0.85rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+				<Col span="4" className="footercolrocketstyle">
+					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/newpost' }); }}
 					>
-						<RocketOutlined style={{ fontSize: '3rem', color: "#ff8235" }} />
+						<RocketOutlined className="footericonrocketstyle" />
 					</Button>
 				</Col>
 
-				<Col span="4" style={{ marginLeft: "1rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+				<Col span="4" className="footerorderscolstyle">
+					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/orders' }); }}
 					>
-						<MenuOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+						<MenuOutlined className="footericonstyle" />
 					</Button>
-					<Text style={{ marginLeft: "0.65rem", marginTop: "0.5rem" }}>
+					<Text className="footerorderstextstyle">
 						Orders
 					</Text>
 				</Col>
 
-				<Col span="4" style={{ marginLeft: "0.25rem" }}>
-					<Button size="large" style={{ backgroundColor: "transparent", borderStyle: "none", marginBottom: "0.5rem" }}
+				<Col span="4" className="footerprofilecolstyle">
+					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/profile' }); }}
 					>
-						<UserOutlined style={{ fontSize: '2rem', color: "#ff8235" }} />
+						<UserOutlined className="footericonstyle" />
 					</Button>
-					<Text style={{ marginLeft: "0.75rem", marginTop: "0.5rem" }}>
+					<Text className="footerprofiletextstyle">
 						Profile
 					</Text>
 				</Col>

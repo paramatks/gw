@@ -4,7 +4,6 @@
     background-color: white;
 }
 
-
 .postsdivstyle {
     background-color: #d3d3d3;
     border-color: black;
@@ -213,6 +212,48 @@ color: black;
     background: linear-gradient(#ff0177,#ff8235);
 }
 
+.indexnewcameracolstyle {
+    margin-right: 4rem;
+}
+
+.indexnewcamerastyle {
+   font-size: 1.5rem;
+   color: white;
+}
+
+.indexnewbellcolstyle {
+    margin-left: 3rem;
+}
+
+.indexnewlogocolstyle {
+   margin-top: 0.75rem;
+   margin-bottom: 0.25rem;
+   margin-right: 1rem;
+}
+
+.indexnewlogoimgstyle {
+   object-fit: cover;
+   position: relative;
+   height: 5rem;
+   width: 6rem;
+}
+
+.indexnewtabbarcolstyle {
+    background-color: white ;
+}
+
+.indexnewfriendstabpane {
+    font-size: 14.5px;
+    color: black;
+    margin-left: 1.5rem
+}
+
+.indexnewfollowpopulartabpanes {
+    font-size: 14.5px;
+    color: black;
+    margin-left: 3rem;
+}
+
 .postsnewliststyle {
     background-color: #fff;
     border-top-color: #f3f2ed ;
@@ -229,7 +270,6 @@ color: black;
 
 .postsnewavatarstyle {
     margin-left: 0.75rem;
-    
 }
 
 .postsnewauthorcolstyle {
@@ -332,3 +372,85 @@ color: black;
     top: 0;
     z-index:1;
 }
+
+.footernewindexrowstyle {
+    margin-top: 0.5rem;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+
+.footermessagesrowstyle {
+    margin-top: 4rem;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+
+.footerordersrowstyle {
+    margin-top: 7rem;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+
+.footerprofilerowstyle {
+    margin-top: 8rem;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+
+.footerhomemessagescolstyle {
+    margin-left: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.footerbuttonstyle {
+    margin-bottom: 0.5rem;
+}
+.footericonstyle {
+    font-size: 2rem;
+    color: #ff8235;
+}
+
+.footerhometextstyle {
+    margin-top: 0.5rem;
+    margin-left: 0.84rem;
+}
+
+.footericonrocketstyle {
+    font-size: 3rem;
+    color: #ff8235;
+}
+
+.footermessagestextstyle {
+    margin-top: 0.5rem;
+    margin-left: 0.15rem;
+}
+
+.footerorderscolstyle {
+    margin-left: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.footercolrocketstyle{
+    margin-left: -0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.footerorderstextstyle {
+    margin-left: 0.65rem;
+    margin-top: 0.5rem;
+}
+
+.footerprofilecolstyle {
+    margin-left: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.footerprofiletextstyle {
+    margin-left: 0.75rem;
+    margin-top: 0.5rem;
+}
+
