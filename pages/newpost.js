@@ -44,7 +44,7 @@ function newPost() {
 			}}
 				validationSchema={Yup.object({
 					newpost: Yup.string()
-						.required("Required"),
+						.required("Required")
 				})}
 				onSubmit={async (values, { setSubmitting }) => {
 					console.log(values)
@@ -121,12 +121,8 @@ function newPost() {
 					</Col>
 				</Row>
 			</Row>
-
-
-
 		</>
 	)
 }
 
-
-export default connect(state => state,)(newPost);
+export default connect(state => state)(newPost);

@@ -17,8 +17,6 @@ function messages() {
 
     }, [])
 
-
-
     return (
         <>
             <Head>
@@ -27,19 +25,19 @@ function messages() {
             </Head>
 
             <Row className="messagesstyle" align="middle" justify="start" >
-                <Col span="3" style={{ marginLeft: "1rem", marginTop: "1rem", marginBottom: "1rem" }}>
-                    <PlusCircleOutlined style={{ color: "white", fontSize: "2rem" }} />
+                <Col span="3" className="messagespluscolstyle">
+                    <PlusCircleOutlined className="messagesplusiconstyle" />
                 </Col>
 
-                <Col span="4" style={{ marginLeft: "5.5rem", marginTop: "1rem", marginBottom: "1rem" }}>
-                    <Text style={{ color: "white" }}>
+                <Col span="4" className="messagestextcolstyle">
+                    <Text className="messagestextstyle">
                         Messages
                     </Text>
                 </Col>
-                <Col span="2" style={{ marginLeft: "6.5rem", marginTop: "1rem", marginBottom: "1rem" }}>
-                    <BellOutlined style={{ color: "white", fontSize: "2rem" }} />
+                <Col span="2" className="messagesbellcolstyle">
+                    <BellOutlined className="messagesbelliconstyle" />
                 </Col>
-                <Row justify="center" style={{ width: "100%", marginBottom: "-1rem" }}>
+                <Row justify="center" className="messagesformikrowstyle">
                     <Formik initialValues={{
                         search: ""
                     }}
@@ -48,9 +46,9 @@ function messages() {
                                 .required("Required"),
                         })}
                     >
-                        <Form style={{ width: "100%", marginLeft: "1rem", marginRight: "1rem" }}>
+                        <Form className="messagesformstyle" >
                             <Form.Item name="search">
-                                <TextArea style={{ borderRadius: "30px" }}
+                                <TextArea className="messagesformtextareastyle"
                                     rows={1}
                                     placeholder="Search"
                                     size="large"
@@ -63,204 +61,204 @@ function messages() {
 
                 </Row>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
-                <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+            <Row align="middle" justify="start" className="messagescontentrowstyle">
+                <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }} >
-                    <Text style={{ color: "black" }}>
+                <Row justify="start" className="messagescontenttextrowstyle" >
+                    <Text className="messagesnametextstyle">
                         Scott Williams
                    </Text>
-                    <Row justify="start" style={{ width: "100%" }} >
+                    <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
-                    <Row style={{ width: "100%" }}>
-                        <Text style={{ color: "#6e6e74" }}>
+                    <Row className="messagesratingtextcolstyle">
+                        <Text className="messagescontenttextstyle">
                             Hi! For this matter I need to think again.
                         </Text>
                     </Row>
 
                 </Row>
-                <Col span="5" style={{ marginLeft: "17rem", marginTop: "-6rem" }}>
+                <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 13:13
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
-                <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+            <Row align="middle" justify="start" className="messagescontentrowstyle">
+                <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }}>
-                    <Text style={{ color: "black" }}>
+                <Row justify="start" className="messagescontenttextrowstyle">
+                    <Text className="messagesnametextstyle">
                         Tony Evans
                    </Text>
-                    <Row justify="start" style={{ width: "100%" }} >
+                    <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={3}
                         />
                     </Row>
-                    <Row style={{ width: "100%" }}>
-                        <Text style={{ color: "#6e6e74" }}>
+                    <Row className="messagesratingtextcolstyle">
+                        <Text className="messagescontenttextstyle">
                             How long will this repair take?
                         </Text>
                     </Row>
 
                 </Row>
-                <Col span="5" style={{ marginLeft: "17rem", marginTop: "-6rem" }}>
+                <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 11:20
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
-                <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+            <Row align="middle" justify="start" className="messagescontentrowstyle">
+                <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }}>
-                    <Text style={{ color: "black" }}>
+                <Row justify="start" className="messagescontenttextrowstyle">
+                    <Text className="messagesnametextstyle">
                         Stephen Cooper
                    </Text>
-                    <Row justify="start" style={{ width: "100%" }} >
+                    <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
-                    <Row style={{ width: "100%" }}>
-                        <Text style={{ color: "#6e6e74" }}>
+                    <Row className="messagesratingtextcolstyle">
+                        <Text className="messagescontenttextstyle">
                             Hi! How will it take to reach me?
                         </Text>
                     </Row>
 
                 </Row>
-                <Col span="5" style={{ marginLeft: "17rem", marginTop: "-6rem" }}>
+                <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 11:12
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
-                <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+            <Row align="middle" justify="start" className="messagescontentrowstyle">
+                <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }}>
-                    <Text style={{ color: "black" }}>
+                <Row justify="start" className="messagescontenttextrowstyle">
+                    <Text className="messagesnametextstyle">
                         Barbara Ellis
                    </Text>
-                    <Row justify="start" style={{ width: "100%" }} >
+                    <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
-                    <Row style={{ width: "100%" }}>
-                        <Text style={{ color: "#6e6e74" }}>
+                    <Row className="messagesratingtextcolstyle">
+                        <Text className="messagescontenttextstyle">
                             I need to confirm the time
                         </Text>
                     </Row>
 
                 </Row>
-                <Col span="5" style={{ marginLeft: "17rem", marginTop: "-6rem" }}>
+                <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 09:30
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
-                <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+            <Row align="middle" justify="start" className="messagescontentrowstyle">
+                <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }}>
-                    <Text style={{ color: "black" }}>
+                <Row justify="start" className="messagescontenttextrowstyle">
+                    <Text className="messagesnametextstyle">
                         Rebecca Rose
                    </Text>
-                    <Row justify="start" style={{ width: "100%" }} >
+                    <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={2}
                         />
                     </Row>
-                    <Row style={{ width: "100%" }}>
-                        <Text style={{ color: "#6e6e74" }}>
+                    <Row className="messagesratingtextcolstyle">
+                        <Text className="messagescontenttextstyle">
                             Can the price be more favorable?
                         </Text>
                     </Row>
 
                 </Row>
-                <Col span="5" style={{ marginLeft: "17rem", marginTop: "-6rem" }}>
+                <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 13:23
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
-                <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+            <Row align="middle" justify="start" className="messagescontentrowstyle">
+                <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }}>
-                    <Text style={{ color: "black" }}>
+                <Row justify="start" className="messagescontenttextrowstyle">
+                    <Text className="messagesnametextstyle">
                         Frank Robertson
                    </Text>
-                    <Row justify="start" style={{ width: "100%" }} >
+                    <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={3}
                         />
                     </Row>
-                    <Row style={{ width: "100%" }}>
-                        <Text style={{ color: "#6e6e74" }}>
+                    <Row className="messagesratingtextcolstyle">
+                        <Text className="messagescontenttextstyle">
                             My boat will be available the day after tomo...
                         </Text>
                     </Row>
 
                 </Row>
-                <Col span="7" style={{ marginLeft: "15.65rem", marginTop: "-6rem" }}>
+                <Col span="7" className="messageslongdate1style">
                     <Text>
                         Yesterday 21:12
                     </Text>
                 </Col>
             </Row>
-            <Row align="middle" justify="start" style={{ borderTopColor: "#f3f2ed", borderTopWidth: "thick", borderTopStyle: "solid", marginBottom: "1rem" }}>
-                <Col span="3" style={{ marginTop: "0.5rem", marginLeft: "1rem" }}>
+            <Row align="middle" justify="start" className="messagescontentrowstyle">
+                <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
 
                 </Col>
-                <Row justify="start" style={{ width: "100%", marginTop: "-2.5rem", marginLeft: "4.5rem" }}>
-                    <Text style={{ color: "black" }}>
+                <Row justify="start" className="messagescontenttextrowstyle">
+                    <Text className="messagesnametextstyle">
                         George Palmer
                    </Text>
-                    <Row justify="start" style={{ width: "100%" }} >
+                    <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
-                    <Row style={{ width: "100%" }}>
-                        <Text style={{ color: "#6e6e74" }}>
+                    <Row className="messagesratingtextcolstyle">
+                        <Text className="messagescontenttextstyle">
                             Will you have time next week? Need your help
                         </Text>
                     </Row>
 
                 </Row>
-                <Col span="7" style={{ marginLeft: "15.20rem", marginTop: "-6rem" }}>
+                <Col span="7" className="messageslongdate2style">
                     <Text>
                         2020/7/31 13:23
                     </Text>
@@ -323,7 +321,6 @@ function messages() {
             </Row>
         </>
     )
-
 }
 
-export default connect(state => state,)(messages);
+export default connect(state => state)(messages);

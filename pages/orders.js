@@ -248,4 +248,5 @@ function orders() {
     )
 
 }
-export default connect(state => state,)(orders);
+
+export default connect(state => state)(orders);

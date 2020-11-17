@@ -125,4 +125,4 @@ function newGwIndex(props) {
 	)
 }
 
-export default connect(state => state,)(newGwIndex);
+export default connect(state => state)(newGwIndex);

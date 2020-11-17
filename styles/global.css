@@ -454,3 +454,94 @@ color: black;
     margin-top: 0.5rem;
 }
 
+.messagespluscolstyle {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.messagesplusiconstyle {
+   color: white;
+   font-size: 2rem;
+}
+
+.messagestextcolstyle {
+    margin-left: 5.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.messagestextstyle {
+    color: white;
+}
+
+.messagesbellcolstyle {
+    margin-left: 6.5rem; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.messagesbelliconstyle {
+    color: white; 
+    font-size: 2rem;
+}
+
+.messagesformikrowstyle {
+    width: 100%;
+    margin-bottom: -1rem;
+}
+
+.messagesformstyle {
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.messagesformtextareastyle {
+    border-radius: 30px;
+}
+
+.messagescontentrowstyle {
+    border-top-color: #f3f2ed; 
+    border-top-width: thick;
+    border-top-style: solid; 
+    margin-bottom: 1rem; 
+}
+
+.messagesavatarcolstyle {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.messagescontenttextrowstyle {
+    width: 100%; 
+    margin-top: -2.5rem;
+    margin-left: 4.5rem;
+}
+
+.messagesnametextstyle {
+    color: black;
+}
+
+.messagesratingtextcolstyle {
+    width: 100%;
+}
+
+.messagesdatestyle {
+    margin-left: 17rem;
+    margin-top: -6rem;
+}
+
+.messageslongdate1style {
+    margin-left: 15.65rem;
+    margin-top: -6rem ;
+}
+
+.messageslongdate2style {
+    margin-left: 15.20rem;
+    margin-top: -6rem;
+}
+
+.messagescontenttextstyle {
+    color: #6e6e74;
+}

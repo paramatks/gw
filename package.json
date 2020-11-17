@@ -8,11 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.2.2",
+    "@ant-design/icons": "^4.3.0",
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
     "@reduxjs/toolkit": "^1.4.0",
-    "antd": "^4.8.2",
+    "antd": "^4.8.4",
     "formik": "^2.2.5",
     "formik-antd": "^2.0.1",
     "js-cookie": "^2.2.1",
@@ -32,8 +32,8 @@
     "yup": "^0.28.5"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.4.0",
-    "@typescript-eslint/parser": "^4.7.0",
+    "@svgr/webpack": "^5.5.0",
+    "@typescript-eslint/parser": "^4.8.0",
     "eslint": "^7.13.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "redux": "^4.0.5",

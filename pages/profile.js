@@ -17,39 +17,28 @@ function profile() {
     return (
 
         <>
-
-
+        
             <Head>
                 <title>GoodWork</title>
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
-
             <Row align="top" className="profilerownewstyle">
-
                 <Col span="3" style={{ marginLeft: "0.5rem", marginTop: "1rem" }}>
                     <img style={{ objectFit: "cover", position: "relative", height: '3rem', width: '3rem' }}
                         src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
                     />
                 </Col>
-
-
-
                 <Col span="8" style={{ marginTop: "1.25rem", marginLeft: "0.50rem", marginBottom: "0.75rem" }}>
                     <Text style={{ color: "white" }}>
                         Boom
                     </Text>
-                    <Rate value={5} style={{ fontSize: "1rem" }}>
-
-                    </Rate>
+                    <Rate value={5} style={{ fontSize: "1rem" }} />
                 </Col>
-
-
                 <Col span="2" style={{ marginLeft: "9rem", marginTop: "2rem" }}>
                     <EditOutlined style={{ fontSize: "1.5rem", color: "white" }} />
                 </Col>
             </Row>
-
 
             <Row>
                 <Col span="20" style={{ marginLeft: "1rem", marginTop: "0.50rem" }}>
@@ -63,13 +52,11 @@ function profile() {
                 <Col span="1" style={{ marginLeft: "1rem", marginTop: "1rem" }}>
                     <EnvironmentFilled className="postsnewlocatoniconstyle" />
                 </Col>
-
                 <Col span="10" style={{ marginTop: "1rem", marginLeft: "0.50rem" }}>
                     <Text className="postsnewlocationtextstyle">
                         Chiang Mai, Thailand
                     </Text>
                 </Col>
-
             </Row>
 
             <Row justify="center" style={{ marginTop: "1.5rem" }}>
@@ -92,7 +79,6 @@ function profile() {
                     <Text style={{ color: "black", marginLeft: "0.25rem" }}>
                         Followers
                     </Text>
-
                 </Col>
                 <Col span="5" style={{ marginLeft: "1rem" }}>
                     <Text style={{ color: "black", marginLeft: "1.25rem" }}>
@@ -105,7 +91,6 @@ function profile() {
                     </Text>
                 </Col>
                 <Col span="4" style={{ marginLeft: "1rem" }} >
-
                     <Text style={{ color: "black", marginLeft: "0.75rem" }}>
                         256
                     </Text>
@@ -113,11 +98,8 @@ function profile() {
                     </br>
                     <Text style={{ color: "black", marginLeft: "0.25rem" }}>
                         Friends
-                </Text>
-
+                    </Text>
                 </Col>
-
-
             </Row>
 
             <Row justify="start" style={{ marginTop: "1rem" }} >
@@ -127,31 +109,27 @@ function profile() {
                         Blocking List
                     </Text>
                 </Col>
-
                 <Col span="3" style={{ marginRight: "4rem" }}>
                     <CloudServerOutlined style={{ fontSize: "3rem" }} />
                     <Text style={{ marginLeft: "0.30rem" }} >
                         Drafts
                     </Text>
                 </Col>
-
                 <Col span="4" >
                     <HeartOutlined style={{ fontSize: "3rem", marginLeft: "0.25rem" }} />
                     <Text >
                         Favorites
                         </Text>
                 </Col>
-
             </Row>
+
             <Row justify="center" style={{ marginTop: "1rem" }}>
                 <Col span="7" style={{ marginRight: "1rem" }}>
                     <Text style={{ color: "black", fontSize: "1rem" }}>
                         Overall Rating
                     </Text>
                 </Col>
-
             </Row>
-
             <Row justify="center">
                 <Col span="11" style={{ marginRight: "0.5rem" }} >
                     <Rate value={5} style={{ fontSize: "1.5rem" }}>
@@ -166,6 +144,7 @@ function profile() {
                    </Text>
                 </Col>
             </Row>
+
             <Row>
                 <Col span="22" style={{ marginLeft: "1rem" }}>
                     <Text style={{ fontSize: "0.75rem", }}>
@@ -185,8 +164,6 @@ function profile() {
                    </Text>
                     <Progress percent={90} strokeColor={{ from: '#ff02af', to: '#f23051', }} strokeWidth={20} />
                 </Col>
-
-
             </Row>
 
             <Row align="top" className="footerprofilerowstyle">
@@ -247,6 +224,7 @@ function profile() {
         </>
     )
 }
+
 export default connect(state => state)(profile);
 
 
