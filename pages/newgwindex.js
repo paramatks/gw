@@ -8,22 +8,19 @@ import router from 'next/router'
 
 const { Text } = Typography;
 
-
 const renderTabBar = (props, DefaultTabBar) => (
-	<div >
+	<div>
 		<Row className="indexnewstyle" align="middle" justify="center" >
 			<Col span="3" className="indexnewcameracolstyle">
 				<Button type="link" >
 					<CameraOutlined className="indexnewcamerastyle" />
 				</Button>
 			</Col>
-
 			<Col span="7" className="indexnewlogocolstyle" >
 				<img className="indexnewlogoimgstyle"
 					src="images\Goodwork_6A rev SC_cropped_transparentBackground.png"
 				/>
 			</Col>
-
 			<Col className="indexnewbellcolstyle" span="3">
 				<Button type="link">
 					<BellOutlined style={{ fontSize: '1.5rem', color: "white" }} />
@@ -36,6 +33,7 @@ const renderTabBar = (props, DefaultTabBar) => (
 				<DefaultTabBar {...props} />
 			</Col>
 		</Row>
+
 	</div>
 );
 
@@ -49,14 +47,12 @@ function newGwIndex(props) {
 
 	return (
 		<>
-
 			<Head>
 				<title>GoodWork</title>
 				<link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
 			</Head>
 
 			<Tabs type="card" defaultActiveKey="1" renderTabBar={renderTabBar} >
-
 				<TabPane tab={<span className="indexnewfriendstabpane">Friends</span>} key="1"  >
 					<Newposts postlist={props.appAuthReducer.posts} />
 				</TabPane>
@@ -67,6 +63,7 @@ function newGwIndex(props) {
 					<Newposts postlist={props.appAuthReducer.posts} />
 				</TabPane>
 			</Tabs>
+
 			<Row align="top" className="footernewindexrowstyle">
 				<Col span="4" className="footerhomemessagescolstyle">
 					<Button size="large" type="link" className="footerbuttonstyle"
@@ -74,12 +71,10 @@ function newGwIndex(props) {
 					>
 						<HomeOutlined className="footericonstyle" />
 					</Button>
-
 					<Text className="footerhometextstyle">
 						Home
 					</Text>
 				</Col>
-
 				<Col span="5" className="footerhomemessagescolstyle">
 					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/messages' }); }}
@@ -90,7 +85,6 @@ function newGwIndex(props) {
 						Messages
 					</Text>
 				</Col>
-
 				<Col span="4" className="footercolrocketstyle">
 					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/newpost' }); }}
@@ -98,7 +92,6 @@ function newGwIndex(props) {
 						<RocketOutlined className="footericonrocketstyle" />
 					</Button>
 				</Col>
-
 				<Col span="4" className="footerorderscolstyle">
 					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/orders' }); }}
@@ -109,7 +102,6 @@ function newGwIndex(props) {
 						Orders
 					</Text>
 				</Col>
-
 				<Col span="4" className="footerprofilecolstyle">
 					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/profile' }); }}
@@ -121,6 +113,7 @@ function newGwIndex(props) {
 					</Text>
 				</Col>
 			</Row>
+
 		</>
 	)
 }

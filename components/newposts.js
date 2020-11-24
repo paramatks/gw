@@ -18,7 +18,6 @@ function newPost(props) {
 			renderItem={item => {
 				return (
 					<>
-
 						<Row className="postsnewavatarowstyle" align="middle">
 							<Col span={2} className="postsnewavatarstyle"   >
 								<Avatar src={item.avatar} />
@@ -30,7 +29,6 @@ function newPost(props) {
 									</Text>
 									<Rate className="postsnewratestyle" value={item.rating} />
 								</Space>
-
 							</Col>
 							<Col span={5} className="postsnewfriendfollowstyle"  >
 								<Button type="text" size="small" className="postsnewfriendbuttonstyle"  >
@@ -46,6 +44,7 @@ function newPost(props) {
 								<Button type="link" icon={<MoreOutlined className="postsnewmorebuttonstyle" />} />
 							</Col>
 						</Row>
+
 						<Row align="middle" className="postsnewcontentstyle"  >
 							<Col>
 								<Text >
@@ -71,6 +70,7 @@ function newPost(props) {
 								</List.Item>
 							)}
 						/>
+
 						<Row className="postsnewbottomrowstyle" align="middle" >
 							<Col span="1" className="postsnewlocationiconcolstyle" >
 								<EnvironmentFilled className="postsnewlocatoniconstyle" />
@@ -86,8 +86,10 @@ function newPost(props) {
 										{item.date}
 									</Text>
 								</Row>
+
 							</Col>
 						</Row>
+
 					</>
 				)
 			}}

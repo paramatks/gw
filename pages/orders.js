@@ -18,170 +18,164 @@ function orders() {
                 <title>GoodWork</title>
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
-            <Row className="indexnewstyle" align="middle" justify="start" style={{ paddingBottom: "2rem" }}>
-                <Col span="3" style={{ marginLeft: "1rem", marginTop: "1rem", marginBottom: "1rem" }}>
-                    <SearchOutlined style={{ color: "white", fontSize: "2rem" }} />
+
+            <Row className="ordersheaderrowstyle" align="middle" justify="start" >
+                <Col span="3" className="orderssearchcolstyle" >
+                    <SearchOutlined className="orderssearchcoliconstyle" />
                 </Col>
 
-                <Col span="4" style={{ marginLeft: "6rem", marginTop: "1rem", marginBottom: "1rem" }}>
-                    <Text style={{ color: "white" }}>
+                <Col span="4" className="ordersheadertextcolstyle">
+                    <Text className="ordersheadertextstyle">
                         Orders
                     </Text>
                 </Col>
-                <Col span="2" style={{ marginLeft: "6rem", marginTop: "1rem", marginBottom: "1rem" }}>
-                    <BellOutlined style={{ color: "white", fontSize: "2rem" }} />
+                <Col span="2" className="ordersheaderbellcolstyle">
+                    <BellOutlined className="ordersheaderbelliconstyle" />
                 </Col>
-
             </Row>
 
-
-
-            <Row style={{ backgroundColor: "white", marginTop: "-1.75rem", marginLeft: "1rem", marginRight: "1rem", borderRadius: "30px" }} size="0" direction="horizontal" align="start">
-
-                <Col span="5" style={{ marginLeft: "0.5rem", marginTop: "0.5rem" }}>
-                    <Button type="primary" shape="circle" size="large" style={{ backgroundColor: "#ffaf37", marginLeft: "1rem" }}>
-                        <Text style={{ color: "white" }}>
+            <Row className="ordersindicatorsrowstyle" size="0" direction="horizontal" align="start">
+                <Col span="5" className="ordersbookingprocessingindicatorcolstyle">
+                    <Button type="primary" shape="circle" size="large" className="ordersbookingindicatorbuttonstyle">
+                        <Text className="ordersbookingindicatortextstyle">
                             12
                         </Text>
 
                     </Button>
-                    <Text style={{ color: "#ff8235", marginLeft: "0.75rem" }}>
+                    <Text className="ordersbookingindicatortext2style">
                         Booking
                     </Text>
                 </Col>
-                <Col span="5" style={{ marginLeft: "0.5rem", marginTop: "0.5rem" }}>
-                    <Button type="primary" shape="circle" size="large" style={{ backgroundColor: "white", marginLeft: "1rem" }}>
+                <Col span="5" className="ordersbookingprocessingindicatorcolstyle">
+                    <Button type="primary" shape="circle" size="large" className="ordersprocessingcompletedindicatorbuttonstyle">
                         <Text>
                             03
                         </Text>
                     </Button>
                     <br>
                     </br>
-                    <Text style={{ color: "black", marginLeft: "0.15rem" }}>
+                    <Text className="ordersprocessingindicatortext2style">
                         Processing
                     </Text>
-
                 </Col>
-                <Col span="6" style={{ marginLeft: "0.75rem", marginTop: "0.5rem" }}>
-                    <Button type="primary" shape="circle" size="large" style={{ backgroundColor: "white", marginLeft: "1rem" }}>
+                <Col span="6" className="orderscompletedindicatorcolstyle">
+                    <Button type="primary" shape="circle" size="large" className="ordersprocessingcompletedindicatorbuttonstyle">
                         <Text>
                             99+
                         </Text>
                     </Button>
-                    <Text style={{ color: "black", marginLeft: "0.20rem" }}>
+                    <Text className="orderscompletedindicatortext2style">
                         Completed
                     </Text>
 
                 </Col>
-                <Col span="4" style={{ marginLeft: "0.25rem", marginTop: "0.5rem" }}>
-                    <Button type="primary" shape="circle" size="large" style={{ backgroundColor: "white", marginLeft: "0.5rem" }}>
+                <Col span="4" className="ordersothersindicatorcolstyle">
+                    <Button type="primary" shape="circle" size="large" className="ordersothersindicatorbuttonstyle">
                         <Text>
                             0
                         </Text>
                     </Button>
-                    <Text style={{ color: "black", marginLeft: "0.50rem" }}>
+                    <Text className="ordersothersindicatortext2style">
                         Others
                     </Text>
 
                 </Col>
             </Row>
-            <Row style={{ marginTop: "1rem", marginLeft: "1rem", marginRight: "1rem" }}>
+
+            <Row className="ordersmyordersrowstyle">
                 <Col span="5">
                     My Orders
                 </Col>
-
-
-
-                <Col span="5" style={{ marginLeft: "11rem" }}>
-                    <Text style={{ fontSize: "0.75rem", marginLeft: "0.35rem" }}>
+                <Col span="5" className="ordersviewallcolstyle">
+                    <Text className="ordersviewalltextstyle">
                         View All
                     </Text>
-                    <RightOutlined style={{ fontSize: "0.75rem", marginLeft: "0.50rem" }} />
+                    <RightOutlined className="ordersviewalliconstyle" />
                 </Col>
             </Row>
 
-            <Row gutter={3} style={{ marginLeft: "1rem", marginTop: "0.5rem", marginRight: "1rem" }}>
+            <Row className="ordersrow2style" >
                 <Col span={8}>
                     <Card bordered={true}>
-                        <AlertOutlined style={{ fontSize: "2rem", marginLeft: "0.5rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "0.20rem" }} >
+                        <AlertOutlined className="ordersbookingalerticonstyle" />
+                        <Text className="ordersbookingtextstyle" >
                             Booking
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <ToolOutlined style={{ fontSize: "2rem", marginLeft: "0.5rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "-0.25rem" }} >
+                        <ToolOutlined className="orderstooliconstyle"/>
+                        <Text className="ordersprocessingtextstyle" >
                             Processing
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
                     <Card bordered={true} >
-                        <CheckOutlined style={{ fontSize: "2rem", marginLeft: "0.75rem" }} />
-                        <Text style={{ fontSize: "11px" }} >
+                        <CheckOutlined className="orderscheckiconstyle" />
+                        <Text className="orderscompletedtextstyle">
                             Completed
                         </Text>
                     </Card>
                 </Col>
             </Row>
 
-            <Row gutter={3} style={{ marginLeft: "1rem", marginTop: "0.5rem", marginRight: "1rem" }}>
+            <Row className="ordersrow3style">
                 <Col span={8}>
                     <Card bordered={true}>
-                        <CloseOutlined style={{ fontSize: "2rem", marginLeft: "0.5rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "0.40rem" }} >
+                        <CloseOutlined className="orderscloseiconstyle" />
+                        <Text className="orderscanceltextstyle" >
                             Cancel
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <EllipsisOutlined style={{ fontSize: "2rem", marginLeft: "0.5rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "0.40rem" }} >
+                        <EllipsisOutlined className="ordersellipsisiconstyle" />
+                        <Text className="ordersotherstextstyle" >
                             Others
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
                     <Card bordered={true} >
-                        <CustomerServiceOutlined style={{ fontSize: "2rem", marginLeft: "0.75rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "0.25rem" }} >
+                        <CustomerServiceOutlined className="orderscustomerserviceiconstyle" />
+                        <Text className="ordersaftersaletexticon" >
                             After Sale
                         </Text>
                     </Card>
                 </Col>
             </Row>
 
-            <Row style={{ marginTop: "1rem", marginLeft: "1rem", marginRight: "1rem" }}>
+            <Row className="ordersmyratingrowstyle">
                 <Col span="5">
                     My Rating
                 </Col>
 
             </Row>
 
-            <Row gutter={3} style={{ marginLeft: "1rem", marginTop: "0.5rem", marginRight: "1rem" }}>
+            <Row  className="ordersrow3style">
                 <Col span={8}>
                     <Card bordered={true}>
-                        <RadarChartOutlined style={{ fontSize: "2rem", marginLeft: "0.5rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "1.15rem" }} >
+                        <RadarChartOutlined className="ordersradarcharticonstyle"/>
+                        <Text className="ordersalltextstyle">
                             All
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <StarOutlined style={{ fontSize: "2rem", marginLeft: "0.5rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "0.25rem" }} >
+                        <StarOutlined className="ordersstariconstyle"/>
+                        <Text className="ordersratingtextstyle" >
                             Ratings
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
                     <Card bordered={true} >
-                        <HistoryOutlined style={{ fontSize: "2rem", marginLeft: "0.75rem" }} />
-                        <Text style={{ fontSize: "11px", marginLeft: "0.65rem" }} >
+                        <HistoryOutlined className="ordershistoryiconstyle" />
+                        <Text className="ordershistorytextstyle">
                             History
                         </Text>
 
@@ -212,7 +206,6 @@ function orders() {
                         Messages
 					</Text>
                 </Col>
-
                 <Col span="4" className="footercolrocketstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/newpost' }); }}
@@ -231,7 +224,6 @@ function orders() {
                         Orders
 					</Text>
                 </Col>
-
                 <Col span="4" className="footerprofilecolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/profile' }); }}

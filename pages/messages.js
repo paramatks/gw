@@ -28,7 +28,6 @@ function messages() {
                 <Col span="3" className="messagespluscolstyle">
                     <PlusCircleOutlined className="messagesplusiconstyle" />
                 </Col>
-
                 <Col span="4" className="messagestextcolstyle">
                     <Text className="messagestextstyle">
                         Messages
@@ -58,9 +57,10 @@ function messages() {
                             </Form.Item>
                         </Form>
                     </Formik>
-
                 </Row>
+
             </Row>
+
             <Row align="middle" justify="start" className="messagescontentrowstyle">
                 <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
@@ -71,12 +71,13 @@ function messages() {
                 <Row justify="start" className="messagescontenttextrowstyle" >
                     <Text className="messagesnametextstyle">
                         Scott Williams
-                   </Text>
+                    </Text>
                     <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
+
                     <Row className="messagesratingtextcolstyle">
                         <Text className="messagescontenttextstyle">
                             Hi! For this matter I need to think again.
@@ -84,12 +85,14 @@ function messages() {
                     </Row>
 
                 </Row>
+
                 <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 13:13
                     </Text>
                 </Col>
             </Row>
+
             <Row align="middle" justify="start" className="messagescontentrowstyle">
                 <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
@@ -100,25 +103,28 @@ function messages() {
                 <Row justify="start" className="messagescontenttextrowstyle">
                     <Text className="messagesnametextstyle">
                         Tony Evans
-                   </Text>
+                    </Text>
                     <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={3}
                         />
                     </Row>
+
                     <Row className="messagesratingtextcolstyle">
                         <Text className="messagescontenttextstyle">
                             How long will this repair take?
                         </Text>
                     </Row>
-
+                    
                 </Row>
+
                 <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 11:20
                     </Text>
                 </Col>
             </Row>
+
             <Row align="middle" justify="start" className="messagescontentrowstyle">
                 <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
@@ -129,12 +135,13 @@ function messages() {
                 <Row justify="start" className="messagescontenttextrowstyle">
                     <Text className="messagesnametextstyle">
                         Stephen Cooper
-                   </Text>
+                    </Text>
                     <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
+
                     <Row className="messagesratingtextcolstyle">
                         <Text className="messagescontenttextstyle">
                             Hi! How will it take to reach me?
@@ -142,12 +149,14 @@ function messages() {
                     </Row>
 
                 </Row>
+
                 <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 11:12
                     </Text>
                 </Col>
             </Row>
+
             <Row align="middle" justify="start" className="messagescontentrowstyle">
                 <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
@@ -158,12 +167,13 @@ function messages() {
                 <Row justify="start" className="messagescontenttextrowstyle">
                     <Text className="messagesnametextstyle">
                         Barbara Ellis
-                   </Text>
+                    </Text>
                     <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
+
                     <Row className="messagesratingtextcolstyle">
                         <Text className="messagescontenttextstyle">
                             I need to confirm the time
@@ -171,12 +181,14 @@ function messages() {
                     </Row>
 
                 </Row>
+
                 <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 09:30
                     </Text>
                 </Col>
             </Row>
+
             <Row align="middle" justify="start" className="messagescontentrowstyle">
                 <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
@@ -187,12 +199,13 @@ function messages() {
                 <Row justify="start" className="messagescontenttextrowstyle">
                     <Text className="messagesnametextstyle">
                         Rebecca Rose
-                   </Text>
+                    </Text>
                     <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={2}
                         />
                     </Row>
+
                     <Row className="messagesratingtextcolstyle">
                         <Text className="messagescontenttextstyle">
                             Can the price be more favorable?
@@ -200,6 +213,7 @@ function messages() {
                     </Row>
 
                 </Row>
+
                 <Col span="5" className="messagesdatestyle">
                     <Text>
                         Today 13:23
@@ -216,12 +230,13 @@ function messages() {
                 <Row justify="start" className="messagescontenttextrowstyle">
                     <Text className="messagesnametextstyle">
                         Frank Robertson
-                   </Text>
+                    </Text>
                     <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={3}
                         />
                     </Row>
+
                     <Row className="messagesratingtextcolstyle">
                         <Text className="messagescontenttextstyle">
                             My boat will be available the day after tomo...
@@ -229,28 +244,30 @@ function messages() {
                     </Row>
 
                 </Row>
+
                 <Col span="7" className="messageslongdate1style">
                     <Text>
                         Yesterday 21:12
                     </Text>
                 </Col>
             </Row>
+
             <Row align="middle" justify="start" className="messagescontentrowstyle">
                 <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
-
                 </Col>
                 <Row justify="start" className="messagescontenttextrowstyle">
                     <Text className="messagesnametextstyle">
                         George Palmer
-                   </Text>
+                    </Text>
                     <Row justify="start" className="messagesratingtextcolstyle" >
                         <Rate className="postsnewratestyle"
                             value={4}
                         />
                     </Row>
+
                     <Row className="messagesratingtextcolstyle">
                         <Text className="messagescontenttextstyle">
                             Will you have time next week? Need your help
@@ -258,6 +275,7 @@ function messages() {
                     </Row>
 
                 </Row>
+
                 <Col span="7" className="messageslongdate2style">
                     <Text>
                         2020/7/31 13:23
@@ -277,7 +295,6 @@ function messages() {
                         Home
 					</Text>
                 </Col>
-
                 <Col span="5" className="footerhomemessagescolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/messages' }); }}
@@ -288,7 +305,6 @@ function messages() {
                         Messages
 					</Text>
                 </Col>
-
                 <Col span="4" className="footercolrocketstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/newpost' }); }}
@@ -296,7 +312,6 @@ function messages() {
                         <RocketOutlined className="footericonrocketstyle" />
                     </Button>
                 </Col>
-
                 <Col span="4" className="footerorderscolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/orders' }); }}
@@ -307,7 +322,6 @@ function messages() {
                         Orders
 					</Text>
                 </Col>
-
                 <Col span="4" className="footerprofilecolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/profile' }); }}
@@ -319,6 +333,7 @@ function messages() {
 					</Text>
                 </Col>
             </Row>
+
         </>
     )
 }

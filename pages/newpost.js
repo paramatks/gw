@@ -17,9 +17,7 @@ function newPost() {
 	}, [])
 
 	return (
-
 		<>
-
 			<Head>
 				<title>GoodWork</title>
 				<link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
@@ -72,7 +70,6 @@ function newPost() {
 						</Text>
 					</Button>
 				</Col>
-
 				<Col span="8" style={{ marginLeft: "2rem" }}>
 					<Button shape="round">
 						<GlobalOutlined style={{ color: "blue" }} />
@@ -82,6 +79,7 @@ function newPost() {
 						<DownOutlined style={{ color: "blue" }} />
 					</Button>
 				</Col>
+
 				<Row style={{ marginTop: "0.75rem", backgroundColor: "white", width: "100%" }}>
 					<Col span="4" style={{ marginLeft: "0.25rem", marginBottom: "0.75rem" }}>
 						<Button type="link">
@@ -119,7 +117,9 @@ function newPost() {
 							</Text>
 						</Button>
 					</Col>
+
 				</Row>
+
 			</Row>
 		</>
 	)

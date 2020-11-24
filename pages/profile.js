@@ -17,7 +17,7 @@ function profile() {
     return (
 
         <>
-        
+
             <Head>
                 <title>GoodWork</title>
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />

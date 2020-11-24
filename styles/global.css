@@ -545,3 +545,237 @@ color: black;
 .messagescontenttextstyle {
     color: #6e6e74;
 }
+
+.ordersheaderrowstyle {
+    background: linear-gradient(#ff0177,#ff8235);
+    padding-bottom: 2rem;
+}
+
+.orderssearchcolstyle {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.orderssearchcoliconstyle {
+    color: white;
+    font-size: 2rem;
+}
+
+.ordersheadertextcolstyle {
+    margin-left: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ordersheadertextstyle {
+    color: white;
+}
+
+.ordersheaderbellcolstyle {
+    margin-left: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ordersheaderbelliconstyle {
+    color: white;
+    font-size: 2rem;
+}
+
+.ordersindicatorsrowstyle {
+    background-color: white;
+    margin-top: -1.75rem;
+    margin-left: 1rem;
+    margin-right: 1rem; 
+    border-radius: 30px;
+}
+
+
+.ordersbookingindicatorbuttonstyle {
+    background-color: #ffaf37;
+    margin-left: 1rem;
+}
+
+.ordersbookingindicatortextstyle {
+    color: white;
+}
+
+.ordersbookingindicatortext2style {
+    color: #ff8235;
+    margin-left: 0.75rem;
+}
+
+.ordersbookingprocessingindicatorcolstyle {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.ordersprocessingcompletedindicatorbuttonstyle {
+    background-color: white;
+    margin-left: 1rem;
+}
+
+.ordersprocessingindicatortext2style {
+    color: black;
+    margin-left: 0.15rem;
+}
+
+.orderscompletedindicatorcolstyle {
+    margin-left: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.orderscompletedindicatortext2style {
+    color: black;
+    margin-left: 0.20rem;
+}
+
+.ordersothersindicatorcolstyle {
+    margin-left: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.ordersothersindicatorbuttonstyle {
+    background-color: white;
+    margin-left: 0.5rem;
+}
+
+.ordersothersindicatortext2style {
+    color: black;
+    margin-left: 0.50rem;
+}
+
+.ordersmyordersrowstyle {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.ordersviewallcolstyle {
+    margin-left: 11rem; 
+}
+
+.ordersviewalltextstyle {
+    font-size: 0.75rem;
+    margin-left: 0.35rem;
+}
+
+.ordersviewalliconstyle {
+    font-size: 0.75rem;
+    margin-left: 0.50rem;
+}
+
+.ordersrow2style {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.ordersbookingalerticonstyle {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+.ordersbookingtextstyle {
+    font-size: 11px;
+    margin-left: 0.20rem;
+}
+
+.orderstooliconstyle {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+.ordersprocessingtextstyle {
+    font-size: 11px;
+    margin-left: -0.25rem;
+}
+
+.orderscheckiconstyle {
+    font-size: 2rem;
+    margin-left: 0.75rem;
+}
+
+.orderscompletedtextstyle {
+    font-size: 11px;
+}
+.ordersrow3style {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+}
+
+.orderscloseiconstyle {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+.orderscanceltextstyle {
+    font-size: 11px;
+    margin-left: 0.40rem;
+}
+
+.ordersellipsisiconstyle {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+.ordersotherstextstyle {
+    font-size: 11px; 
+    margin-left: 0.40rem;
+}
+
+.orderscustomerserviceiconstyle {
+    font-size: 2rem;
+    margin-left: 0.75rem;
+}
+
+.ordersaftersaletexticon {
+    font-size: 11px;
+    margin-left: 0.25rem;
+}
+
+.ordersmyratingrowstyle {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.ordersrow3style {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+}
+
+.ordersradarcharticonstyle {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+.ordersalltextstyle {
+    font-size: 11px;
+    margin-left: 1.15rem;
+}
+
+.ordersstariconstyle {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+.ordersratingtextstyle {
+    font-size: 11px;
+    margin-left: 0.25rem;
+}
+
+.ordershistoryiconstyle {
+    font-size: 2rem;
+    margin-left: 0.75rem;
+}
+
+.ordershistorytextstyle {
+    font-size: 11px;
+    margin-left: 0.65rem;
+}
