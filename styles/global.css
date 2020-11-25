@@ -779,3 +779,167 @@ color: black;
     font-size: 11px;
     margin-left: 0.65rem;
 }
+
+.profileavatarcolstyle {
+   margin-left: 0.5rem;
+   margin-top: 1rem;
+}
+
+.profileavatarimgstyle {
+   object-fit: cover;
+   position: relative;
+   height: 3rem;
+   width: 3rem;
+}
+
+.profileusercolstyle {
+   margin-top: 1.25rem;
+   margin-left: 0.50rem; 
+   margin-bottom: 0.75rem;
+}
+
+.profileusertextstyle {
+   color: white;
+}
+
+.profileuserratestyle {
+   font-size: 1rem;
+}
+
+.profileeditcolstyle {
+   margin-left: 9rem;
+   margin-top: 2rem;
+}
+
+.profileediticonstyle {
+   font-size: 1.5rem;
+   color: white;
+}
+
+.profilecontentcolstyle {
+   margin-left: 1rem;
+   margin-top: 0.50rem;
+}
+
+.profilelocationcolstyle {
+    margin-left: 1rem; 
+    margin-top: 1rem;
+}
+
+.profilerow4style {
+    margin-top: 1.5rem;
+}
+
+.profilepostsamounttextstyle {
+    color: black;
+}
+
+.profilepoststextstyle {
+    color: black;
+    margin-left: 0.20rem;
+}
+
+.profilefollowerscolstyle {
+    margin-left: 1rem;
+}
+
+.profilefollowersamounttextstyle {
+    color: black;
+    margin-left: 1.25rem;
+}
+
+.profilefollowingcolstyle {
+    margin-left: 1rem;
+}
+
+.profilefollowingamounttextstyle {
+    color: black;
+    margin-left: 1.25rem;
+}
+
+.profilefollowingtextstyle {
+    color: black;
+    margin-left: 0.15rem;
+}
+
+.profilefriendscolstyle {
+    margin-left: 1rem;
+}
+
+.profilefriendsamounttextstyle{
+    color: black;
+    margin-left: 0.75rem;
+}
+
+.profilefriendstextstyle {
+    color: black;
+    margin-left: 0.25rem;
+}
+
+.profilerow5style {
+    margin-top: 1rem;
+}
+
+.profileblockinglistcolstyle {
+    margin-right: 3rem;
+    margin-left: 1rem;
+}
+
+.profileeyeinvisibleiconstyle {
+    margin-left: 1.25rem;
+    font-size: 3rem;
+}
+
+.profileblockinglisttextstyle {
+    margin-left: 0.30rem;
+}
+
+.profiledraftscolstyle {
+    margin-right: 4rem;
+}
+
+.profilecloudservericonstyle {
+    font-size: 3rem;
+}
+
+.profiledraftstextstyle {
+    margin-left: 0.30rem;
+}
+
+.profilehearticonstyle {
+    font-size: 3rem;
+    margin-left: 0.25rem;
+}
+
+.profilerow6style {
+    margin-top: 1rem;
+}
+
+.profileoverallratingcolstyle {
+    margin-right: 1rem;
+}
+
+.profileoverallratingtextstyle {
+    color: black;
+    font-size: 1rem;
+}
+
+.profileoverallratingratecolstyle {
+    margin-right: 0.5rem;
+}
+
+.profileoverallratingratestyle {
+    font-size: 1.5rem;
+}
+
+.profilepositiveratetextstyle {
+    font-size: 1rem;
+}
+
+.profileserviceattitudequalityefficiencycolstyle {
+    margin-left: 1rem;
+}
+
+.profileserviceattitudequalityefficiencytextstyle {
+    font-size: 0.75rem;
+}

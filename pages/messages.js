@@ -115,7 +115,7 @@ function messages() {
                             How long will this repair take?
                         </Text>
                     </Row>
-                    
+
                 </Row>
 
                 <Col span="5" className="messagesdatestyle">

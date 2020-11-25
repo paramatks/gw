@@ -105,7 +105,7 @@ function orders() {
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <ToolOutlined className="orderstooliconstyle"/>
+                        <ToolOutlined className="orderstooliconstyle" />
                         <Text className="ordersprocessingtextstyle" >
                             Processing
                         </Text>
@@ -155,10 +155,10 @@ function orders() {
 
             </Row>
 
-            <Row  className="ordersrow3style">
+            <Row className="ordersrow3style">
                 <Col span={8}>
                     <Card bordered={true}>
-                        <RadarChartOutlined className="ordersradarcharticonstyle"/>
+                        <RadarChartOutlined className="ordersradarcharticonstyle" />
                         <Text className="ordersalltextstyle">
                             All
                         </Text>
@@ -166,7 +166,7 @@ function orders() {
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <StarOutlined className="ordersstariconstyle"/>
+                        <StarOutlined className="ordersstariconstyle" />
                         <Text className="ordersratingtextstyle" >
                             Ratings
                         </Text>

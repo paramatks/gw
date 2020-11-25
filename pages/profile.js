@@ -15,33 +15,31 @@ function profile() {
     }, [])
 
     return (
-
         <>
-
             <Head>
                 <title>GoodWork</title>
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
             <Row align="top" className="profilerownewstyle">
-                <Col span="3" style={{ marginLeft: "0.5rem", marginTop: "1rem" }}>
-                    <img style={{ objectFit: "cover", position: "relative", height: '3rem', width: '3rem' }}
+                <Col span="3" className="profileavatarcolstyle" >
+                    <img className="profileavatarimgstyle"
                         src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
                     />
                 </Col>
-                <Col span="8" style={{ marginTop: "1.25rem", marginLeft: "0.50rem", marginBottom: "0.75rem" }}>
-                    <Text style={{ color: "white" }}>
+                <Col span="8" className="profileusercolstyle">
+                    <Text className="profileusertextstyle">
                         Boom
                     </Text>
-                    <Rate value={5} style={{ fontSize: "1rem" }} />
+                    <Rate value={5} className="profileuserratestyle" />
                 </Col>
-                <Col span="2" style={{ marginLeft: "9rem", marginTop: "2rem" }}>
-                    <EditOutlined style={{ fontSize: "1.5rem", color: "white" }} />
+                <Col span="2" className="profileeditcolstyle">
+                    <EditOutlined className="profileediticonstyle" />
                 </Col>
             </Row>
 
             <Row>
-                <Col span="20" style={{ marginLeft: "1rem", marginTop: "0.50rem" }}>
+                <Col span="20" className="profilecontentcolstyle">
                     <Text>
                         Content
                     </Text>
@@ -49,7 +47,7 @@ function profile() {
             </Row>
 
             <Row>
-                <Col span="1" style={{ marginLeft: "1rem", marginTop: "1rem" }}>
+                <Col span="1" className="profilelocationcolstyle">
                     <EnvironmentFilled className="postsnewlocatoniconstyle" />
                 </Col>
                 <Col span="10" style={{ marginTop: "1rem", marginLeft: "0.50rem" }}>
@@ -59,107 +57,107 @@ function profile() {
                 </Col>
             </Row>
 
-            <Row justify="center" style={{ marginTop: "1.5rem" }}>
+            <Row justify="center" className="profilerow4style">
                 <Col span="3"  >
-                    <Text style={{ color: "black" }}>
+                    <Text className="profilepostsamounttextstyle">
                         1,655
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black", marginLeft: "0.20rem" }}>
+                    <Text className="profilepoststextstyle">
                         Posts
                     </Text>
                 </Col>
-                <Col span="5" style={{ marginLeft: "1rem" }}>
-                    <Text style={{ color: "black", marginLeft: "1.25rem" }} >
+                <Col span="5" className="profilefollowerscolstyle">
+                    <Text className="profilefollowersamounttextstyle" >
                         33K
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black", marginLeft: "0.25rem" }}>
+                    <Text className="profilefollowerstextstyle">
                         Followers
                     </Text>
                 </Col>
-                <Col span="5" style={{ marginLeft: "1rem" }}>
-                    <Text style={{ color: "black", marginLeft: "1.25rem" }}>
+                <Col span="5" className="profilefollowingcolstyle">
+                    <Text className="profilefollowingamounttextstyle">
                         10K
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black", marginLeft: "0.15rem" }}>
+                    <Text className="profilefollowingtextstyle">
                         Following
                     </Text>
                 </Col>
-                <Col span="4" style={{ marginLeft: "1rem" }} >
-                    <Text style={{ color: "black", marginLeft: "0.75rem" }}>
+                <Col span="4" className="profilefriendscolstyle" >
+                    <Text className="profilefriendsamounttextstyle">
                         256
                     </Text>
                     <br>
                     </br>
-                    <Text style={{ color: "black", marginLeft: "0.25rem" }}>
+                    <Text className="profilefriendstextstyle">
                         Friends
                     </Text>
                 </Col>
             </Row>
 
-            <Row justify="start" style={{ marginTop: "1rem" }} >
-                <Col span="6" style={{ marginRight: "3rem", marginLeft: "1rem" }}>
-                    <EyeInvisibleOutlined style={{ marginLeft: "1.25rem", fontSize: "3rem" }} />
-                    <Text style={{ marginLeft: "0.30rem" }} >
+            <Row justify="start" className="profilerow5style" >
+                <Col span="6" className="profileblockinglistcolstyle">
+                    <EyeInvisibleOutlined className="profileeyeinvisibleiconstyle" />
+                    <Text className="profileblockinglisttextstyle" >
                         Blocking List
                     </Text>
                 </Col>
-                <Col span="3" style={{ marginRight: "4rem" }}>
-                    <CloudServerOutlined style={{ fontSize: "3rem" }} />
-                    <Text style={{ marginLeft: "0.30rem" }} >
+                <Col span="3" className="profiledraftscolstyle">
+                    <CloudServerOutlined className="profilecloudservericonstyle" />
+                    <Text className="profiledraftstextstyle" >
                         Drafts
                     </Text>
                 </Col>
                 <Col span="4" >
-                    <HeartOutlined style={{ fontSize: "3rem", marginLeft: "0.25rem" }} />
+                    <HeartOutlined className="profilehearticonstyle" />
                     <Text >
                         Favorites
                         </Text>
                 </Col>
             </Row>
 
-            <Row justify="center" style={{ marginTop: "1rem" }}>
-                <Col span="7" style={{ marginRight: "1rem" }}>
-                    <Text style={{ color: "black", fontSize: "1rem" }}>
+            <Row justify="center" className="profilerow6style">
+                <Col span="7" className="profileoverallratingcolstyle">
+                    <Text className="profileoverallratingtextstyle">
                         Overall Rating
                     </Text>
                 </Col>
             </Row>
             <Row justify="center">
-                <Col span="11" style={{ marginRight: "0.5rem" }} >
-                    <Rate value={5} style={{ fontSize: "1.5rem" }}>
+                <Col span="11" className="profileoverallratingratecolstyle" >
+                    <Rate value={5} className="profileoverallratingratestyle">
 
                     </Rate>
                 </Col>
             </Row>
             <Row justify="center">
                 <Col span="10" >
-                    <Text style={{ fontSize: "1rem", }}>
+                    <Text className="profilepostiveratetextstyle">
                         Positive Rate: 100%
                    </Text>
                 </Col>
             </Row>
 
             <Row>
-                <Col span="22" style={{ marginLeft: "1rem" }}>
-                    <Text style={{ fontSize: "0.75rem", }}>
+                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle">
+                    <Text className="profileserviceattitudequalityefficiencytextstyle">
                         Service Attitude:
                    </Text>
                     <Progress percent={90} strokeColor={{ from: '#ff8235', to: '#f8d829' }} strokeWidth={20} />
                 </Col>
-                <Col span="22" style={{ marginLeft: "1rem" }}>
-                    <Text style={{ fontSize: "0.75rem", }}>
+                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle">
+                    <Text className="profileserviceattitudequalityefficiencytextstyle">
                         Service Quality:
                    </Text>
                     <Progress percent={90} strokeColor={{ from: '#d8f715', to: '#00ffd3', }} strokeWidth={20} />
                 </Col>
-                <Col span="22" style={{ marginLeft: "1rem" }}>
-                    <Text style={{ fontSize: "0.75rem", }}>
+                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle">
+                    <Text className="profileserviceattitudequalityefficiencytextstyle">
                         Service Efficiency:
                    </Text>
                     <Progress percent={90} strokeColor={{ from: '#ff02af', to: '#f23051', }} strokeWidth={20} />
