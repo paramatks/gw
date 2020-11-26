@@ -117,7 +117,7 @@ function profile() {
                     <HeartOutlined className="profilehearticonstyle" />
                     <Text >
                         Favorites
-                        </Text>
+                    </Text>
                 </Col>
             </Row>
 
@@ -128,13 +128,13 @@ function profile() {
                     </Text>
                 </Col>
             </Row>
+
             <Row justify="center">
                 <Col span="11" className="profileoverallratingratecolstyle" >
-                    <Rate value={5} className="profileoverallratingratestyle">
-
-                    </Rate>
+                    <Rate value={5} className="profileoverallratingratestyle"/>
                 </Col>
             </Row>
+            
             <Row justify="center">
                 <Col span="10" >
                     <Text className="profilepostiveratetextstyle">
@@ -176,7 +176,6 @@ function profile() {
                         Home
 					</Text>
                 </Col>
-
                 <Col span="5" className="footerhomemessagescolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/messages' }); }}
@@ -187,7 +186,6 @@ function profile() {
                         Messages
 					</Text>
                 </Col>
-
                 <Col span="4" className="footercolrocketstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/newpost' }); }}
@@ -195,7 +193,6 @@ function profile() {
                         <RocketOutlined className="footericonrocketstyle" />
                     </Button>
                 </Col>
-
                 <Col span="4" className="footerorderscolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/orders' }); }}
@@ -206,7 +203,6 @@ function profile() {
                         Orders
 					</Text>
                 </Col>
-
                 <Col span="4" className="footerprofilecolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/profile' }); }}

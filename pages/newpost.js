@@ -27,11 +27,11 @@ function newPost() {
 				className="profilerownewstyle"
 				onBack={() => window.history.back()}
 
-				title={<span style={{ marginLeft: "5rem" }}><Text style={{ color: "white" }}>New Post</Text> </span>}
+				title={<Text className="newposttitletextstyle" >New Post</Text>}
 
 				extra={
-					<Button shape="round" size="medium" style={{ backgroundColor: "#f8d829" }}>
-						<Text style={{ color: "red" }}>
+					<Button shape="round" size="medium" className="newpostsharebuttonstyle">
+						<Text className="newpostsharetextstyle">
 							Share
 						</Text>
 					</Button>}
@@ -61,66 +61,65 @@ function newPost() {
 				</Form>
 			</Formik>
 
-			<Row style={{ marginTop: "1rem", position: "sticky", bottom: "0" }}>
-				<Col span="12" style={{ marginLeft: "1rem" }}>
+			<Row className="newpostrow1style">
+				<Col span="12" className="newpostlocationcolstyle">
 					<Button shape="round">
-						<EnvironmentOutlined style={{ color: "blue" }} />
-						<Text style={{ color: "blue" }}>
+						<EnvironmentOutlined className="newpostlocationpublicicontextstyle" />
+						<Text className="newpostlocationpublicicontextstyle">
 							Bangkok, Thailand
 						</Text>
 					</Button>
 				</Col>
-				<Col span="8" style={{ marginLeft: "2rem" }}>
+				<Col span="8" className="newpostpubliccolstyle">
 					<Button shape="round">
-						<GlobalOutlined style={{ color: "blue" }} />
-						<Text style={{ color: "blue" }} >
+						<GlobalOutlined className="newpostlocationpublicicontextstyle" />
+						<Text className="newpostlocationpublicicontextstyle" >
 							Public
 						</Text>
-						<DownOutlined style={{ color: "blue" }} />
+						<DownOutlined className="newpostlocationpublicicontextstyle" />
 					</Button>
 				</Col>
-
-				<Row style={{ marginTop: "0.75rem", backgroundColor: "white", width: "100%" }}>
-					<Col span="4" style={{ marginLeft: "0.25rem", marginBottom: "0.75rem" }}>
+				<Row className="newpostrow2style">
+					<Col span="4" className="newpostcameracolstyle">
 						<Button type="link">
-							<CameraOutlined style={{ fontSize: "1.5rem", color: "black" }} />
+							<CameraOutlined className="newpostcameraiconstyle" />
 						</Button>
 					</Col>
-					<Col span="4" style={{ marginBottom: "0.75rem" }}>
+					<Col span="4" className="newpostvideocameraathashtagcolstyle">
 						<Button type="link">
-							<VideoCameraOutlined style={{ fontSize: "1.5rem", color: "black" }} />
+							<VideoCameraOutlined className="newpostvideocameracontainericonstyle" />
 						</Button>
 					</Col>
-					<Col span="4" style={{ marginBottom: "0.75rem" }}>
+					<Col span="4" className="newpostvideocameraathashtagcolstyle">
 						<Button type="link">
-							<Text strong="true" style={{ color: "black", fontSize: "23px", marginTop: "-0.55rem" }} >
+							<Text strong="true" className="newpostattextstyle" >
 								@
 							</Text>
 						</Button>
 					</Col>
-					<Col span="4" style={{ marginBottom: "0.75rem" }} >
+					<Col span="4" className="newpostvideocameraathashtagcolstyle" >
 						<Button type="link">
-							<Text strong="true" style={{ color: "black", fontSize: "23px", marginTop: "-0.50rem" }}>
+							<Text strong="true" className="newposthashtagtextstyle">
 								#
 							</Text>
 						</Button>
 					</Col>
-					<Col span="4" style={{ marginBottom: "0.75rem", borderLeftStyle: "solid", borderLeftColor: "gray", borderLeftWidth: "thin" }}>
+					<Col span="4" className="newpostcontainercolstyle">
 						<Button type="link">
-							<ContainerOutlined style={{ fontSize: "1.5rem", color: "black" }} />
+							<ContainerOutlined className="newpostvideocameracontainericonstyle" />
 						</Button>
 					</Col>
 					<Col span="3">
-						<Button type="link" style={{ marginLeft: "-1rem" }}>
-							<Text style={{ color: "black", fontSize: "16px", marginTop: "-1rem" }}>
+						<Button type="link" className="newpostdraftsbuttonstyle">
+							<Text className="newpostdraftstextstyle">
 								Drafts
 							</Text>
 						</Button>
 					</Col>
-
 				</Row>
 
 			</Row>
+
 		</>
 	)
 }

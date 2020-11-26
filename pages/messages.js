@@ -162,7 +162,6 @@ function messages() {
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />
-
                 </Col>
                 <Row justify="start" className="messagescontenttextrowstyle">
                     <Text className="messagesnametextstyle">
@@ -220,6 +219,7 @@ function messages() {
                     </Text>
                 </Col>
             </Row>
+
             <Row align="middle" justify="start" className="messagescontentrowstyle">
                 <Col span="3" className="messagesavatarcolstyle">
                     <Avatar size="large"

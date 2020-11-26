@@ -943,3 +943,89 @@ color: black;
 .profileserviceattitudequalityefficiencytextstyle {
     font-size: 0.75rem;
 }
+
+.newposttitletextstyle {
+    margin-left: 5rem;
+    color: white;
+}
+
+.newpostsharebuttonstyle {
+    background-color: #f8d829;
+}
+
+.newpostsharetextstyle {
+    color: red;
+}
+
+.newpostrow1style {
+    margin-top: 1rem;
+    position: sticky;
+    bottom: 0;
+}
+
+.newpostlocationcolstyle {
+    margin-left: 1rem;
+}
+
+.newpostlocationpublicicontextstyle {
+    color: blue;
+}
+
+.newpostpubliccolstyle {
+    margin-left: 2rem;
+}
+
+.newpostrow2style {
+    margin-top: 0.75rem;
+    background-color: white;
+    width: 100%;
+}
+
+.newpostcameracolstyle {
+    margin-left: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.newpostcameraiconstyle {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.newpostvideocameraathashtagcolstyle {
+    margin-bottom: 0.75rem;
+}
+
+.newpostvideocameracontainericonstyle {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.newpostattextstyle {
+    color: black;
+    font-size: 23px;
+    margin-top: -0.55rem;
+}
+
+.newposthashtagtextstyle {
+    color: black;
+    font-size: 23px;
+    margin-top: -0.50rem;
+}
+
+.newpostcontainercolstyle {
+    margin-bottom: 0.75rem;
+    border-left-style: solid;
+    border-left-color:  gray;
+    border-left-width: thin;
+}
+
+.newpostdraftsbuttonstyle {
+    margin-left: -1rem;
+}
+
+.newpostdraftstextstyle {
+    color: black;
+    font-size: 16px;
+    margin-top: -1rem;
+}
+

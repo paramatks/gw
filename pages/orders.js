@@ -23,7 +23,6 @@ function orders() {
                 <Col span="3" className="orderssearchcolstyle" >
                     <SearchOutlined className="orderssearchcoliconstyle" />
                 </Col>
-
                 <Col span="4" className="ordersheadertextcolstyle">
                     <Text className="ordersheadertextstyle">
                         Orders
@@ -67,7 +66,6 @@ function orders() {
                     <Text className="orderscompletedindicatortext2style">
                         Completed
                     </Text>
-
                 </Col>
                 <Col span="4" className="ordersothersindicatorcolstyle">
                     <Button type="primary" shape="circle" size="large" className="ordersothersindicatorbuttonstyle">
@@ -78,7 +76,6 @@ function orders() {
                     <Text className="ordersothersindicatortext2style">
                         Others
                     </Text>
-
                 </Col>
             </Row>
 
@@ -152,7 +149,6 @@ function orders() {
                 <Col span="5">
                     My Rating
                 </Col>
-
             </Row>
 
             <Row className="ordersrow3style">
@@ -190,12 +186,10 @@ function orders() {
                     >
                         <HomeOutlined className="footericonstyle" />
                     </Button>
-
                     <Text className="footerhometextstyle">
                         Home
 					</Text>
                 </Col>
-
                 <Col span="5" className="footerhomemessagescolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/messages' }); }}
@@ -213,7 +207,6 @@ function orders() {
                         <RocketOutlined className="footericonrocketstyle" />
                     </Button>
                 </Col>
-
                 <Col span="4" className="footerorderscolstyle">
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/orders' }); }}
@@ -235,8 +228,8 @@ function orders() {
 					</Text>
                 </Col>
             </Row>
-        </>
 
+        </>
     )
 
 }
