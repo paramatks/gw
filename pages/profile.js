@@ -58,7 +58,7 @@ function profile() {
             </Row>
 
             <Row justify="center" className="profilerow4style">
-                <Col span="3"  >
+                <Col span="3" className="profilepostscolstyle"  >
                     <Text className="profilepostsamounttextstyle">
                         1,655
                     </Text>
@@ -107,13 +107,13 @@ function profile() {
                         Blocking List
                     </Text>
                 </Col>
-                <Col span="3" className="profiledraftscolstyle">
+                <Col span="4" className="profiledraftscolstyle">
                     <CloudServerOutlined className="profilecloudservericonstyle" />
                     <Text className="profiledraftstextstyle" >
                         Drafts
                     </Text>
                 </Col>
-                <Col span="4" >
+                <Col span="4" className="profilefavoritescolstyle" >
                     <HeartOutlined className="profilehearticonstyle" />
                     <Text >
                         Favorites
@@ -131,12 +131,12 @@ function profile() {
 
             <Row justify="center">
                 <Col span="11" className="profileoverallratingratecolstyle" >
-                    <Rate value={5} className="profileoverallratingratestyle"/>
+                    <Rate value={5} className="profileoverallratingratestyle" />
                 </Col>
             </Row>
-            
+
             <Row justify="center">
-                <Col span="10" >
+                <Col span="8" className="profilepositiveratecolstyle" >
                     <Text className="profilepostiveratetextstyle">
                         Positive Rate: 100%
                    </Text>

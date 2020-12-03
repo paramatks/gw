@@ -803,7 +803,7 @@ color: black;
 }
 
 .profileuserratestyle {
-   font-size: 1rem;
+   font-size:  1rem;
 }
 
 .profileeditcolstyle {
@@ -830,6 +830,10 @@ color: black;
     margin-top: 1.5rem;
 }
 
+.profilepostscolstyle {
+    margin-left: 1.50rem;
+}
+
 .profilepostsamounttextstyle {
     color: black;
 }
@@ -840,16 +844,16 @@ color: black;
 }
 
 .profilefollowerscolstyle {
-    margin-left: 1rem;
+    margin-left: 1.25rem;
 }
 
 .profilefollowersamounttextstyle {
     color: black;
-    margin-left: 1.25rem;
+    margin-left: 1rem;
 }
 
 .profilefollowingcolstyle {
-    margin-left: 1rem;
+    margin-left: 2.75rem;
 }
 
 .profilefollowingamounttextstyle {
@@ -863,7 +867,7 @@ color: black;
 }
 
 .profilefriendscolstyle {
-    margin-left: 1rem;
+    margin-right: 0.50rem;
 }
 
 .profilefriendsamounttextstyle{
@@ -881,8 +885,8 @@ color: black;
 }
 
 .profileblockinglistcolstyle {
-    margin-right: 3rem;
-    margin-left: 1rem;
+    margin-right: 2.45rem;
+    margin-left: 2rem;
 }
 
 .profileeyeinvisibleiconstyle {
@@ -895,7 +899,11 @@ color: black;
 }
 
 .profiledraftscolstyle {
-    margin-right: 4rem;
+    margin-right: 2rem;
+}
+
+.profilefavoritescolstyle {
+    margin-left: 0.50rem;
 }
 
 .profilecloudservericonstyle {
@@ -916,7 +924,7 @@ color: black;
 }
 
 .profileoverallratingcolstyle {
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .profileoverallratingtextstyle {
@@ -925,11 +933,15 @@ color: black;
 }
 
 .profileoverallratingratecolstyle {
-    margin-right: 0.5rem;
+    margin-left: 1rem;
 }
 
 .profileoverallratingratestyle {
     font-size: 1.5rem;
+}
+
+.profilepositiveratecolstyle {
+    margin-left: 1rem;
 }
 
 .profilepositiveratetextstyle {
