@@ -845,6 +845,7 @@ color: black;
 
 .profilefollowerscolstyle {
     margin-left: 1.25rem;
+    margin-right: -1.25rem;
 }
 
 .profilefollowersamounttextstyle {
@@ -853,7 +854,7 @@ color: black;
 }
 
 .profilefollowingcolstyle {
-    margin-left: 2.75rem;
+    margin-left: 3.75rem;
 }
 
 .profilefollowingamounttextstyle {

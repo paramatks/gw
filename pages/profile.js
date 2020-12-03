@@ -68,7 +68,7 @@ function profile() {
                         Posts
                     </Text>
                 </Col>
-                <Col span="5" className="profilefollowerscolstyle">
+                <Col span="4" className="profilefollowerscolstyle">
                     <Text className="profilefollowersamounttextstyle" >
                         33K
                     </Text>
