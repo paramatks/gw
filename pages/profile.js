@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Row, Col, Typography, Rate, Progress, Button } from 'antd';
 import { connect } from "react-redux"
-import { EditOutlined, EnvironmentFilled, EyeInvisibleOutlined, HeartOutlined, CloudServerOutlined } from '@ant-design/icons'
+import { EditOutlined, EnvironmentFilled, EyeInvisibleOutlined, HeartOutlined, CloudServerOutlined, SettingOutlined } from '@ant-design/icons'
 import Head from 'next/head'
 import { HomeOutlined, MessageOutlined, RocketOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
 import router from 'next/router'
@@ -22,6 +22,11 @@ function profile() {
             </Head>
 
             <Row align="top" className="profilerownewstyle">
+                <Col span="3" className="profilesettingscolstyle">
+                    <Button type="link">
+                        <SettingOutlined className="profilesettingsiconstyle"/>
+                    </Button>  
+                </Col>
                 <Col span="3" className="profileavatarcolstyle" >
                     <img className="profileavatarimgstyle"
                         src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
@@ -33,8 +38,10 @@ function profile() {
                     </Text>
                     <Rate value={5} className="profileuserratestyle" />
                 </Col>
-                <Col span="2" className="profileeditcolstyle">
-                    <EditOutlined className="profileediticonstyle" />
+                <Col span="3" className="profileeditcolstyle">
+                    <Button type="link">
+                        <EditOutlined className="profileediticonstyle" />
+                    </Button>
                 </Col>
             </Row>
 
