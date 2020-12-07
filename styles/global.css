@@ -832,9 +832,14 @@ color: black;
    margin-top: 0.50rem;
 }
 
-.profilelocationcolstyle {
+.profilelocationcoliconstyle {
     margin-left: 1rem; 
     margin-top: 1rem;
+}
+
+.profilelocationcoltextstyle {
+    margin-top: 1rem;
+    margin-left: 0.50rem;
 }
 
 .profilerow4style {
@@ -894,15 +899,33 @@ color: black;
 
 .profilerow5style {
     margin-top: 1rem;
+    border-top: #f3f2ed;
+    border-top-width: 0.50rem;
+    border-top-style: solid;
+    border-bottom:  #f3f2ed;
+    border-bottom-width: 0.50rem;
+    border-bottom-style: solid;
+    border-right: #f3f2ed;
+    border-right-width: 0.50rem;
+    border-right-style: solid;
+    border-left: #f3f2ed;
+    border-left-width: 0.50rem;
+    border-left-style: solid;
+}
+
+.profilerow5buttonstyle {
+    color: black;
 }
 
 .profileblockinglistcolstyle {
-    margin-right: 2.45rem;
+    margin-right: 2rem;
     margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top:1rem;
 }
 
 .profileeyeinvisibleiconstyle {
-    margin-left: 1.25rem;
+    margin-left: 1.15rem;
     font-size: 3rem;
 }
 
@@ -911,11 +934,14 @@ color: black;
 }
 
 .profiledraftscolstyle {
-    margin-right: 2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .profilefavoritescolstyle {
-    margin-left: 0.50rem;
+    margin-left: -1rem;
+    margin-top:1rem;
 }
 
 .profilecloudservericonstyle {
@@ -928,15 +954,56 @@ color: black;
 
 .profilehearticonstyle {
     font-size: 3rem;
-    margin-left: 0.25rem;
+    margin-left: 1.15rem;
 }
 
 .profilerow6style {
-    margin-top: 1rem;
+    border-right: #f3f2ed;
+    border-right-width: 0.50rem;
+    border-right-style: solid;
+    border-left: #f3f2ed;
+    border-left-width: 0.50rem;
+    border-left-style: solid;
+    padding-top: 1rem;
+}
+
+.profilerow7style {
+    border-right: #f3f2ed;
+    border-right-width: 0.50rem;
+    border-right-style: solid;
+    border-left: #f3f2ed;
+    border-left-width: 0.50rem;
+    border-left-style: solid;
+}
+
+.profilerow8style {
+    border-right: #f3f2ed;
+    border-right-width: 0.50rem;
+    border-right-style: solid;
+    border-left: #f3f2ed;
+    border-left-width: 0.50rem;
+    border-left-style: solid;
+    border-bottom: #f3f2ed;
+    border-bottom-width: 0.25rem;
+    border-bottom-style: solid;
+    padding-bottom: 1rem;
+}
+
+.profilerow9style {
+    border-right: #f3f2ed;
+    border-right-width: 0.50rem;
+    border-right-style: solid;
+    border-left: #f3f2ed;
+    border-left-width: 0.50rem;
+    border-left-style: solid;
+    border-bottom:  #f3f2ed ;
+    border-bottom-width: 0.50rem ;
+    border-bottom-style: solid ;
+    padding-bottom: 1rem;
 }
 
 .profileoverallratingcolstyle {
-    margin-left: 1rem;
+    margin-left: 0.75rem;
 }
 
 .profileoverallratingtextstyle {
@@ -945,7 +1012,7 @@ color: black;
 }
 
 .profileoverallratingratecolstyle {
-    margin-left: 1rem;
+    margin-left: 0.85rem;
 }
 
 .profileoverallratingratestyle {

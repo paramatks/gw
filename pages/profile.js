@@ -21,11 +21,11 @@ function profile() {
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
-            <Row align="top" className="profilerownewstyle">
-                <Col span="3" className="profilesettingscolstyle">
+            <Row align="top" className="profilerownewstyle" >
+                <Col span="3" className="profilesettingscolstyle" >
                     <Button type="link">
-                        <SettingOutlined className="profilesettingsiconstyle"/>
-                    </Button>  
+                        <SettingOutlined className="profilesettingsiconstyle" />
+                    </Button>
                 </Col>
                 <Col span="3" className="profileavatarcolstyle" >
                     <img className="profileavatarimgstyle"
@@ -38,7 +38,7 @@ function profile() {
                     </Text>
                     <Rate value={5} className="profileuserratestyle" />
                 </Col>
-                <Col span="3" className="profileeditcolstyle">
+                <Col span="3" className="profileeditcolstyle" >
                     <Button type="link">
                         <EditOutlined className="profileediticonstyle" />
                     </Button>
@@ -54,10 +54,10 @@ function profile() {
             </Row>
 
             <Row>
-                <Col span="1" className="profilelocationcolstyle">
+                <Col span="1" className="profilelocationcoliconstyle">
                     <EnvironmentFilled className="postsnewlocatoniconstyle" />
                 </Col>
-                <Col span="10" style={{ marginTop: "1rem", marginLeft: "0.50rem" }}>
+                <Col span="10" className="profilelocationcoltextstyle">
                     <Text className="postsnewlocationtextstyle">
                         Chiang Mai, Thailand
                     </Text>
@@ -109,20 +109,26 @@ function profile() {
 
             <Row justify="start" className="profilerow5style" >
                 <Col span="6" className="profileblockinglistcolstyle">
-                    <EyeInvisibleOutlined className="profileeyeinvisibleiconstyle" />
+                    <Button shape="circle" type="link" size="large" className="profilerow5buttonstyle" >
+                        <EyeInvisibleOutlined className="profileeyeinvisibleiconstyle" />
+                    </Button>
                     <Text className="profileblockinglisttextstyle" >
                         Blocking List
                     </Text>
                 </Col>
-                <Col span="4" className="profiledraftscolstyle">
-                    <CloudServerOutlined className="profilecloudservericonstyle" />
+                <Col span="5" className="profiledraftscolstyle">
+                    <Button shape="circle" type="link" size="large" className="profilerow5buttonstyle" >
+                        <CloudServerOutlined className="profilecloudservericonstyle" />
+                    </Button>
                     <Text className="profiledraftstextstyle" >
                         Drafts
                     </Text>
                 </Col>
-                <Col span="4" className="profilefavoritescolstyle" >
-                    <HeartOutlined className="profilehearticonstyle" />
-                    <Text >
+                <Col span="5" className="profilefavoritescolstyle" >
+                    <Button shape="circle" type="link" size="large" className="profilerow5buttonstyle" >
+                        <HeartOutlined className="profilehearticonstyle" />
+                    </Button>
+                    <Text style={{ marginLeft: "1rem" }}>
                         Favorites
                     </Text>
                 </Col>
@@ -136,21 +142,21 @@ function profile() {
                 </Col>
             </Row>
 
-            <Row justify="center">
+            <Row justify="center" className="profilerow7style">
                 <Col span="11" className="profileoverallratingratecolstyle" >
                     <Rate value={5} className="profileoverallratingratestyle" />
                 </Col>
             </Row>
 
-            <Row justify="center">
-                <Col span="8" className="profilepositiveratecolstyle" >
+            <Row justify="center" className="profilerow8style">
+                <Col span="9" className="profilepositiveratecolstyle" >
                     <Text className="profilepostiveratetextstyle">
                         Positive Rate: 100%
                    </Text>
                 </Col>
             </Row>
 
-            <Row>
+            <Row className="profilerow9style" >
                 <Col span="22" className="profileserviceattitudequalityefficiencycolstyle">
                     <Text className="profileserviceattitudequalityefficiencytextstyle">
                         Service Attitude:
