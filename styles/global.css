@@ -455,7 +455,7 @@ color: black;
 }
 
 .messagespluscolstyle {
-    margin-left: 1rem;
+    margin-left: 0.50rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -466,7 +466,7 @@ color: black;
 }
 
 .messagestextcolstyle {
-    margin-left: 5.5rem;
+    margin-left: 6.25rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -476,7 +476,7 @@ color: black;
 }
 
 .messagesbellcolstyle {
-    margin-left: 6.5rem; 
+    margin-left: 4.5rem; 
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -564,7 +564,7 @@ color: black;
 }
 
 .ordersheadertextcolstyle {
-    margin-left: 6rem;
+    margin-left: 6.45rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -582,6 +582,11 @@ color: black;
 .ordersheaderbelliconstyle {
     color: white;
     font-size: 2rem;
+}
+
+.ordersbuttonstyle {
+    color: black;
+    margin-left: -1rem;
 }
 
 .ordersindicatorsrowstyle {
@@ -608,7 +613,7 @@ color: black;
 }
 
 .ordersbookingprocessingindicatorcolstyle {
-    margin-left: 0.5rem;
+    margin-left: 0.60rem;
     margin-top: 0.5rem;
 }
 
@@ -623,7 +628,7 @@ color: black;
 }
 
 .orderscompletedindicatorcolstyle {
-    margin-left: 0.75rem;
+    margin-left: 1.50rem;
     margin-top: 0.5rem;
 }
 
@@ -633,7 +638,7 @@ color: black;
 }
 
 .ordersothersindicatorcolstyle {
-    margin-left: 0.25rem;
+    margin-left: 0rem;
     margin-top: 0.5rem;
 }
 
@@ -654,17 +659,16 @@ color: black;
 }
 
 .ordersviewallcolstyle {
-    margin-left: 11rem; 
+    margin-left: 10rem;
+    margin-top: -0.25rem; 
 }
 
 .ordersviewalltextstyle {
     font-size: 0.75rem;
-    margin-left: 0.35rem;
 }
 
 .ordersviewalliconstyle {
     font-size: 0.75rem;
-    margin-left: 0.50rem;
 }
 
 .ordersrow2style {
@@ -686,12 +690,12 @@ color: black;
 
 .orderstooliconstyle {
     font-size: 2rem;
-    margin-left: 0.5rem;
+    margin-left: 1.20rem;
 }
 
 .ordersprocessingtextstyle {
     font-size: 11px;
-    margin-left: -0.25rem;
+    margin-left: 0.27rem;
 }
 
 .orderscheckiconstyle {
@@ -720,12 +724,12 @@ color: black;
 
 .ordersellipsisiconstyle {
     font-size: 2rem;
-    margin-left: 0.5rem;
+    margin-left: 1.15rem;
 }
 
 .ordersotherstextstyle {
     font-size: 11px; 
-    margin-left: 0.40rem;
+    margin-left: 1.05rem;
 }
 
 .orderscustomerserviceiconstyle {
@@ -762,12 +766,12 @@ color: black;
 
 .ordersstariconstyle {
     font-size: 2rem;
-    margin-left: 0.5rem;
+    margin-left: 1.15rem;
 }
 
 .ordersratingtextstyle {
     font-size: 11px;
-    margin-left: 0.25rem;
+    margin-left: 1rem;
 }
 
 .ordershistoryiconstyle {
@@ -949,7 +953,7 @@ color: black;
 }
 
 .profiledraftstextstyle {
-    margin-left: 0.30rem;
+    margin-left: 0.45rem;
 }
 
 .profilehearticonstyle {

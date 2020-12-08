@@ -32,8 +32,8 @@ function profile() {
                         src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
                     />
                 </Col>
-                <Col span="8" className="profileusercolstyle">
-                    <Text className="profileusertextstyle">
+                <Col span="8" className="profileusercolstyle" >
+                    <Text className="profileusertextstyle" >
                         Boom
                     </Text>
                     <Rate value={5} className="profileuserratestyle" />
@@ -46,7 +46,7 @@ function profile() {
             </Row>
 
             <Row>
-                <Col span="20" className="profilecontentcolstyle">
+                <Col span="20" className="profilecontentcolstyle" >
                     <Text>
                         Content
                     </Text>
@@ -54,24 +54,24 @@ function profile() {
             </Row>
 
             <Row>
-                <Col span="1" className="profilelocationcoliconstyle">
+                <Col span="1" className="profilelocationcoliconstyle" >
                     <EnvironmentFilled className="postsnewlocatoniconstyle" />
                 </Col>
-                <Col span="10" className="profilelocationcoltextstyle">
-                    <Text className="postsnewlocationtextstyle">
+                <Col span="10" className="profilelocationcoltextstyle" >
+                    <Text className="postsnewlocationtextstyle" >
                         Chiang Mai, Thailand
                     </Text>
                 </Col>
             </Row>
 
-            <Row justify="center" className="profilerow4style">
-                <Col span="3" className="profilepostscolstyle"  >
-                    <Text className="profilepostsamounttextstyle">
+            <Row justify="center" className="profilerow4style" >
+                <Col span="3" className="profilepostscolstyle" >
+                    <Text className="profilepostsamounttextstyle" >
                         1,655
                     </Text>
                     <br>
                     </br>
-                    <Text className="profilepoststextstyle">
+                    <Text className="profilepoststextstyle" >
                         Posts
                     </Text>
                 </Col>
@@ -85,30 +85,30 @@ function profile() {
                         Followers
                     </Text>
                 </Col>
-                <Col span="5" className="profilefollowingcolstyle">
-                    <Text className="profilefollowingamounttextstyle">
+                <Col span="5" className="profilefollowingcolstyle" >
+                    <Text className="profilefollowingamounttextstyle" >
                         10K
                     </Text>
                     <br>
                     </br>
-                    <Text className="profilefollowingtextstyle">
+                    <Text className="profilefollowingtextstyle" >
                         Following
                     </Text>
                 </Col>
                 <Col span="4" className="profilefriendscolstyle" >
-                    <Text className="profilefriendsamounttextstyle">
+                    <Text className="profilefriendsamounttextstyle" >
                         256
                     </Text>
                     <br>
                     </br>
-                    <Text className="profilefriendstextstyle">
+                    <Text className="profilefriendstextstyle" >
                         Friends
                     </Text>
                 </Col>
             </Row>
 
-            <Row justify="start" className="profilerow5style" >
-                <Col span="6" className="profileblockinglistcolstyle">
+            <Row className="profilerow5style" >
+                <Col span="6" className="profileblockinglistcolstyle" >
                     <Button shape="circle" type="link" size="large" className="profilerow5buttonstyle" >
                         <EyeInvisibleOutlined className="profileeyeinvisibleiconstyle" />
                     </Button>
@@ -134,95 +134,95 @@ function profile() {
                 </Col>
             </Row>
 
-            <Row justify="center" className="profilerow6style">
-                <Col span="7" className="profileoverallratingcolstyle">
-                    <Text className="profileoverallratingtextstyle">
+            <Row justify="center" className="profilerow6style" >
+                <Col span="7" className="profileoverallratingcolstyle" >
+                    <Text className="profileoverallratingtextstyle" >
                         Overall Rating
                     </Text>
                 </Col>
             </Row>
 
-            <Row justify="center" className="profilerow7style">
+            <Row justify="center" className="profilerow7style" >
                 <Col span="11" className="profileoverallratingratecolstyle" >
                     <Rate value={5} className="profileoverallratingratestyle" />
                 </Col>
             </Row>
 
-            <Row justify="center" className="profilerow8style">
+            <Row justify="center" className="profilerow8style" >
                 <Col span="9" className="profilepositiveratecolstyle" >
-                    <Text className="profilepostiveratetextstyle">
+                    <Text className="profilepostiveratetextstyle" >
                         Positive Rate: 100%
                    </Text>
                 </Col>
             </Row>
 
             <Row className="profilerow9style" >
-                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle">
-                    <Text className="profileserviceattitudequalityefficiencytextstyle">
+                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle" >
+                    <Text className="profileserviceattitudequalityefficiencytextstyle" >
                         Service Attitude:
                    </Text>
                     <Progress percent={90} strokeColor={{ from: '#ff8235', to: '#f8d829' }} strokeWidth={20} />
                 </Col>
-                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle">
-                    <Text className="profileserviceattitudequalityefficiencytextstyle">
+                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle" >
+                    <Text className="profileserviceattitudequalityefficiencytextstyle" >
                         Service Quality:
                    </Text>
                     <Progress percent={90} strokeColor={{ from: '#d8f715', to: '#00ffd3', }} strokeWidth={20} />
                 </Col>
-                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle">
-                    <Text className="profileserviceattitudequalityefficiencytextstyle">
+                <Col span="22" className="profileserviceattitudequalityefficiencycolstyle" >
+                    <Text className="profileserviceattitudequalityefficiencytextstyle" >
                         Service Efficiency:
                    </Text>
                     <Progress percent={90} strokeColor={{ from: '#ff02af', to: '#f23051', }} strokeWidth={20} />
                 </Col>
             </Row>
 
-            <Row align="top" className="footerprofilerowstyle">
-                <Col span="4" className="footerhomemessagescolstyle">
+            <Row align="top" className="footerprofilerowstyle" >
+                <Col span="4" className="footerhomemessagescolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/newgwindex' }); }}
                     >
                         <HomeOutlined className="footericonstyle" />
                     </Button>
 
-                    <Text className="footerhometextstyle">
+                    <Text className="footerhometextstyle" >
                         Home
 					</Text>
                 </Col>
-                <Col span="5" className="footerhomemessagescolstyle">
+                <Col span="5" className="footerhomemessagescolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/messages' }); }}
                     >
                         <MessageOutlined className="footericonstyle" />
                     </Button>
-                    <Text className="footermessagestextstyle">
+                    <Text className="footermessagestextstyle" >
                         Messages
 					</Text>
                 </Col>
-                <Col span="4" className="footercolrocketstyle">
+                <Col span="4" className="footercolrocketstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/newpost' }); }}
                     >
                         <RocketOutlined className="footericonrocketstyle" />
                     </Button>
                 </Col>
-                <Col span="4" className="footerorderscolstyle">
+                <Col span="4" className="footerorderscolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/orders' }); }}
                     >
                         <MenuOutlined className="footericonstyle" />
                     </Button>
-                    <Text className="footerorderstextstyle">
+                    <Text className="footerorderstextstyle" >
                         Orders
 					</Text>
                 </Col>
-                <Col span="4" className="footerprofilecolstyle">
+                <Col span="4" className="footerprofilecolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/profile' }); }}
                     >
                         <UserOutlined className="footericonstyle" />
                     </Button>
-                    <Text className="footerprofiletextstyle">
+                    <Text className="footerprofiletextstyle" >
                         Profile
 					</Text>
                 </Col>

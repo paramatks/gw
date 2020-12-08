@@ -19,74 +19,76 @@ function orders() {
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
-            <Row className="ordersheaderrowstyle" align="middle" justify="start" >
+            <Row className="ordersheaderrowstyle" align="middle" >
                 <Col span="3" className="orderssearchcolstyle" >
                     <SearchOutlined className="orderssearchcoliconstyle" />
                 </Col>
-                <Col span="4" className="ordersheadertextcolstyle">
-                    <Text className="ordersheadertextstyle">
+                <Col span="4" className="ordersheadertextcolstyle" >
+                    <Text className="ordersheadertextstyle" >
                         Orders
                     </Text>
                 </Col>
-                <Col span="2" className="ordersheaderbellcolstyle">
+                <Col span="2" className="ordersheaderbellcolstyle" >
                     <BellOutlined className="ordersheaderbelliconstyle" />
                 </Col>
             </Row>
 
-            <Row className="ordersindicatorsrowstyle" size="0" direction="horizontal" align="start">
-                <Col span="5" className="ordersbookingprocessingindicatorcolstyle">
-                    <Button type="primary" shape="circle" size="large" className="ordersbookingindicatorbuttonstyle">
-                        <Text className="ordersbookingindicatortextstyle">
+            <Row className="ordersindicatorsrowstyle" >
+                <Col span="5" className="ordersbookingprocessingindicatorcolstyle" >
+                    <Button type="primary" shape="circle" size="large" className="ordersbookingindicatorbuttonstyle" >
+                        <Text className="ordersbookingindicatortextstyle" >
                             12
                         </Text>
 
                     </Button>
-                    <Text className="ordersbookingindicatortext2style">
+                    <Text className="ordersbookingindicatortext2style" >
                         Booking
                     </Text>
                 </Col>
-                <Col span="5" className="ordersbookingprocessingindicatorcolstyle">
-                    <Button type="primary" shape="circle" size="large" className="ordersprocessingcompletedindicatorbuttonstyle">
+                <Col span="5" className="ordersbookingprocessingindicatorcolstyle" >
+                    <Button type="primary" shape="circle" size="large" className="ordersprocessingcompletedindicatorbuttonstyle" >
                         <Text>
                             03
                         </Text>
                     </Button>
                     <br>
                     </br>
-                    <Text className="ordersprocessingindicatortext2style">
+                    <Text className="ordersprocessingindicatortext2style" >
                         Processing
                     </Text>
                 </Col>
-                <Col span="6" className="orderscompletedindicatorcolstyle">
-                    <Button type="primary" shape="circle" size="large" className="ordersprocessingcompletedindicatorbuttonstyle">
+                <Col span="6" className="orderscompletedindicatorcolstyle" >
+                    <Button type="primary" shape="circle" size="large" className="ordersprocessingcompletedindicatorbuttonstyle" >
                         <Text>
                             99+
                         </Text>
                     </Button>
-                    <Text className="orderscompletedindicatortext2style">
+                    <Text className="orderscompletedindicatortext2style" >
                         Completed
                     </Text>
                 </Col>
-                <Col span="4" className="ordersothersindicatorcolstyle">
-                    <Button type="primary" shape="circle" size="large" className="ordersothersindicatorbuttonstyle">
+                <Col span="4" className="ordersothersindicatorcolstyle" >
+                    <Button type="primary" shape="circle" size="large" className="ordersothersindicatorbuttonstyle" >
                         <Text>
                             0
                         </Text>
                     </Button>
-                    <Text className="ordersothersindicatortext2style">
+                    <Text className="ordersothersindicatortext2style" >
                         Others
                     </Text>
                 </Col>
             </Row>
 
-            <Row className="ordersmyordersrowstyle">
+            <Row className="ordersmyordersrowstyle" >
                 <Col span="5">
                     My Orders
                 </Col>
-                <Col span="5" className="ordersviewallcolstyle">
-                    <Text className="ordersviewalltextstyle">
-                        View All
-                    </Text>
+                <Col span="7" className="ordersviewallcolstyle" >
+                    <Button type="link">
+                        <Text className="ordersviewalltextstyle" >
+                            View All
+                        </Text>
+                    </Button>
                     <RightOutlined className="ordersviewalliconstyle" />
                 </Col>
             </Row>
@@ -94,7 +96,9 @@ function orders() {
             <Row className="ordersrow2style" >
                 <Col span={8}>
                     <Card bordered={true}>
-                        <AlertOutlined className="ordersbookingalerticonstyle" />
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <AlertOutlined className="ordersbookingalerticonstyle" />
+                        </Button>
                         <Text className="ordersbookingtextstyle" >
                             Booking
                         </Text>
@@ -102,26 +106,32 @@ function orders() {
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <ToolOutlined className="orderstooliconstyle" />
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <ToolOutlined className="orderstooliconstyle" />
+                        </Button>
                         <Text className="ordersprocessingtextstyle" >
                             Processing
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
-                    <Card bordered={true} >
-                        <CheckOutlined className="orderscheckiconstyle" />
-                        <Text className="orderscompletedtextstyle">
+                    <Card bordered={true}>
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <CheckOutlined className="orderscheckiconstyle" />
+                        </Button>
+                        <Text className="orderscompletedtextstyle" >
                             Completed
                         </Text>
                     </Card>
                 </Col>
             </Row>
 
-            <Row className="ordersrow3style">
+            <Row className="ordersrow3style" >
                 <Col span={8}>
                     <Card bordered={true}>
-                        <CloseOutlined className="orderscloseiconstyle" />
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <CloseOutlined className="orderscloseiconstyle" />
+                        </Button>
                         <Text className="orderscanceltextstyle" >
                             Cancel
                         </Text>
@@ -129,7 +139,9 @@ function orders() {
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <EllipsisOutlined className="ordersellipsisiconstyle" />
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <EllipsisOutlined className="ordersellipsisiconstyle" />
+                        </Button>
                         <Text className="ordersotherstextstyle" >
                             Others
                         </Text>
@@ -137,7 +149,9 @@ function orders() {
                 </Col>
                 <Col span={8}>
                     <Card bordered={true} >
-                        <CustomerServiceOutlined className="orderscustomerserviceiconstyle" />
+                        <Button type="link" className="ordersbuttonstyle">
+                            <CustomerServiceOutlined className="orderscustomerserviceiconstyle" />
+                        </Button>
                         <Text className="ordersaftersaletexticon" >
                             After Sale
                         </Text>
@@ -145,24 +159,28 @@ function orders() {
                 </Col>
             </Row>
 
-            <Row className="ordersmyratingrowstyle">
-                <Col span="5">
+            <Row className="ordersmyratingrowstyle" >
+                <Col span="5" >
                     My Rating
                 </Col>
             </Row>
 
-            <Row className="ordersrow3style">
+            <Row className="ordersrow3style" >
                 <Col span={8}>
                     <Card bordered={true}>
-                        <RadarChartOutlined className="ordersradarcharticonstyle" />
-                        <Text className="ordersalltextstyle">
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <RadarChartOutlined className="ordersradarcharticonstyle" />
+                        </Button>
+                        <Text className="ordersalltextstyle" >
                             All
                         </Text>
                     </Card>
                 </Col>
                 <Col span={8}>
                     <Card bordered={true}>
-                        <StarOutlined className="ordersstariconstyle" />
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <StarOutlined className="ordersstariconstyle" />
+                        </Button>
                         <Text className="ordersratingtextstyle" >
                             Ratings
                         </Text>
@@ -170,11 +188,12 @@ function orders() {
                 </Col>
                 <Col span={8}>
                     <Card bordered={true} >
-                        <HistoryOutlined className="ordershistoryiconstyle" />
-                        <Text className="ordershistorytextstyle">
+                        <Button type="link" className="ordersbuttonstyle" >
+                            <HistoryOutlined className="ordershistoryiconstyle" />
+                        </Button>
+                        <Text className="ordershistorytextstyle" >
                             History
                         </Text>
-
                     </Card>
                 </Col>
             </Row>

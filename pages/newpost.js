@@ -30,7 +30,7 @@ function newPost() {
 				title={<Text className="newposttitletextstyle" >New Post</Text>}
 
 				extra={
-					<Button shape="round" size="medium" className="newpostsharebuttonstyle">
+					<Button shape="round" size="medium" className="newpostsharebuttonstyle" >
 						<Text className="newpostsharetextstyle">
 							Share
 						</Text>
@@ -61,16 +61,16 @@ function newPost() {
 				</Form>
 			</Formik>
 
-			<Row className="newpostrow1style">
-				<Col span="12" className="newpostlocationcolstyle">
+			<Row className="newpostrow1style" >
+				<Col span="12" className="newpostlocationcolstyle" >
 					<Button shape="round">
 						<EnvironmentOutlined className="newpostlocationpublicicontextstyle" />
-						<Text className="newpostlocationpublicicontextstyle">
+						<Text className="newpostlocationpublicicontextstyle" >
 							Bangkok, Thailand
 						</Text>
 					</Button>
 				</Col>
-				<Col span="8" className="newpostpubliccolstyle">
+				<Col span="8" className="newpostpubliccolstyle" >
 					<Button shape="round">
 						<GlobalOutlined className="newpostlocationpublicicontextstyle" />
 						<Text className="newpostlocationpublicicontextstyle" >
@@ -79,18 +79,18 @@ function newPost() {
 						<DownOutlined className="newpostlocationpublicicontextstyle" />
 					</Button>
 				</Col>
-				<Row className="newpostrow2style">
-					<Col span="4" className="newpostcameracolstyle">
+				<Row className="newpostrow2style" >
+					<Col span="4" className="newpostcameracolstyle" >
 						<Button type="link">
 							<CameraOutlined className="newpostcameraiconstyle" />
 						</Button>
 					</Col>
-					<Col span="4" className="newpostvideocameraathashtagcolstyle">
+					<Col span="4" className="newpostvideocameraathashtagcolstyle" >
 						<Button type="link">
 							<VideoCameraOutlined className="newpostvideocameracontainericonstyle" />
 						</Button>
 					</Col>
-					<Col span="4" className="newpostvideocameraathashtagcolstyle">
+					<Col span="4" className="newpostvideocameraathashtagcolstyle" >
 						<Button type="link">
 							<Text strong="true" className="newpostattextstyle" >
 								@
@@ -99,19 +99,19 @@ function newPost() {
 					</Col>
 					<Col span="4" className="newpostvideocameraathashtagcolstyle" >
 						<Button type="link">
-							<Text strong="true" className="newposthashtagtextstyle">
+							<Text strong="true" className="newposthashtagtextstyle" >
 								#
 							</Text>
 						</Button>
 					</Col>
-					<Col span="4" className="newpostcontainercolstyle">
+					<Col span="4" className="newpostcontainercolstyle" >
 						<Button type="link">
 							<ContainerOutlined className="newpostvideocameracontainericonstyle" />
 						</Button>
 					</Col>
 					<Col span="3">
-						<Button type="link" className="newpostdraftsbuttonstyle">
-							<Text className="newpostdraftstextstyle">
+						<Button type="link" className="newpostdraftsbuttonstyle" >
+							<Text className="newpostdraftstextstyle" >
 								Drafts
 							</Text>
 						</Button>
