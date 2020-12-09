@@ -922,8 +922,7 @@ color: black;
 }
 
 .profileblockinglistcolstyle {
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-bottom: 1rem;
     margin-top:1rem;
 }
@@ -938,14 +937,14 @@ color: black;
 }
 
 .profiledraftscolstyle {
-    margin-right: 1rem;
+    margin-right: 1.25rem;
+    margin-left: 3.15rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .profilefavoritescolstyle {
-    margin-left: -1rem;
-    margin-top:1rem;
+    margin-top: 1rem;
 }
 
 .profilecloudservericonstyle {
@@ -959,6 +958,10 @@ color: black;
 .profilehearticonstyle {
     font-size: 3rem;
     margin-left: 1.15rem;
+}
+
+.profilefavoritestextstyle{
+    margin-left: 1rem;
 }
 
 .profilerow6style {

@@ -225,7 +225,7 @@ function messages() {
             </Row>
 
             <Row align="middle" className="messagescontentrowstyle" >
-                <Col span="3" className="messagesavatarcolstyle">
+                <Col span="3" className="messagesavatarcolstyle" >
                     <Avatar size="large"
                         src={'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'}
                     />

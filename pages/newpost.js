@@ -26,12 +26,10 @@ function newPost() {
 			<PageHeader
 				className="profilerownewstyle"
 				onBack={() => window.history.back()}
-
 				title={<Text className="newposttitletextstyle" >New Post</Text>}
-
 				extra={
 					<Button shape="round" size="medium" className="newpostsharebuttonstyle" >
-						<Text className="newpostsharetextstyle">
+						<Text className="newpostsharetextstyle" >
 							Share
 						</Text>
 					</Button>}
@@ -49,7 +47,7 @@ function newPost() {
 				}}>
 				<Form>
 					<Form.Item
-						name="newpost">
+						name="newpost" >
 						<TextArea
 							rows={25}
 							size="large"
@@ -63,7 +61,7 @@ function newPost() {
 
 			<Row className="newpostrow1style" >
 				<Col span="12" className="newpostlocationcolstyle" >
-					<Button shape="round">
+					<Button shape="round" >
 						<EnvironmentOutlined className="newpostlocationpublicicontextstyle" />
 						<Text className="newpostlocationpublicicontextstyle" >
 							Bangkok, Thailand
@@ -71,7 +69,7 @@ function newPost() {
 					</Button>
 				</Col>
 				<Col span="8" className="newpostpubliccolstyle" >
-					<Button shape="round">
+					<Button shape="round" >
 						<GlobalOutlined className="newpostlocationpublicicontextstyle" />
 						<Text className="newpostlocationpublicicontextstyle" >
 							Public
@@ -81,35 +79,35 @@ function newPost() {
 				</Col>
 				<Row className="newpostrow2style" >
 					<Col span="4" className="newpostcameracolstyle" >
-						<Button type="link">
+						<Button type="link" >
 							<CameraOutlined className="newpostcameraiconstyle" />
 						</Button>
 					</Col>
 					<Col span="4" className="newpostvideocameraathashtagcolstyle" >
-						<Button type="link">
+						<Button type="link" >
 							<VideoCameraOutlined className="newpostvideocameracontainericonstyle" />
 						</Button>
 					</Col>
 					<Col span="4" className="newpostvideocameraathashtagcolstyle" >
-						<Button type="link">
+						<Button type="link" >
 							<Text strong="true" className="newpostattextstyle" >
 								@
 							</Text>
 						</Button>
 					</Col>
 					<Col span="4" className="newpostvideocameraathashtagcolstyle" >
-						<Button type="link">
+						<Button type="link" >
 							<Text strong="true" className="newposthashtagtextstyle" >
 								#
 							</Text>
 						</Button>
 					</Col>
 					<Col span="4" className="newpostcontainercolstyle" >
-						<Button type="link">
+						<Button type="link" >
 							<ContainerOutlined className="newpostvideocameracontainericonstyle" />
 						</Button>
 					</Col>
-					<Col span="3">
+					<Col span="3" >
 						<Button type="link" className="newpostdraftsbuttonstyle" >
 							<Text className="newpostdraftstextstyle" >
 								Drafts

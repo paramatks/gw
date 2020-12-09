@@ -53,10 +53,10 @@ function newGwIndex(props) {
 			</Head>
 
 			<Tabs type="card" defaultActiveKey="1" renderTabBar={renderTabBar} >
-				<TabPane tab={<span className="indexnewfriendstabpane">Friends</span>} key="1"  >
+				<TabPane tab={<span className="indexnewfriendstabpane">Friends</span>} key="1" >
 					<Newposts postlist={props.appAuthReducer.posts} />
 				</TabPane>
-				<TabPane tab={<span className="indexnewfollowpopulartabpanes">Follow</span>} key="2"  >
+				<TabPane tab={<span className="indexnewfollowpopulartabpanes">Follow</span>} key="2" >
 					<Newposts postlist={props.appAuthReducer.posts} />
 				</TabPane>
 				<TabPane tab={<span className="indexnewfollowpopulartabpanes">Popular</span>} key="3" >
@@ -64,7 +64,7 @@ function newGwIndex(props) {
 				</TabPane>
 			</Tabs>
 
-			<Row align="top" className="footernewindexrowstyle" >
+			<Row className="footernewindexrowstyle" >
 				<Col span="4" className="footerhomemessagescolstyle" >
 					<Button size="large" type="link" className="footerbuttonstyle"
 						onClick={() => { router.push({ pathname: '/newgwindex' }); }}

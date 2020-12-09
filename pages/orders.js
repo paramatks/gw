@@ -80,11 +80,11 @@ function orders() {
             </Row>
 
             <Row className="ordersmyordersrowstyle" >
-                <Col span="5">
+                <Col span="5" >
                     My Orders
                 </Col>
                 <Col span="7" className="ordersviewallcolstyle" >
-                    <Button type="link">
+                    <Button type="link" >
                         <Text className="ordersviewalltextstyle" >
                             View All
                         </Text>
@@ -148,7 +148,7 @@ function orders() {
                     </Card>
                 </Col>
                 <Col span={8}>
-                    <Card bordered={true} >
+                    <Card bordered={true}>
                         <Button type="link" className="ordersbuttonstyle">
                             <CustomerServiceOutlined className="orderscustomerserviceiconstyle" />
                         </Button>
@@ -187,7 +187,7 @@ function orders() {
                     </Card>
                 </Col>
                 <Col span={8}>
-                    <Card bordered={true} >
+                    <Card bordered={true}>
                         <Button type="link" className="ordersbuttonstyle" >
                             <HistoryOutlined className="ordershistoryiconstyle" />
                         </Button>
@@ -198,51 +198,51 @@ function orders() {
                 </Col>
             </Row>
 
-            <Row align="top" className="footerordersrowstyle">
-                <Col span="4" className="footerhomemessagescolstyle">
+            <Row className="footerordersrowstyle" >
+                <Col span="4" className="footerhomemessagescolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/newgwindex' }); }}
                     >
                         <HomeOutlined className="footericonstyle" />
                     </Button>
-                    <Text className="footerhometextstyle">
+                    <Text className="footerhometextstyle" >
                         Home
 					</Text>
                 </Col>
-                <Col span="5" className="footerhomemessagescolstyle">
+                <Col span="5" className="footerhomemessagescolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/messages' }); }}
                     >
                         <MessageOutlined className="footericonstyle" />
                     </Button>
-                    <Text className="footermessagestextstyle">
+                    <Text className="footermessagestextstyle" >
                         Messages
 					</Text>
                 </Col>
-                <Col span="4" className="footercolrocketstyle">
+                <Col span="4" className="footercolrocketstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/newpost' }); }}
                     >
                         <RocketOutlined className="footericonrocketstyle" />
                     </Button>
                 </Col>
-                <Col span="4" className="footerorderscolstyle">
+                <Col span="4" className="footerorderscolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/orders' }); }}
                     >
                         <MenuOutlined className="footericonstyle" />
                     </Button>
-                    <Text className="footerorderstextstyle">
+                    <Text className="footerorderstextstyle" >
                         Orders
 					</Text>
                 </Col>
-                <Col span="4" className="footerprofilecolstyle">
+                <Col span="4" className="footerprofilecolstyle" >
                     <Button size="large" type="link" className="footerbuttonstyle"
                         onClick={() => { router.push({ pathname: '/profile' }); }}
                     >
                         <UserOutlined className="footericonstyle" />
                     </Button>
-                    <Text className="footerprofiletextstyle">
+                    <Text className="footerprofiletextstyle" >
                         Profile
 					</Text>
                 </Col>

@@ -21,9 +21,9 @@ function profile() {
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
-            <Row align="top" className="profilerownewstyle" >
+            <Row className="profilerownewstyle" >
                 <Col span="3" className="profilesettingscolstyle" >
-                    <Button type="link">
+                    <Button type="link" >
                         <SettingOutlined className="profilesettingsiconstyle" />
                     </Button>
                 </Col>
@@ -39,7 +39,7 @@ function profile() {
                     <Rate value={5} className="profileuserratestyle" />
                 </Col>
                 <Col span="3" className="profileeditcolstyle" >
-                    <Button type="link">
+                    <Button type="link" >
                         <EditOutlined className="profileediticonstyle" />
                     </Button>
                 </Col>
@@ -116,7 +116,7 @@ function profile() {
                         Blocking List
                     </Text>
                 </Col>
-                <Col span="5" className="profiledraftscolstyle">
+                <Col span="5" className="profiledraftscolstyle" >
                     <Button shape="circle" type="link" size="large" className="profilerow5buttonstyle" >
                         <CloudServerOutlined className="profilecloudservericonstyle" />
                     </Button>
@@ -128,7 +128,7 @@ function profile() {
                     <Button shape="circle" type="link" size="large" className="profilerow5buttonstyle" >
                         <HeartOutlined className="profilehearticonstyle" />
                     </Button>
-                    <Text style={{ marginLeft: "1rem" }}>
+                    <Text className="profilefavoritestextstyle">
                         Favorites
                     </Text>
                 </Col>
