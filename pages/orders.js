@@ -15,13 +15,17 @@ function orders() {
     return (
         <>
             <Head>
-                <title>GoodWork</title>
+                <title>
+                    GoodWork
+                </title>
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
             <Row className="ordersheaderrowstyle" align="middle" >
                 <Col span="3" className="orderssearchcolstyle" >
-                    <SearchOutlined className="orderssearchcoliconstyle" />
+                    <Button type="link" >
+                        <SearchOutlined className="orderssearchcoliconstyle" />
+                    </Button>
                 </Col>
                 <Col span="4" className="ordersheadertextcolstyle" >
                     <Text className="ordersheadertextstyle" >
@@ -29,7 +33,9 @@ function orders() {
                     </Text>
                 </Col>
                 <Col span="2" className="ordersheaderbellcolstyle" >
-                    <BellOutlined className="ordersheaderbelliconstyle" />
+                    <Button type="link">
+                        <BellOutlined className="ordersheaderbelliconstyle" />
+                    </Button>   
                 </Col>
             </Row>
 
@@ -39,7 +45,6 @@ function orders() {
                         <Text className="ordersbookingindicatortextstyle" >
                             12
                         </Text>
-
                     </Button>
                     <Text className="ordersbookingindicatortext2style" >
                         Booking
@@ -51,8 +56,6 @@ function orders() {
                             03
                         </Text>
                     </Button>
-                    <br>
-                    </br>
                     <Text className="ordersprocessingindicatortext2style" >
                         Processing
                     </Text>

@@ -20,7 +20,9 @@ function messages() {
     return (
         <>
             <Head>
-                <title>GoodWork</title>
+                <title>
+                    GoodWork
+                </title>
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 

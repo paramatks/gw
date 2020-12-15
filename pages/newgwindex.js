@@ -9,11 +9,11 @@ import router from 'next/router'
 const { Text } = Typography;
 
 const renderTabBar = (props, DefaultTabBar) => (
-	<div>
+	<>
 		<Row className="indexnewstyle" align="middle" justify="center" >
 			<Col span="3" className="indexnewcameracolstyle" >
 				<Button type="link" >
-					<CameraOutlined className="indexnewcamerastyle" />
+					<CameraOutlined className="indexnewcameraiconstyle" />
 				</Button>
 			</Col>
 			<Col span="7" className="indexnewlogocolstyle" >
@@ -23,18 +23,18 @@ const renderTabBar = (props, DefaultTabBar) => (
 			</Col>
 			<Col className="indexnewbellcolstyle" span="3" >
 				<Button type="link" >
-					<BellOutlined style={{ fontSize: '1.5rem', color: "white" }} />
+					<BellOutlined className="indexnewbelliconstyle" />
 				</Button>
 			</Col>
 		</Row>
 
-		<Row >
+		<Row>
 			<Col span="24" className="indexnewtabbarcolstyle" >
 				<DefaultTabBar {...props} />
 			</Col>
 		</Row>
 
-	</div>
+	</>
 );
 
 const { TabPane } = Tabs;
@@ -48,7 +48,9 @@ function newGwIndex(props) {
 	return (
 		<>
 			<Head>
-				<title>GoodWork</title>
+				<title>
+                	GoodWork
+                </title>
 				<link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
 			</Head>
 

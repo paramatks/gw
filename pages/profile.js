@@ -17,7 +17,9 @@ function profile() {
     return (
         <>
             <Head>
-                <title>GoodWork</title>
+                <title>
+                    GoodWork
+                </title>
                 <link rel="icon" href="/images\Goodwork_6A rev SC_cropped_transparentBackground.png" />
             </Head>
 
@@ -69,8 +71,6 @@ function profile() {
                     <Text className="profilepostsamounttextstyle" >
                         1,655
                     </Text>
-                    <br>
-                    </br>
                     <Text className="profilepoststextstyle" >
                         Posts
                     </Text>
@@ -79,8 +79,7 @@ function profile() {
                     <Text className="profilefollowersamounttextstyle" >
                         33K
                     </Text>
-                    <br>
-                    </br>
+                    <br/>
                     <Text className="profilefollowerstextstyle">
                         Followers
                     </Text>
@@ -89,8 +88,7 @@ function profile() {
                     <Text className="profilefollowingamounttextstyle" >
                         10K
                     </Text>
-                    <br>
-                    </br>
+                    <br/>                    
                     <Text className="profilefollowingtextstyle" >
                         Following
                     </Text>
@@ -99,8 +97,7 @@ function profile() {
                     <Text className="profilefriendsamounttextstyle" >
                         256
                     </Text>
-                    <br>
-                    </br>
+                    <br/>
                     <Text className="profilefriendstextstyle" >
                         Friends
                     </Text>
